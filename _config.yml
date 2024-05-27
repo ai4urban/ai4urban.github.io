@@ -1,22 +1,22 @@
 # SITE SETTINGS
-title: Petridish                        # Title in top navigation bar (navbar) and <head>
-author: Peter Desmet                    # Used for copyright statement in footer
-baseurl: "/petridish"                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
+title: AI-Physics for Urban Decarbonisation                        # Title in top navigation bar (navbar) and <head>
+author: Authors                    # Used for copyright statement in footer
+baseurl: "/main"                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
                                         # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
 # SOCIAL PROFILES
 social:
-  email: name@example.com
-  twitter: peterdesmet
-  github: github_username               # Can also be a github_username/repository
-  mastodon: https://mastodon.social/@mastodon_username
+  email: 
+  twitter: 
+  github:                # Can also be a github_username/repository
+  mastodon: 
   facebook:                             # A URL
-  disqus: disqus_sitename               # Enable Disqus comments from disqus_sitename.disqus.com
+  disqus:                # Enable Disqus comments from disqus_sitename.disqus.com
 
 # THEME SETTINGS (ALL OPTIONAL)
 posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
-tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
+# tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
 archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
 github_edit: true                       # Show an "edit this page" link in the footer, can also be name of branch (default: main)
 colors:
@@ -25,7 +25,7 @@ colors:
   footer: "#6c757d"                     # Background color for footer: use color that contrasts well with white
 font_serif: true                        # Font type for page content: serif (default) or slightly smaller sans-serif
 rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons
-logo: /assets/theme/images/petri-dish_1f9eb.png # Logo in navbar, will be displayed with 30px height
+logo: /assets/theme/images/imperial_logo.png # Logo in navbar, will be displayed with 30px height
 
 # BUILD SETTINGS
 markdown: kramdown

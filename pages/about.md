@@ -1,10 +1,10 @@
 ---
 title: About
-description: Here you can describe your project, lab or yourself. Or remove this page altogether if you don't want to do that.
+description: Hybrid AI and multiscale physical modelling for optimal urban decarbonisation combating climate change
 background:
-  img: https://images.unsplash.com/photo-1475906089153-644d9452ce87?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80
-  by: CHUTTERSNAP
-  href: https://unsplash.com/photos/UmncJq4KPcA
+  img: /assets/theme/images/fons-heijnsbroek-u5TFwiLweNg-unsplash.jpg
+  by: Fons Heijnsbroek on Unsplash
+  href: https://unsplash.com/photos/a-group-of-people-boarding-a-bus-at-a-bus-stop-u5TFwiLweNg
 permalink: /about/
 ---
 
