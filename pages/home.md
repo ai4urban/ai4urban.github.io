@@ -17,6 +17,9 @@ This EPSRC Fellowship project (Grant references [EP/X029093/1](https://gow.epsrc
 
 This innovative framework will allow the critical assessment of existing and new policy options on decarbonisation to be carried out, thus improving local and global climate. The tool could potentially change the way in which city infrastructure design, GI and BI for decarbonisation are used in our future cities and pave the way for accurate quantification of the impact of urban carbon emissions on global warming.
 
+![Multiscale model](assets/theme/images/global_multiscale.png)
+*A multiscale model will be built to help understanding the relationship between health, economics, environment and climate change.*
+
 <!-- ## Installation
 
 See the demo website for instructions:
