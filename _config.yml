@@ -3,7 +3,7 @@ domain: ai4urban.github.io
 url: https://ai4urban.github.io
 title: AI-Physics for Urban Decarbonisation                        # Title in top navigation bar (navbar) and <head>
 author: Authors                    # Used for copyright statement in footer
-baseurl: "/main"                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
+                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
                                         # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
