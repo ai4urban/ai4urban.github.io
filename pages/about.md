@@ -81,9 +81,15 @@ The multiscale carbon model developed in WP1 will be used for modelling of carbo
     2. Optimal configuration of GI-BI
     3. Optimal traffic management
 
+![Digital twin](../assets/theme/images/wp3.png)
+*Digital twin that links the physical world with an virtual image can hlep optimising urban design.*
+
 ## Work Package 4 (WP4)
 ### Case study at city-scale (London)
 *Aims: (1) Assessment of carbon distribution and related energy use; (2) providing suggestion of carbon reduction via optimal infrastructure management and efficient use of energy; (3) Regression analysis of carbon distribution/emission and layout of city infrastructures.*
+
+![Case study in London](../assets/theme/images/wp4_london.png)
+*Digital tools for Urban Environment Management: Integrated modelling from the neighbourhood, city to global scales showing the city GI-BI and human activities on local and global climate*
 
 ## Work Package 5 (WP5)
 ### Improved simulation of carbon cycle in global model
