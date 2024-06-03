@@ -6,7 +6,7 @@ permalink: /publication/
 ---
 
 <!-- Content here would shop up above your list of posts -->
-## Journal Paper
+<!-- ## Journal Paper
 
 Paper 1
 
@@ -16,4 +16,8 @@ Paper 2
 
 Software 1
 
-Software 2
+Software 2 -->
+
+The list of publications will be updated as the project proceeds.
+
+For a list of previous publications of our group, you can check [Dr Fang's webpage](https://profiles.imperial.ac.uk/f.fang).

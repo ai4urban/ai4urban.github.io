@@ -5,13 +5,10 @@
   image: assets/theme/images/fang_photo.jpeg # Can be external link
   description: > # Can be Markdown
     Senior Research Fellow at Department of Earth Science and Engineering, Imperial College London
-  orcid: 0000-0000-0000-0000
-  researchgate: researchgate_username
-  googlescholar: googlescholar_username
-  twitter: twitter_username
-  mastodon: https://mastodon.social/@mastodon_username
-  github: github_username
-  email: name@example.com
+  orcid: 0000-0002-3777-8428
+  researchgate: Fangxin-Fang
+  googlescholar: 8hHpAoMAAAAJ&hl
+  email: f.fang@imperial.ac.uk
 
 - name: Dr Jie Zheng
   role: Research Associate
@@ -24,9 +21,12 @@
   image: assets/theme/images/linfeng_photo.jpg
   description: >
     Research Assistant at Department of Earth Science and Engineering, Imperial College London.
+  github: linfeng810
+  email: l.li20@imperial.ac.uk
 
 - name: Miss Judongyang Zhou
   role: PhD student
   image: assets/theme/images/dongyang_photo.jpeg
   description: >
     PhD student at Department of Earth Science and Engineering, Imperial College London.
+  email: j.zhou23@imperial.ac.uk
