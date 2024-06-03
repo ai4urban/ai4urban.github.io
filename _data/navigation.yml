@@ -4,6 +4,21 @@
   href: /
 - text: About
   href: /about/
+  menu: # Dropdown menu
+  - text: "Project objective"
+    href: /about/#project-objective
+  - text: "Work package 1"
+    href: /about/#work-package-1-wp1
+  - text: "Work package 2"
+    href: /about/#work-package-2-wp2
+  - text: "Work package 3"
+    href: /about/#work-package-3-wp3
+  - text: "Work package 4"
+    href: /about/#work-package-4-wp4
+  - text: "Work package 5"
+    href: /about/#work-package-5-wp5
+  - text: "Work package 6"
+    href: /about/#work-package-6-wp6
 - text: Team
   href: /team/
 - text: News
