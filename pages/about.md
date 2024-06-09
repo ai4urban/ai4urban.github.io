@@ -1,6 +1,7 @@
 ---
 title: About
 description: Hybrid AI and multiscale physical modelling for optimal urban decarbonisation combating climate change
+toc: true
 background:
   img: /assets/theme/images/fons-heijnsbroek-u5TFwiLweNg-unsplash.jpg
   by: Fons Heijnsbroek on Unsplash
