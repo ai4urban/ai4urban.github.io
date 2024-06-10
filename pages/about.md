@@ -57,10 +57,9 @@ The work will be built on a multi-scale urban CFD model (Fluidity-Urban). The us
 ![WP1-air-quality1](../assets/theme/images/air_quality_1.gif)
 *Air quality modelling (SO<sub>2</sub>) over 100 power plants.*
 
-*Collaboration work with Institute of Atmospheric Physics, Chinese Academy of Sciences and Institute of Urban Environment, Chinese Academy of Sciences.*
-
+{:.col-md-6 .mx-auto}
 ![WP1-air-quality2](../assets/theme/images/air_quality_2.gif)
-*Air quality modelling (NO<sub>2</sub> and O<sub>3</sub>) over 100 power plants.*
+*Air quality modelling (NO and O<sub>3</sub>) with chemical reactions over 100 power plants.*
 
 *Collaboration work with Institute of Atmospheric Physics, Chinese Academy of Sciences and Institute of Urban Environment, Chinese Academy of Sciences.*
 
@@ -76,11 +75,11 @@ The work will be built on a multi-scale urban CFD model (Fluidity-Urban). The us
 
 *Atmosphere modelling. Left: cloud water mesh; right: rainwater structure.*
 
-*Collaboration work with Institute of Atmospheric Physics, Chinese Academy of Sciences and Institute of Urban Environment, Chinese Academy of Sciences.*
+*Courtesy of Dr Li. Collaboration work with Institute of Atmospheric Physics, Chinese Academy of Sciences and Institute of Urban Environment, Chinese Academy of Sciences.*
 
 #### Urban flow modelling
 ![Urban modelling](../assets/theme/images/urban.png)
-*Fluidity-Urban and 3D Urban Generator can model the airflow in urban areas, providing a high-resolution spatial distribution of pollutants or humidity. Courtesy of INHALE and MAGIC projects.*
+*Fluidity-Urban and 3D Urban Generator can model the airflow in urban areas, providing a high-resolution spatial distribution of pollutants or humidity. Courtesy of Dr Wu, INHALE, and MAGIC projects.*
 
 ## Work Package 2 (WP2)
 ### AI-based GHG parametrisation scheme in cities
