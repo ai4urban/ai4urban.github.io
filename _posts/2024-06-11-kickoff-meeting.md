@@ -10,3 +10,5 @@ tags: [Meetings, Shared tag]
 **Location**: RSM1.47, Royal School of Mines, Imperial College London
 
 **Time**: 2PM - 7PM, 25 July 2024
+
+**Registration**: Please register via [the link](https://forms.office.com/e/hPmJFxtXah).
