@@ -1,6 +1,6 @@
 ---
 layout: home
-title: AI-Physics for Urban Decarbonisation
+title: AI-Physical Modelling Tools for Urban Decarbonisation
 description: Hybrid AI and multiscale physical modelling for optimal urban decarbonisation combating climate change
 background: 
   img: /assets/theme/images/fons-heijnsbroek-u5TFwiLweNg-unsplash.jpg

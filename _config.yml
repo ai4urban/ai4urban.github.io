@@ -1,7 +1,7 @@
 # SITE SETTINGS
 domain: ai4urban.github.io
 url: https://ai4urban.github.io
-title: AI-Physics for Urban Decarbonisation                        # Title in top navigation bar (navbar) and <head>
+title: AI-Physical Modelling Tools for Urban Decarbonisation                        # Title in top navigation bar (navbar) and <head>
 author: Authors                    # Used for copyright statement in footer
                    # Only required if your site is in a directory e.g. https://username.github.io/sitename
                                         # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
