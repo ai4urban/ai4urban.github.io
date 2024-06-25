@@ -1,6 +1,10 @@
 ---
-title: Healthy People Healthy Planet
+title: Healthy People Healthy Planet (Hybrid Workshop)
 description: Leveraging AI for decarbonized, Healthy, Inspiring and Energy Positive Cities. 
+background: 
+  img: /assets/theme/images/fons-heijnsbroek-u5TFwiLweNg-unsplash.jpg
+  by: Fons Heijnsbroek on Unsplash
+  href: https://unsplash.com/photos/a-group-of-people-boarding-a-bus-at-a-bus-stop-u5TFwiLweNg
 tags: [Meetings, Shared tag]
 ---
 
@@ -10,7 +14,7 @@ The theme of this workshop is: "Healthy People and Healthy Planet: AI for Decarb
 
 This is a hybrid meeting and free to register. Agenda for the workshop will be updated soon.
 
-**Location**: RSM1.47, Royal School of Mines, Imperial College London
+**Location**: RSM1.47, Royal School of Mines, Imperial College London; and online.
 
 **Time**: 2PM - 7PM, 25 July 2024
 
