@@ -14,7 +14,7 @@ The theme of this workshop is: "Healthy People and Healthy Planet: AI for Decarb
 
 This is a hybrid meeting and free to register. Agenda for the workshop will be updated soon.
 
-**Location**: RSM1.47, Royal School of Mines, Imperial College London; and online.
+**Location**: ~~RSM1.47, Royal School of Mines, Imperial College London~~ Data Science Institute, Imperial College London; and online.
 
 **Time**: 2PM - 7PM, 25 July 2024
 
