@@ -24,7 +24,7 @@ This is a hybrid meeting and free to register. Agenda for the workshop will be u
 
 **Online meeting link**: The online meeting is on the Microsoft Teams Meeting - [https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDA0ODgxNjUtNjljNi00NThhLTg4YzYtZGM4OTU2ZmEzZmYw%40thread.v2/0?context=%7b%22Tid%22%3a%222b897507-ee8c-4575-830b-4f8267c3d307%22%2c%22Oid%22%3a%228dadb162-4d24-4032-8f70-0b19e50c991f%22%7d](https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDA0ODgxNjUtNjljNi00NThhLTg4YzYtZGM4OTU2ZmEzZmYw%40thread.v2/0?context=%7b%22Tid%22%3a%222b897507-ee8c-4575-830b-4f8267c3d307%22%2c%22Oid%22%3a%228dadb162-4d24-4032-8f70-0b19e50c991f%22%7d).
 
-**Agenda**: Aganda for the workshop can be found in the PDF file below.
+**Agenda**: Aganda for the workshop can be found in the [PDF file](/assets/theme/doc/WorkshopAgenda-HealthyPeopleHealthyPlanet.pdf) below.
 
 <iframe src="{{ '/assets/theme/doc/WorkshopAgenda-HealthyPeopleHealthyPlanet.pdf' | relative_url }}" width="100%" height="600px">
     This browser does not support PDFs. Please download the PDF to view it: <a href="{{ '/assets/theme/doc/WorkshopAgenda-HealthyPeopleHealthyPlanet.pdf' | relative_url }}">Download PDF</a>.
