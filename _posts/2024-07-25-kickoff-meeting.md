@@ -14,11 +14,13 @@ The theme of this workshop is: "Healthy People and Healthy Planet: AI for Decarb
 
 This is a hybrid meeting and free to register. Agenda for the workshop will be updated soon.
 
-**Location**: ~~RSM1.47, Royal School of Mines, Imperial College London~~ Data Science Institute Boardroom, Imperial College London; and online.
+**Location**: ~~RSM1.47, Royal School of Mines, Imperial College London~~ Data Science Institute (DSI) Boardroom, Imperial College London. You can access DSI through the Sherfield Walkway (see [link](https://www.imperial.ac.uk/media/imperial-college/visit/public/SouthKensingtonCampus.pdf) for a map of South Kensington Campus). 
 
-**Time**: 2PM - 7PM, 25 July 2024
+**Time**: 2PM - 6PM, 25 July 2024
 
 **Registration**: Please register via [the link](https://forms.office.com/e/hPmJFxtXah).
+
+**Refreshments**: Tea and coffee will be provided during the coffee break (13:30 and 15:10); Vegetarian wraps and nibbling will be provided during the refreshment session (17:00).
 
 **Contact**: Dr Fangxin Fang (f.fang@imperial.ac.uk), Philip Challinor (philipchallinor@hotmail.com), Linfeng Li (l.li20@imperial.ac.uk).
 
