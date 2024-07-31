@@ -30,3 +30,28 @@
   description: >
     PhD student at Department of Earth Science and Engineering, Imperial College London.
   email: j.zhou23@imperial.ac.uk
+
+- name: Anna Smith 
+  role: Master student (EDSML23) 
+  description: >
+    Project title: Predicting spatiotemporal trends in intraurban CO2 using land use regression and machine learning algorithms
+
+- name: Bo Chen 
+  role: Master student (EDSML23) 
+  description: >
+    Project title: AI-based global spatial-temporal land use regression models for nitrogen dioxide emissions
+
+- name: Boyang Hu 
+  role: Master student (EDSML23) 
+  description: >
+    Project title: Methane concentrations forecasting based on ConvLSTM with attention
+
+- name: Chenxin Zhang 
+  role: Master student (ACSE23) 
+  description: >
+    Project title: Machine Learning Models for CO2 Forecasting: ConvLSTM vs. Transformer
+
+- name: Junyu Li 
+  role: Master student (GEMS23) 
+  description: >
+    Project title: AI-based tools for assessing the impact of land use types on carbon dioxide emissions
