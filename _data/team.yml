@@ -33,6 +33,7 @@
 
 - name: Anna Smith 
   role: Master student (EDSML23) 
+  image: assets/theme/images/Anna_Smith_headshot.jpeg
   description: >
     Project title: Predicting spatiotemporal trends in intraurban CO2 using land use regression and machine learning algorithms
 
