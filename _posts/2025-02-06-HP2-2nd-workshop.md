@@ -78,6 +78,8 @@ Agenda will be released soon.
 - Fangxin Fang, Imperial College London
 - Christopher Pain, Imperial College London
 
+Chair: Mojtaba Moatamedi, Executive Director, NYU London
+
 Contact: Linfeng Li (l.li20@imperial.ac.uk)
 
 ## Registration Link
