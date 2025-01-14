@@ -71,9 +71,15 @@ Planning regulators, built environment and transport professionals, community en
 
 Agenda will be released soon.
 
-Contact
+## Organizing Committee
 
-- Philip Challinor (philipchallinor@hotmail.com)
-- Daniil Mintc  (dmintc@openweather.co.uk)
-- Fangxin Fang (f.fang@imperial.ac.uk)
-- Linfeng Li (l.li20@imperial.ac.uk)
+- Daniil Mintc, Open Weather
+- Philip Challinor, Architect
+- Fangxin Fang, Imperial College London
+- Christopher Pain, Imperial College London
+
+Contact: Linfeng Li (l.li20@imperial.ac.uk)
+
+## Registration Link
+
+Please register here at the link: [https://forms.office.com/e/4uATLNY8mG](https://forms.office.com/e/4uATLNY8mG)
