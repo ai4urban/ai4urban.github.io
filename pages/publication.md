@@ -21,3 +21,5 @@ Software 2 -->
 The list of publications will be updated as the project proceeds.
 
 For a list of previous publications of our group, you can check [Dr Fang's webpage](https://profiles.imperial.ac.uk/f.fang).
+
+[1] Project introduction (poster) presented in the RECLAIM Network Conference 2025. [PDF file](/assets/theme/doc/RECLAIM-Jan2025-poster.pdf)
