@@ -69,7 +69,7 @@ Planning regulators, built environment and transport professionals, community en
 
 ## Agenda
 
-Agenda will be released soon.
+Agenda can be found in the following link: [PDF file](/assets/theme/doc/2ndWorkshop-2025-Agenda3.pdf)
 
 ## Organizing Committee
 
