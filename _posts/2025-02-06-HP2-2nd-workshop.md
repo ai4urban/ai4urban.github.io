@@ -49,7 +49,7 @@ Shape the cities of tomorrow by integrating innovative technologies, sustainable
 
 Planning regulators, built environment and transport professionals, community enterprises, social entrepreneurs, public health experts, politician and anyone that wants to leave a better built environment for our successors!
 
-## Potential Speech topics 
+## Potential discussion topics 
 
 - The Role of AI in Shaping the Cities of Tomorrow
 
@@ -71,6 +71,8 @@ Planning regulators, built environment and transport professionals, community en
 
 Agenda can be found in the following link: [PDF file](/assets/theme/doc/2ndWorkshop-2025-Agenda3.pdf)
 
+The workshop will take place 2pm to 6pm on Thursday, Feburary 6th, 2025.
+
 ## Organizing Committee
 
 - Daniil Mintc, Open Weather
@@ -85,3 +87,13 @@ Contact: Linfeng Li (l.li20@imperial.ac.uk)
 ## Registration Link
 
 Please register here at the link: [https://forms.office.com/e/4uATLNY8mG](https://forms.office.com/e/4uATLNY8mG)
+
+## Online joining Link
+
+Microsoft Teams Meeting
+
+[Join the meeting now](https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZTg0NDk0NTMtZmQxZi00OTk5LWE4OWItYzU3NjNmYmYwOTAy%40thread.v2/0?context=%7b%22Tid%22%3a%222b897507-ee8c-4575-830b-4f8267c3d307%22%2c%22Oid%22%3a%221c45ef24-7fa9-41d9-8642-8b79bc405ab7%22%7d)
+
+Meeting ID: 383 366 953 356
+
+Passcode: Nk9oC6H3
