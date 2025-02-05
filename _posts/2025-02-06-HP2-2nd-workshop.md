@@ -1,6 +1,6 @@
 ---
 title: The Journey to Equitable Planning (Hybrid Workshop)
-description: Royal School of Mines Room G32, Imperial College London
+description: Royal School of Mines Room 301D/E, Imperial College London
 background: 
   img: /assets/theme/images/hulki-okan-tabak-sz2UCx-0UqI-unsplash.jpg
   by: Photo by <a href="https://unsplash.com/@hulkiokantabak?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Hulki Okan Tabak</a> on <a href="https://unsplash.com/photos/people-walking-on-sidewalk-near-brown-concrete-building-during-daytime-sz2UCx-0UqI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
@@ -23,7 +23,7 @@ tags: [Meetings, Shared tag]
 
 Delivering more equitable, resource efficient, healthier homes, whilst achieving COP 29 climate change obligations to ensure that ‘**1.5 is kept alive**’, demands a major shift in Planning, Housing, Transport and Environmental Policies. 
 
-Healthy People, Healthy Planet (HP2), founded by Imperial College and the Universities of New York, Surrey, Southampton plus climate tech experts -  OpenWeather, aims to navigate the Planning Minefield by ensuring future decision-making is driven by **data**- not **dogma**, by **science**- not **suspicion** and by **collaboration**- not **conflict**.
+Healthy People, Healthy Planet (HP2), founded by Imperial College and the Universities of New York, Surrey, Southampton plus climate tech experts -  OpenWeather, aims to navigate the Planning Minefield by ensuring future decision-making is driven by **data**, **science**, and **collaboration**.
 	
 HP2 is developing integrated AI/ Digital Twin technologies to empower communities to analyse needs, synthesise and prioritise options and test proposed solutions in a virtual world, thereby minimising risk in the real world. 
 
@@ -69,7 +69,7 @@ Planning regulators, built environment and transport professionals, community en
 
 ## Agenda
 
-Agenda can be found in the following link: [PDF file](/assets/theme/doc/2ndWorkshop-2025-Agenda3.pdf)
+Agenda can be found in the following link: [PDF file](/assets/theme/doc/2ndWorkshop-2025-Agenda3.1.pdf)
 
 The workshop will take place 2pm to 6pm on Thursday, Feburary 6th, 2025.
 
@@ -97,3 +97,7 @@ Microsoft Teams Meeting
 Meeting ID: 383 366 953 356
 
 Passcode: Nk9oC6H3
+
+## Change of venue
+
+The workshop will be held in Room **301D/E** instead of G32, for those who are joining in person.
