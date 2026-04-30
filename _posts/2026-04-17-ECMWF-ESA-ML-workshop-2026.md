@@ -1,5 +1,5 @@
 ---
-title: Attendingthe 5th ECMWF-ESA Machine Learning Workshop
+title: Attending the 5th ECMWF-ESA Machine Learning Workshop
 description: Oral presentation and poster presentations at the workshop
 background: 
   img: /assets/theme/images/ecmwf.jpeg
