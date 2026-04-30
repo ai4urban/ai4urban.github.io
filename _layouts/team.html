@@ -9,8 +9,6 @@ description: Template for team page.
   {% assign team = site.data.team %}
 {% endif %}
 
-{{ content }}
-
 {% for member in team %}
   <div class="d-flex team-member">
     <div class="flex-shrink-0 me-3">
@@ -74,3 +72,5 @@ description: Template for team page.
     </div>
   </div>
 {% endfor %}
+
+{{ content }}

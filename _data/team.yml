@@ -63,3 +63,9 @@
   role: Master student (GEMS23) 
   description: >
     Project title: AI-based tools for assessing the impact of land use types on carbon dioxide emissions
+
+- name: Wei Feng
+  role: Visiting student
+  image: assets/theme/images/feng-wei-photo.jpeg
+  description: >
+    PhD student from Institute of Atmospheric Physics, Chinese Academy of Sciences working on carbon dioxide inversion
