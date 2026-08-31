@@ -69,3 +69,9 @@
   image: assets/theme/images/feng-wei-photo.jpeg
   description: >
     PhD student from Institute of Atmospheric Physics, Chinese Academy of Sciences working on carbon dioxide inversion
+
+- name: Marcelo Paiva Ramos
+  role: Visiting student
+  image: assets/theme/images/marcelo-photo-square.jpg
+  description: >
+    PhD student from Computer Science Department, Aeronautics Institute of Technology (ITA), and Division for Earth System Numerical Modeling (DIMNT), National Institute for Space Research (INPE), in São Paulo, Brazil
