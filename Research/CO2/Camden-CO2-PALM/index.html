@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camden CO₂ PALM comparison</title>
+  <style>
+    :root { color-scheme: light; font: 16px/1.6 system-ui, sans-serif; color: #203b35; background: #f6f7f2; }
+    body { margin: 0; }
+    main { max-width: 1220px; margin: auto; padding: clamp(18px, 4vw, 52px) clamp(16px, 4vw, 48px) 48px; }
+    h1, h2 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 5vw, 3.1rem); letter-spacing: -.035em; margin: 0 0 8px; }
+    h2 { font-size: 1.55rem; margin: 0 0 12px; }
+    p { margin: 0 0 12px; max-width: 85ch; }
+    section { margin-top: 32px; }
+    .case { color: #415a53; }
+    .note { background: #fbefd7; border-left: 4px solid #a67d39; padding: 12px 16px; margin: 18px 0 0; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 12px; }
+    label { font-weight: 650; }
+    select { font: inherit; color: inherit; background: white; border: 1px solid #758780; border-radius: 4px; padding: 7px 10px; }
+    a { color: #1b6257; text-underline-offset: .16em; }
+    :focus-visible { outline: 3px solid #235d91; outline-offset: 3px; }
+    figure { margin: 0; }
+    img { display: block; width: 100%; height: auto; box-sizing: border-box; background: white; border: 1px solid #d3dfd8; }
+    figcaption { margin: 8px 0 0; color: #415a53; max-width: 100ch; }
+    .table-wrap { overflow-x: auto; border: 1px solid #d3dfd8; }
+    table { width: 100%; min-width: 750px; border-collapse: collapse; background: white; font-variant-numeric: tabular-nums; }
+    th, td { padding: 9px 11px; border-bottom: 1px solid #dce4dc; text-align: right; }
+    thead th { background: #e9f0e9; vertical-align: bottom; }
+    th:first-child, .no-cells { text-align: left; }
+    tbody th { font-weight: 500; }
+    tbody tr:nth-child(even) { background: #f8faf8; }
+    tbody tr:last-child > * { border-bottom: 0; }
+    @media (max-width: 550px) {
+      section { margin-top: 26px; }
+      .controls a { flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <nav aria-label="Research navigation" style="margin-bottom: 18px"><a href="../../index.html">Research outcomes</a> <span aria-hidden="true">/</span> <a href="../index.html">CO₂</a></nav>
+    <h1>Camden CO₂ PALM comparison</h1>
+    <p class="case">16 June 2019, 19:30 UTC · PALM 30-minute averages · 10 m nested grid</p>
+    <p>PALM is an atmospheric model that uses large-eddy simulation to represent the larger turbulent motions in the air. In cities, it can simulate how buildings shape wind and how turbulent air transports gases such as CO₂. <a href="#palm-reference">Maronga et al. (2020)</a></p>
+    <p>Compare the baseline surrogate’s CO₂ concentrations with the PALM simulation at matching model heights. The maps and statistics cover valid atmospheric cells within Camden.</p>
+    <p class="note"><strong>How to read this comparison.</strong> Error is surrogate minus PALM. Positive values indicate overprediction. Heights above 95 m are exploratory. This reference case includes training patches, so the results describe agreement for this case. Independent validation requires a held-out case.</p>
+  </header>
+
+  <section aria-labelledby="compare">
+    <h2 id="compare">Compare one height</h2>
+    <div class="controls">
+      <label for="height">Model height</label>
+      <select id="height">
+        <option value="comparison-025m.png">25 m</option>
+        <option value="comparison-035m.png">35 m</option>
+        <option value="comparison-045m.png" selected>45 m</option>
+        <option value="comparison-055m.png">55 m</option>
+        <option value="comparison-065m.png">65 m</option>
+        <option value="comparison-075m.png">75 m</option>
+        <option value="comparison-085m.png">85 m</option>
+        <option value="comparison-095m.png">95 m</option>
+        <option value="comparison-105m.png">105 m · exploratory</option>
+        <option value="comparison-115m.png">115 m · exploratory</option>
+        <option value="comparison-125m.png">125 m · exploratory</option>
+        <option value="comparison-135m.png">135 m · exploratory</option>
+        <option value="comparison-145m.png">145 m · exploratory</option>
+        <option value="comparison-155m.png">155 m · exploratory</option>
+      </select>
+      <a id="full-map" href="comparison-045m.png">Open full-size map</a>
+    </div>
+    <figure>
+      <img id="maps" src="comparison-045m.png" width="3060" height="1062" alt="PALM concentration, surrogate concentration and surrogate minus PALM error at 45 m">
+      <figcaption>PALM and the surrogate use the same concentration scale within each height. The error scale is separate. Figures clip colours for readability, and metrics use the unclipped values.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="results">
+    <h2 id="results">Results by height</h2>
+    <p><a href="metrics-by-height.csv" download>Download metrics CSV</a></p>
+    <div class="table-wrap" role="region" aria-labelledby="results" tabindex="0">
+      <table>
+        <thead><tr>
+          <th scope="col">Model height</th><th scope="col">Cells</th>
+          <th scope="col">PALM mean (ppm)</th><th scope="col">Surrogate mean (ppm)</th>
+          <th scope="col">Bias (ppm)</th><th scope="col">MAE (ppm)</th><th scope="col">RMSE (ppm)</th>
+          <th scope="col">Pearson r</th>
+        </tr></thead>
+        <tbody>
+          <tr><th scope="row">5 m</th><td>0</td><td class="no-cells" colspan="6">No valid atmospheric cells inside Camden</td></tr>
+          <tr><th scope="row">15 m</th><td>0</td><td class="no-cells" colspan="6">No valid atmospheric cells inside Camden</td></tr>
+          <tr><th scope="row">25 m</th><td>323</td><td>422.514</td><td>423.007</td><td>0.493</td><td>1.032</td><td>1.432</td><td>0.966</td></tr>
+          <tr><th scope="row">35 m</th><td>15,765</td><td>422.021</td><td>421.960</td><td>-0.060</td><td>1.032</td><td>1.940</td><td>0.937</td></tr>
+          <tr><th scope="row">45 m</th><td>46,820</td><td>419.208</td><td>419.242</td><td>0.034</td><td>0.703</td><td>1.104</td><td>0.967</td></tr>
+          <tr><th scope="row">55 m</th><td>82,169</td><td>417.706</td><td>417.957</td><td>0.251</td><td>0.710</td><td>1.139</td><td>0.971</td></tr>
+          <tr><th scope="row">65 m</th><td>116,885</td><td>416.819</td><td>417.248</td><td>0.429</td><td>0.767</td><td>1.068</td><td>0.963</td></tr>
+          <tr><th scope="row">75 m</th><td>142,877</td><td>416.154</td><td>416.665</td><td>0.512</td><td>0.762</td><td>0.959</td><td>0.930</td></tr>
+          <tr><th scope="row">85 m</th><td>159,041</td><td>415.640</td><td>416.189</td><td>0.548</td><td>0.762</td><td>0.943</td><td>0.900</td></tr>
+          <tr><th scope="row">95 m</th><td>172,367</td><td>415.258</td><td>415.816</td><td>0.558</td><td>0.756</td><td>0.934</td><td>0.863</td></tr>
+          <tr><th scope="row">105 m · exploratory</th><td>184,977</td><td>414.958</td><td>415.507</td><td>0.548</td><td>0.759</td><td>0.979</td><td>0.815</td></tr>
+          <tr><th scope="row">115 m · exploratory</th><td>196,148</td><td>414.722</td><td>412.950</td><td>-1.772</td><td>1.860</td><td>2.160</td><td>0.632</td></tr>
+          <tr><th scope="row">125 m · exploratory</th><td>206,251</td><td>414.521</td><td>410.152</td><td>-4.369</td><td>4.467</td><td>4.870</td><td>0.331</td></tr>
+          <tr><th scope="row">135 m · exploratory</th><td>212,849</td><td>414.365</td><td>411.622</td><td>-2.744</td><td>3.124</td><td>3.566</td><td>0.259</td></tr>
+          <tr><th scope="row">145 m · exploratory</th><td>217,894</td><td>414.233</td><td>413.372</td><td>-0.861</td><td>1.899</td><td>2.269</td><td>0.186</td></tr>
+          <tr><th scope="row">155 m · exploratory</th><td>218,506</td><td>414.122</td><td>416.287</td><td>2.165</td><td>2.260</td><td>2.540</td><td>0.231</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="agreement">
+    <h2 id="agreement">How agreement changes with height</h2>
+    <figure>
+      <a href="comparison-all-heights.png">
+        <img src="comparison-all-heights.png" width="2700" height="1224" loading="lazy" alt="Open the full-size figure of error, bias and spatial correlation by model height">
+      </a>
+      <figcaption>Only 323 cells are available for comparison at 25 m. Agreement weakens from 115 m upward. Within the 5–95 m focus, the largest local absolute error was 83.52 ppm.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="methods">
+    <h2 id="methods">Comparison method</h2>
+    <p>The PALM and surrogate fields share a grid and time, so the comparison matches cells directly. Model heights are fixed vertical coordinates. The distance above local ground varies with terrain.</p>
+    <p>MAE is mean absolute error, RMSE is root mean square error, and Pearson r measures spatial correlation. The Camden boundary is from the Office for National Statistics, May 2024.</p>
+  </section>
+
+  <section aria-labelledby="reference">
+    <h2 id="reference">PALM reference</h2>
+    <p id="palm-reference">Maronga, B., et al. (2020). Overview of the PALM model system 6.0. <cite>Geoscientific Model Development</cite>, 13, 1335–1372. <a href="https://doi.org/10.5194/gmd-13-1335-2020">doi:10.5194/gmd-13-1335-2020</a></p>
+  </section>
+</main>
+<script>
+  const height = document.getElementById('height');
+  const maps = document.getElementById('maps');
+  const fullMap = document.getElementById('full-map');
+  function showHeight() {
+    const label = height.selectedOptions[0].text;
+    maps.src = height.value;
+    maps.alt = 'PALM concentration, surrogate concentration and surrogate minus PALM error at ' + label;
+    fullMap.href = height.value;
+  }
+  height.addEventListener('change', showHeight);
+  showHeight();
+</script>
+</body>
+</html>
