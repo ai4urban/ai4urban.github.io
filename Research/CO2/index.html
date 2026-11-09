@@ -5,16 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CO₂ research outcomes | AI4URBAN</title>
   <link rel="stylesheet" href="../research.css">
+  <style>
+    .sections { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 22px 0 28px; }
+    section + section { margin-top: 26px; }
+    section h2 { margin: 0 0 6px; }
+    section ul { margin-top: 12px; }
+  </style>
 </head>
 <body>
 <main>
   <nav aria-label="Research navigation"><a href="../index.html">Research outcomes</a></nav>
   <h1>CO₂ research outcomes</h1>
-  <ul>
-    <li><a href="Camden-CO2-PALM/index.html">Camden CO₂ PALM comparison</a>
-      <p>Compare the surrogate model with PALM by height and download the comparison metrics.</p>
-    </li>
-  </ul>
+  <p>Urban CO₂ modelling for Camden, London.</p>
+  <nav class="sections" aria-label="On this page">
+    <a href="#comparisons">Model comparisons</a>
+    <a href="#scenarios">Scenario results</a>
+    <a href="#predictions">Live predictions</a>
+  </nav>
+
+  <section aria-labelledby="comparisons">
+    <h2 id="comparisons">Model comparisons</h2>
+    <ul>
+      <li><a href="Camden-CO2-PALM/index.html">Camden CO₂ PALM comparison</a>
+        <p>Compare the surrogate model with PALM by height and download the comparison metrics.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="scenarios">
+    <h2 id="scenarios">Scenario results</h2>
+    <p>Maps and metrics from predefined emissions and weather scenarios will appear here as they are published.</p>
+  </section>
+
+  <section aria-labelledby="predictions">
+    <h2 id="predictions">Live predictions</h2>
+    <p><strong>Planned.</strong> The interactive app will let visitors choose emissions and weather inputs and run a new CO₂ prediction.</p>
+  </section>
 </main>
 </body>
 </html>
