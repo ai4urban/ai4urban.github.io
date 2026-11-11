@@ -1,0 +1,166 @@
+<!doctype html>
+<html data-public-app lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camden CO₂ Lab · Browser pilot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">C₂</span> Camden <strong>CO₂ Lab</strong></a>
+    <span class="header-note"><i></i> Private browser pilot</span>
+    <a class="paper-link" href="https://github.com/PetterDong-ch/3D-high-resolution-surrogate-Modelling-for-urban-CO2-prediction" target="_blank" rel="noreferrer">Research &amp; source ↗</a>
+  </header>
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">URBAN CARBON · CAMDEN, LONDON</p>
+        <h1>Explore CO₂ across Camden.</h1>
+        <p class="lede">Choose an area and scenario, then compare the predicted CO₂ with the baseline.</p>
+      </div>
+      <div class="domain-note"><strong>8 × 8 km</strong><span>surrounding model domain</span><small>10 m grid · 16 height levels</small></div>
+    </section>
+    <div class="workspace">
+      <aside class="controls">
+        <div class="panel-heading"><span class="step-number">01</span><h2>Set a scenario</h2><button id="reset" type="button" class="text-button">Reset</button></div>
+        <div class="case">
+          <span class="eyebrow">REFERENCE CASE</span>
+          <strong>16 June 2019 · 19:30 UTC</strong>
+          <span>One prediction step</span>
+        </div>
+        <form>
+          <aside id="compute-note" class="compute-note">
+            <strong>GPU acceleration recommended</strong>
+            <p>Use a GPU-accelerated version of the app on a computer with a supported GPU for faster predictions, especially for the whole domain or custom weather. This browser preview runs on the CPU, where those predictions can take several minutes.</p>
+          </aside>
+          <div class="control">
+            <label for="scope">Prediction area</label>
+            <select id="scope" aria-describedby="compute-note"><option value="tile">Selected tile</option><option value="domain">Whole domain</option></select>
+            <div id="tile-picker">
+              <label for="tile">Camden tile</label>
+              <select id="tile" disabled></select>
+              <svg id="tile-map" aria-label="Camden boundary and available prediction tiles" viewBox="0 0 800 800">
+                <path id="camden-boundary" fill-rule="evenodd"></path>
+              </svg>
+            </div>
+            <p id="area-note"></p>
+          </div>
+          <div class="control">
+            <label for="preset">Scenario preset</label>
+            <select id="preset">
+              <option value="reference">Reference case</option>
+              <option value="lower" selected>Lower emissions</option>
+              <option value="wind" disabled>Turn the wind</option>
+              <option value="boundary" disabled>Raise boundary CO₂</option>
+              <option value="custom" disabled>Custom settings</option>
+            </select>
+          </div>
+          <div class="control">
+            <div class="control-title"><label for="emissions">CO₂ emissions</label><span class="value-entry"><input id="emissions-value" type="number" min="50" max="150" step="any" value="80" required aria-label="Enter CO₂ emissions in percent"><span>%</span></span></div>
+            <p>Scale emissions relative to the reference case.</p>
+            <input id="emissions" type="range" min="50" max="150" step="1" value="80">
+            <div class="range-ends"><span>50%</span><span>150%</span></div>
+          </div>
+          <div class="control">
+            <div class="control-title"><label for="wind-speed">Wind speed factor</label><span class="value-entry"><input id="wind-speed-value" type="number" min="80" max="100" step="any" value="100" required disabled aria-label="Enter wind speed factor in percent"><span>%</span></span></div>
+            <p>Scale the reference wind speed. Negative values reverse the reference forcing.</p>
+            <input id="wind-speed" type="range" min="80" max="100" step="20" value="100" disabled>
+            <div class="range-ends"><span id="wind-speed-min">80%</span><span id="wind-speed-max">100%</span></div>
+          </div>
+          <div class="control">
+            <div class="control-title"><label for="rotation">Wind direction</label><span class="value-entry"><input id="rotation-value" type="number" min="0" max="15" step="any" value="0" required disabled aria-label="Enter wind direction adjustment in degrees"><span>°</span></span></div>
+            <p>Rotate from the reference direction. Positive angles turn clockwise.</p>
+            <input id="rotation" type="range" min="0" max="15" step="15" value="0" disabled>
+            <div class="range-ends"><span id="rotation-min">0°</span><span id="rotation-max">15°</span></div>
+          </div>
+          <div class="control">
+            <div class="control-title"><label for="background">Boundary CO₂ forcing</label><span class="value-entry"><input id="background-value" type="number" min="-2" max="2" step="any" value="0" required disabled aria-label="Enter boundary CO₂ forcing in ppm"><span>ppm</span></span></div>
+            <p>Shift the reference boundary CO₂ profile.</p>
+            <input id="background" type="range" min="-2" max="2" step="2" value="0" disabled>
+            <div class="range-ends"><span id="background-min">−2 ppm</span><span id="background-max">+2 ppm</span></div>
+            <p id="weather-note">Loading saved weather options…</p>
+          </div>
+          <button id="run" class="primary" disabled><span id="run-label">Run prediction</span><span aria-hidden="true">↗</span></button>
+          <p id="pending" class="pending">Choose a scenario and run it to see the maps.</p>
+        </form>
+      </aside>
+      <section class="results" aria-labelledby="result-title">
+        <div class="result-heading">
+          <div><p class="eyebrow">02 · EXPLORE THE RESULTS</p><h2 id="result-title">Tile prediction</h2></div>
+          <div class="height-picker"><label for="height">Model height</label><select id="height" disabled><option value="4">45 m</option></select></div>
+        </div>
+        <p class="compute-location">Calculations run in this browser.</p>
+        <p id="height-caution" class="height-caution" hidden>Heights above 95 m are exploratory.</p>
+        <div id="status" class="status ready" role="status"><span class="spinner" aria-hidden="true"></span><span id="status-text">Loading the reference case…</span></div>
+        <p id="applied-scenario" class="compute-location" hidden></p>
+        <div class="metric-row">
+          <div class="metric"><span>Baseline mean</span><strong id="baseline-mean">—</strong><small>CO₂ concentration · ppm</small></div>
+          <div class="metric"><span>Scenario mean</span><strong id="scenario-mean">—</strong><small>CO₂ concentration · ppm</small></div>
+          <div class="metric accent"><span>Mean change</span><strong id="change-mean">—</strong><small>scenario minus baseline · ppm</small></div>
+          <div class="metric"><span>Prediction time</span><strong id="runtime">—</strong><small>for the completed calculation</small></div>
+        </div>
+        <section class="change-guide" aria-labelledby="change-guide-title">
+          <div>
+            <h3 id="change-guide-title">See the change from baseline</h3>
+            <p>Blue means lower CO₂ and red means higher CO₂.</p>
+            <p id="change-range">Run a scenario to compare local changes.</p>
+          </div>
+          <div class="change-tools">
+            <label for="change-contrast">Change map contrast</label>
+            <select id="change-contrast" disabled><option value="1">Automatic</option><option value="2">Stronger · 2×</option><option value="5">Stronger · 5×</option></select>
+            <button id="enlarge-change" class="secondary" type="button" aria-pressed="false" disabled>Enlarge change map</button>
+          </div>
+        </section>
+        <div class="maps" id="maps">
+          <article class="map-card">
+            <div class="map-heading"><h3>Baseline</h3><span class="map-tag">Original inputs</span></div>
+            <div class="map-wrap"><canvas id="baseline-map" role="img" aria-label="Baseline CO₂ concentration"></canvas><span class="north">N ↑</span><div class="map-placeholder">Baseline map will appear here</div></div>
+            <div class="legend"><div class="gradient concentration"></div><div class="legend-ends"><span class="co2-low">—</span><span>CO₂ · ppm</span><span class="co2-high">—</span></div></div>
+          </article>
+          <article class="map-card">
+            <div class="map-heading"><h3>Your scenario</h3><span id="scenario-tag" class="map-tag">Selected emissions</span></div>
+            <div class="map-wrap"><canvas id="scenario-map" role="img" aria-label="Scenario CO₂ concentration"></canvas><span class="north">N ↑</span><div class="map-placeholder">Run a scenario to compare</div></div>
+            <div class="legend"><div class="gradient concentration"></div><div class="legend-ends"><span class="co2-low">—</span><span>CO₂ · ppm</span><span class="co2-high">—</span></div></div>
+          </article>
+          <article class="map-card change-card">
+            <div class="map-heading"><h3>Change</h3><span class="map-tag">Scenario − baseline</span></div>
+            <div class="map-wrap"><canvas id="difference-map" role="img" aria-label="Change in CO₂ concentration"></canvas><span class="north">N ↑</span><div class="map-placeholder">Blue means decrease · red means increase</div></div>
+            <div class="legend"><div class="gradient difference"></div><div class="legend-ends"><span id="diff-low">—</span><span>Change · ppm</span><span id="diff-high">—</span></div></div>
+          </article>
+        </div>
+        <div class="map-caption"><span><i class="mask-key"></i> Grey marks excluded cells.</span><span>Shared concentration scale · colours clipped to the 2nd–98th percentiles</span></div>
+        <section class="comparison-panel" aria-labelledby="error-title">
+          <h3 id="error-title">Comparison with PALM</h3><p><a href="../../Camden-CO2-PALM/">View the published error maps and statistics by height</a>.</p>
+          <p id="error-note">The public comparison report covers the original reference case.</p>
+          <p>For PALM data, contact Fangxin Fang at <a href="mailto:f.fang@imperial.ac.uk">f.fang@imperial.ac.uk</a>.</p>
+          <dl class="error-values" id="error-values" hidden>
+            <div><dt>Baseline mean absolute error</dt><dd id="palm-mae">—</dd></div>
+            <div><dt>Baseline root mean square error</dt><dd id="palm-rmse">—</dd></div>
+          </dl>
+        </section>
+        <div class="exploration">
+          <section class="comparison-panel" aria-labelledby="profile-title">
+            <h3 id="profile-title">Vertical profile at a location</h3>
+            <p id="profile-location">Click or tap a coloured cell on any map.</p>
+            <div class="profile-charts" id="profile-charts" hidden>
+              <figure><figcaption>CO₂ concentration</figcaption><svg id="concentration-profile" viewBox="0 0 330 236" role="img" aria-label="Baseline and scenario concentration by height"></svg><p class="profile-legend"><span class="baseline-key">Baseline</span><span class="scenario-key">Scenario</span></p></figure>
+              <figure><figcaption>Change with height</figcaption><svg id="difference-profile" viewBox="0 0 330 236" role="img" aria-label="Scenario minus baseline by height"></svg><p class="profile-legend"><span class="difference-key">Scenario − baseline</span></p></figure>
+            </div>
+          </section>
+          <div class="readout"><span class="eyebrow">MAP INSPECTION</span><strong id="point-value">Move over or tap a map</strong><p id="point-detail">Read the concentration and change at a 10 m grid cell.</p></div>
+        </div>
+        <details class="method">
+          <summary>About this demonstration</summary>
+          <p>The browser applies the Camden CO₂ surrogate using prepared meteorology for saved settings or computes new meteorology for custom settings. The PALM simulation supplies a reference for the original inputs. Tiles overlap and can predict different values at the same location. Choose Whole domain for a single calculation over the full grid. The maps show atmospheric cells inside Camden.</p>
+          <p>Boundary data comes from the ONS Local Authority Districts, May 2024 (20 m generalised). Contains OS and ONS data.</p>
+        </details>
+      </section>
+    </div>
+    <footer>Urban atmospheric CO₂ surrogate <span>Concentrations in ppm · exploratory scenarios</span></footer>
+  </main>
+  <script src="runtime/ort.wasm.min.js"></script>
+  <script src="weather.js"></script>
+  <script type="module" src="public-start.js"></script>
+</body>
+</html>

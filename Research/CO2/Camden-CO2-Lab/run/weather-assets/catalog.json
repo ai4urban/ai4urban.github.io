@@ -1,0 +1,29 @@
+{
+  "wind": [
+    {
+      "id": "reference",
+      "label": "Reference wind",
+      "speed": 1.0,
+      "rotation": 0.0
+    }
+  ],
+  "boundary": [
+    0
+  ],
+  "channels": {
+    "local": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "context": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ]
+  }
+}

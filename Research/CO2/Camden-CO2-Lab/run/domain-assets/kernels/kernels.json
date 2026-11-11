@@ -1,0 +1,345 @@
+{
+  "trunk": [
+    {
+      "op": "Conv",
+      "source": "local",
+      "output": "/enc1/block/block.0/Conv_output_0",
+      "channels": 32,
+      "file": "kernel-00.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/enc1/block/block.0/Conv_output_0",
+      "output": "/enc1/block/block.1/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/enc1/block/block.1/InstanceNormalization_output_0",
+      "output": "/enc1/block/block.2/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "Conv",
+      "source": "/enc1/block/block.2/LeakyRelu_output_0",
+      "output": "/enc1/block/block.3/Conv_output_0",
+      "channels": 32,
+      "file": "kernel-03.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/enc1/block/block.3/Conv_output_0",
+      "output": "/enc1/block/block.4/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/enc1/block/block.4/InstanceNormalization_output_0",
+      "output": "/enc1/block/block.5/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "MaxPool",
+      "source": "/enc1/block/block.5/LeakyRelu_output_0",
+      "output": "/enc2/pool/MaxPool_output_0",
+      "channels": 32,
+      "file": "kernel-06.onnx"
+    },
+    {
+      "op": "Conv",
+      "source": "/enc2/pool/MaxPool_output_0",
+      "output": "/enc2/conv/block/block.0/Conv_output_0",
+      "channels": 64,
+      "file": "kernel-07.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/enc2/conv/block/block.0/Conv_output_0",
+      "output": "/enc2/conv/block/block.1/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/enc2/conv/block/block.1/InstanceNormalization_output_0",
+      "output": "/enc2/conv/block/block.2/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "Conv",
+      "source": "/enc2/conv/block/block.2/LeakyRelu_output_0",
+      "output": "/enc2/conv/block/block.3/Conv_output_0",
+      "channels": 64,
+      "file": "kernel-10.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/enc2/conv/block/block.3/Conv_output_0",
+      "output": "/enc2/conv/block/block.4/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/enc2/conv/block/block.4/InstanceNormalization_output_0",
+      "output": "/enc2/conv/block/block.5/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "MaxPool",
+      "source": "/enc2/conv/block/block.5/LeakyRelu_output_0",
+      "output": "/enc3/pool/MaxPool_output_0",
+      "channels": 64,
+      "file": "kernel-13.onnx"
+    },
+    {
+      "op": "Conv",
+      "source": "/enc3/pool/MaxPool_output_0",
+      "output": "/enc3/conv/block/block.0/Conv_output_0",
+      "channels": 128,
+      "file": "kernel-14.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/enc3/conv/block/block.0/Conv_output_0",
+      "output": "/enc3/conv/block/block.1/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/enc3/conv/block/block.1/InstanceNormalization_output_0",
+      "output": "/enc3/conv/block/block.2/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "Conv",
+      "source": "/enc3/conv/block/block.2/LeakyRelu_output_0",
+      "output": "/enc3/conv/block/block.3/Conv_output_0",
+      "channels": 128,
+      "file": "kernel-17.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/enc3/conv/block/block.3/Conv_output_0",
+      "output": "/enc3/conv/block/block.4/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/enc3/conv/block/block.4/InstanceNormalization_output_0",
+      "output": "/enc3/conv/block/block.5/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "MaxPool",
+      "source": "/enc3/conv/block/block.5/LeakyRelu_output_0",
+      "output": "/bottleneck/pool/MaxPool_output_0",
+      "channels": 128,
+      "file": "kernel-20.onnx"
+    },
+    {
+      "op": "Conv",
+      "source": "/bottleneck/pool/MaxPool_output_0",
+      "output": "/bottleneck/conv/block/block.0/Conv_output_0",
+      "channels": 256,
+      "file": "kernel-21.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/bottleneck/conv/block/block.0/Conv_output_0",
+      "output": "/bottleneck/conv/block/block.1/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/bottleneck/conv/block/block.1/InstanceNormalization_output_0",
+      "output": "/bottleneck/conv/block/block.2/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "Conv",
+      "source": "/bottleneck/conv/block/block.2/LeakyRelu_output_0",
+      "output": "/bottleneck/conv/block/block.3/Conv_output_0",
+      "channels": 256,
+      "file": "kernel-24.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/bottleneck/conv/block/block.3/Conv_output_0",
+      "output": "/bottleneck/conv/block/block.4/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/bottleneck/conv/block/block.4/InstanceNormalization_output_0",
+      "output": "/bottleneck/conv/block/block.5/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "ConvTranspose",
+      "source": "/bottleneck/conv/block/block.5/LeakyRelu_output_0",
+      "output": "/dec3/up/ConvTranspose_output_0",
+      "channels": 128,
+      "file": "kernel-27.onnx"
+    },
+    {
+      "op": "Concat",
+      "source": [
+        "/dec3/up/ConvTranspose_output_0",
+        "/enc3/conv/block/block.5/LeakyRelu_output_0"
+      ],
+      "output": "/dec3/Concat_output_0"
+    },
+    {
+      "op": "Conv",
+      "source": "/dec3/Concat_output_0",
+      "output": "/dec3/conv/block/block.0/Conv_output_0",
+      "channels": 128,
+      "file": "kernel-29.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/dec3/conv/block/block.0/Conv_output_0",
+      "output": "/dec3/conv/block/block.1/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/dec3/conv/block/block.1/InstanceNormalization_output_0",
+      "output": "/dec3/conv/block/block.2/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "Conv",
+      "source": "/dec3/conv/block/block.2/LeakyRelu_output_0",
+      "output": "/dec3/conv/block/block.3/Conv_output_0",
+      "channels": 128,
+      "file": "kernel-32.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/dec3/conv/block/block.3/Conv_output_0",
+      "output": "/dec3/conv/block/block.4/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/dec3/conv/block/block.4/InstanceNormalization_output_0",
+      "output": "/dec3/conv/block/block.5/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "ConvTranspose",
+      "source": "/dec3/conv/block/block.5/LeakyRelu_output_0",
+      "output": "/dec2/up/ConvTranspose_output_0",
+      "channels": 64,
+      "file": "kernel-35.onnx"
+    },
+    {
+      "op": "Concat",
+      "source": [
+        "/dec2/up/ConvTranspose_output_0",
+        "/enc2/conv/block/block.5/LeakyRelu_output_0"
+      ],
+      "output": "/dec2/Concat_output_0"
+    },
+    {
+      "op": "Conv",
+      "source": "/dec2/Concat_output_0",
+      "output": "/dec2/conv/block/block.0/Conv_output_0",
+      "channels": 64,
+      "file": "kernel-37.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/dec2/conv/block/block.0/Conv_output_0",
+      "output": "/dec2/conv/block/block.1/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/dec2/conv/block/block.1/InstanceNormalization_output_0",
+      "output": "/dec2/conv/block/block.2/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "Conv",
+      "source": "/dec2/conv/block/block.2/LeakyRelu_output_0",
+      "output": "/dec2/conv/block/block.3/Conv_output_0",
+      "channels": 64,
+      "file": "kernel-40.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/dec2/conv/block/block.3/Conv_output_0",
+      "output": "/dec2/conv/block/block.4/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/dec2/conv/block/block.4/InstanceNormalization_output_0",
+      "output": "/dec2/conv/block/block.5/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "ConvTranspose",
+      "source": "/dec2/conv/block/block.5/LeakyRelu_output_0",
+      "output": "/dec1/up/ConvTranspose_output_0",
+      "channels": 32,
+      "file": "kernel-43.onnx"
+    },
+    {
+      "op": "Concat",
+      "source": [
+        "/dec1/up/ConvTranspose_output_0",
+        "/enc1/block/block.5/LeakyRelu_output_0"
+      ],
+      "output": "/dec1/Concat_output_0"
+    },
+    {
+      "op": "Conv",
+      "source": "/dec1/Concat_output_0",
+      "output": "/dec1/conv/block/block.0/Conv_output_0",
+      "channels": 32,
+      "file": "kernel-45.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/dec1/conv/block/block.0/Conv_output_0",
+      "output": "/dec1/conv/block/block.1/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/dec1/conv/block/block.1/InstanceNormalization_output_0",
+      "output": "/dec1/conv/block/block.2/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    },
+    {
+      "op": "Conv",
+      "source": "/dec1/conv/block/block.2/LeakyRelu_output_0",
+      "output": "/dec1/conv/block/block.3/Conv_output_0",
+      "channels": 32,
+      "file": "kernel-48.onnx"
+    },
+    {
+      "op": "InstanceNormalization",
+      "source": "/dec1/conv/block/block.3/Conv_output_0",
+      "output": "/dec1/conv/block/block.4/InstanceNormalization_output_0",
+      "epsilon": 9.999999747378752e-06
+    },
+    {
+      "op": "LeakyRelu",
+      "source": "/dec1/conv/block/block.4/InstanceNormalization_output_0",
+      "output": "/dec1/conv/block/block.5/LeakyRelu_output_0",
+      "alpha": 0.10000000149011612
+    }
+  ],
+  "encoder": {
+    "file": "context-encoder.onnx",
+    "output": "/global_encoder/net/net.2/act_1/Mul_output_0"
+  },
+  "heads": {
+    "file": "heads.onnx",
+    "decoder": "/dec1/conv/block/block.5/LeakyRelu_output_0",
+    "halo": 9
+  }
+}

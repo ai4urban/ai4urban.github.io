@@ -1,0 +1,67 @@
+{
+  "emissions": {
+    "local": {
+      "channel": 0,
+      "mean": 0.0029873487073928118,
+      "std": 0.021998506039381027
+    },
+    "context": {
+      "channel": 0,
+      "mean": 0.0039359224028885365,
+      "std": 0.009180348366498947
+    }
+  },
+  "full_vertical_levels": 102,
+  "arrays": {
+    "local": {
+      "file": "local.bin.gz",
+      "shape": [
+        1,
+        18,
+        16,
+        800,
+        800
+      ],
+      "bytes": 737280000,
+      "download_bytes": 226949973,
+      "parts": [
+        "local.bin.gz.00.part",
+        "local.bin.gz.01.part",
+        "local.bin.gz.02.part",
+        "local.bin.gz.03.part"
+      ]
+    },
+    "context": {
+      "file": "context.bin.gz",
+      "shape": [
+        1,
+        9,
+        16,
+        80,
+        80
+      ],
+      "bytes": 3686400,
+      "download_bytes": 1652719
+    },
+    "previous": {
+      "file": "previous.bin.gz",
+      "shape": [
+        16,
+        800,
+        800
+      ],
+      "bytes": 40960000,
+      "download_bytes": 19574320
+    },
+    "mask": {
+      "file": "mask.bin.gz",
+      "shape": [
+        16,
+        800,
+        800
+      ],
+      "bytes": 10240000,
+      "download_bytes": 193874
+    }
+  }
+}
