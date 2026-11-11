@@ -1,5 +1,5 @@
 /* Whole-domain inference with full-field normalization and bounded WASM kernels. */
-importScripts('runtime/ort.wasm.min.js', 'weather.js', 'weather-model.js');
+importScripts('runtime/ort.wasm.min.js', 'weather.js', 'weather-model.js', 'grid-inputs.js');
 ort.env.wasm.wasmPaths = new URL('runtime/', location.href).href;
 ort.env.wasm.numThreads = crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
 
@@ -171,11 +171,8 @@ async function runTrunk(plan, local, emissions) {
   return values.get(plan.heads.decoder);
 }
 
-function coordinate(index, length) {
-  return Math.fround(2 * Math.fround(index / (length - 1)) - 1);
-}
-
 function grid(p, local, fullLevels) {
+  const {coordinate} = gridInputs;
   const data = new Float32Array(local.d * p.h * p.w * 3);
   let i = 0;
   for (let z = 0; z < local.d; z++) {
@@ -229,9 +226,10 @@ async function loadCase() {
   self.postMessage({status: 'Loading the whole-domain inputs…'});
   const [meta, plan] = await Promise.all(
     ['domain.json', 'kernels/kernels.json'].map(async file => (await fetchAsset(file)).json()));
-  const [local, context, previous, mask] = await Promise.all(
-    ['local', 'context', 'previous', 'mask'].map(name =>
-      readArray(meta.arrays[name], name === 'mask' ? Uint8Array : Float32Array)));
+  const names = ['local', 'context', 'previous', 'mask'];
+  const {local, context, previous, mask} = meta.chunks ? (await gridInputs.load(meta)).arrays :
+    Object.fromEntries(await Promise.all(names.map(async name =>
+      [name, await readArray(meta.arrays[name], name === 'mask' ? Uint8Array : Float32Array)])));
   const state = {meta, plan, previous, mask, emissions: {}};
   for (const [name, data] of Object.entries({local, context})) {
     state[name] = field(data, ...meta.arrays[name].shape.slice(1));

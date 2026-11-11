@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Camden CO₂ Lab · Browser pilot</title>
+  <title>Camden CO₂ Lab · Run a prediction</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="masthead">
     <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">C₂</span> Camden <strong>CO₂ Lab</strong></a>
-    <span class="header-note"><i></i> Private browser pilot</span>
+    <span class="header-note"><i></i> Browser prediction</span>
     <a class="paper-link" href="https://github.com/PetterDong-ch/3D-high-resolution-surrogate-Modelling-for-urban-CO2-prediction" target="_blank" rel="noreferrer">Research &amp; source ↗</a>
   </header>
   <main>
@@ -17,7 +17,7 @@
       <div>
         <p class="eyebrow">URBAN CARBON · CAMDEN, LONDON</p>
         <h1>Explore CO₂ across Camden.</h1>
-        <p class="lede">Choose an area and scenario, then compare the predicted CO₂ with the baseline.</p>
+        <p class="lede">Each run maps predicted 30-minute average CO₂ concentrations. Change inputs such as emissions, wind speed, wind direction or boundary CO₂, then compare the scenario with the baseline.</p>
       </div>
       <div class="domain-note"><strong>8 × 8 km</strong><span>surrounding model domain</span><small>10 m grid · 16 height levels</small></div>
     </section>
@@ -27,12 +27,12 @@
         <div class="case">
           <span class="eyebrow">REFERENCE CASE</span>
           <strong>16 June 2019 · 19:30 UTC</strong>
-          <span>One prediction step</span>
+          <span>One 30-minute prediction step</span>
         </div>
         <form>
           <aside id="compute-note" class="compute-note">
             <strong>GPU acceleration recommended</strong>
-            <p>Use a GPU-accelerated version of the app on a computer with a supported GPU for faster predictions, especially for the whole domain or custom weather. This browser preview runs on the CPU, where those predictions can take several minutes.</p>
+            <p>Use a GPU-accelerated version of the app on a computer with a supported GPU for faster predictions, especially for the whole domain or custom weather. This app runs on the CPU, where those predictions can take several minutes.</p>
           </aside>
           <div class="control">
             <label for="scope">Prediction area</label>

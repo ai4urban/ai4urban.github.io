@@ -1,3 +1,5 @@
+import './grid-inputs.js';
+
 ort.env.wasm.wasmPaths = new URL('runtime/', location.href).href;
 ort.env.wasm.numThreads = crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
 
@@ -8,6 +10,7 @@ export async function fetchAsset(path) {
 }
 
 let sessionPromise;
+let domainManifest;
 
 async function loadModel() {
   const response = await fetchAsset('assets/stage2.onnx');
@@ -17,6 +20,15 @@ async function loadModel() {
 async function prepare(tile) {
   const start = performance.now();
   sessionPromise ??= loadModel().catch(error => { sessionPromise = undefined; throw error; });
+  if (document.documentElement.hasAttribute('data-public-app')) {
+    domainManifest ??= fetchAsset('domain-assets/domain.json').then(response => response.json())
+      .catch(error => { domainManifest = undefined; throw error; });
+    const [inputs, session] = await Promise.all([
+      domainManifest.then(meta => gridInputs.load(meta, {x: tile.x, y: tile.y, w: tile.size, h: tile.size})),
+      sessionPromise,
+    ]);
+    return {...inputs, session, loadSeconds: (performance.now() - start) / 1000};
+  }
   const [manifestResponse, caseResponse, session] = await Promise.all([
     fetchAsset(`assets/${tile.id}.json`), fetchAsset(`assets/${tile.id}.bin.gz`), sessionPromise,
   ]);

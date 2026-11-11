@@ -49,10 +49,14 @@ h1 { font: 54px/1.1 var(--serif); letter-spacing: -1.5px; margin: 0 0 12px; }
 #tile-picker { margin-top: 13px; }
 #tile-map { display: block; width: 100%; max-width: 180px; margin: 9px auto 0; border: 1px solid var(--line); border-radius: 5px; background: #edf1e9; }
 #camden-boundary { fill: #fff; stroke: #83958a; stroke-width: 4; }
-#tile-map rect { fill: #649c8b; fill-opacity: .26; stroke: #396b5e; stroke-width: 5; cursor: pointer; }
-#tile-map rect[aria-pressed="true"] { fill-opacity: .60; stroke: #244f43; stroke-width: 8; }
-#tile-map rect:focus-visible { outline: none; stroke: #c96742; stroke-width: 9; }
-#tile-map text { pointer-events: none; fill: var(--green); font-size: 62px; font-weight: 700; }
+#tile-map .tile-footprint { fill: #649c8b; fill-opacity: .28; stroke: #396b5e; stroke-width: 5; pointer-events: none; }
+#tile-map [role="button"] { cursor: pointer; }
+#tile-map circle { fill: #fff; stroke: #396b5e; stroke-width: 5; }
+#tile-map [aria-pressed="true"] circle { fill: #244f43; }
+#tile-map [role="button"]:focus-visible { outline: none; }
+#tile-map [role="button"]:focus-visible circle { stroke: #c96742; stroke-width: 9; }
+#tile-map text { pointer-events: none; fill: var(--green); font-size: 42px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+#tile-map [aria-pressed="true"] text { fill: #fff; }
 .control-title, .range-ends { display: flex; justify-content: space-between; gap: 8px; }
 .control-title { align-items: center; }
 .value-entry { display: flex; align-items: center; gap: 4px; flex-shrink: 0; color: var(--green); font-size: 16px; }

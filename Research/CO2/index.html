@@ -10,6 +10,9 @@
     section + section { margin-top: 26px; }
     section h2 { margin: 0 0 6px; }
     section ul { margin-top: 12px; }
+    figure { margin: 24px 0; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid #d3dfd8; border-radius: 6px; }
+    figcaption { margin-top: 8px; color: #415a53; }
   </style>
 </head>
 <body>
@@ -38,12 +41,18 @@
   </section>
 
   <section aria-labelledby="predictions">
-    <h2 id="predictions">Camden CO₂ app</h2>
-    <ul>
-      <li><a href="Camden-CO2-Lab/">View Camden CO₂ Lab</a>
-        <p>Run a tile or whole-domain prediction in your browser, or view a saved Camden scenario.</p>
-      </li>
-    </ul>
+    <h2 id="predictions">Camden CO₂ Lab</h2>
+    <p>Explore how emissions, wind speed, wind direction and boundary CO₂ affect predicted concentrations across Camden.</p>
+    <p>Each run maps 30-minute average CO₂ concentrations on a 10 m grid at 16 heights. Choose one of ten tiles or the whole 8 × 8 km model domain. For example, set emissions to 80% of the reference value and see where concentrations change compared with the baseline.</p>
+    <p><a href="Camden-CO2-Lab/run/"><strong>Run a prediction</strong></a></p>
+    <p>The model runs in your browser. Start with a tile for a faster result. Whole-domain predictions and runs with custom weather can take several minutes.</p>
+    <h3>Example prediction</h3>
+    <p>This example uses 80% of reference emissions and reference weather. The maps show concentrations at 45 m, and the profiles show how concentrations vary with height at the selected location.</p>
+    <figure>
+      <a href="Camden-CO2-Lab/camden-co2-lab.png"><img src="Camden-CO2-Lab/camden-co2-lab.png" alt="Camden CO₂ Lab showing scenario controls, baseline and scenario maps, a map of the change, and vertical profiles."></a>
+      <figcaption>Select the saved example to view it at full size.</figcaption>
+    </figure>
+    <p>See the <a href="https://github.com/PetterDong-ch/3D-high-resolution-surrogate-Modelling-for-urban-CO2-prediction">surrogate model source code</a>. For PALM data, contact <a href="mailto:f.fang@imperial.ac.uk">Fangxin Fang</a>.</p>
   </section>
 </main>
 </body>

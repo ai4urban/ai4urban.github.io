@@ -15,6 +15,7 @@ const publicApp = document.documentElement.hasAttribute('data-public-app');
 const query = new URLSearchParams(location.search);
 const verify = !publicApp && query.get('verify') === '1';
 const tileRects = new Map();
+let footprint;
 let catalog, weatherCatalog, liveWeather, truthCache, worker, busy = false;
 const presets = {
   reference: [100, 100, 0, 0],
@@ -60,6 +61,12 @@ function updateArea() {
     '256 × 256 cells. Select a tile on the map or from the list.';
   $('pending').textContent = 'Choose a scenario and run a prediction.';
   for (const [id, rectangle] of tileRects) rectangle.setAttribute('aria-pressed', String(id === tileSelect.value));
+  const tile = selectedTile();
+  if (tile && footprint) {
+    for (const [key, value] of Object.entries({
+      x: tile.x, y: catalog.domainSize - tile.y - tile.size, width: tile.size, height: tile.size,
+    })) footprint.setAttribute(key, value);
+  }
   status(isDomain() || catalog ? 'Ready to run' : 'Loading the tile map…');
   setBusy(false);
 }
@@ -76,11 +83,14 @@ async function loadCatalog() {
   $('camden-boundary').setAttribute('d', catalog.boundary.map(ring => {
     return 'M' + ring.map(([x, y]) => `${x.toFixed(2)},${(extent - y).toFixed(2)}`).join(' L') + ' Z';
   }).join(' '));
-  catalog.tiles.forEach((tile, index) => {
+  footprint = document.createElementNS(map.namespaceURI, 'rect');
+  footprint.setAttribute('class', 'tile-footprint');
+  map.append(footprint);
+  catalog.tiles.forEach(tile => {
     tileSelect.add(new Option(tile.label, tile.id));
-    const rectangle = document.createElementNS(map.namespaceURI, 'rect');
-    const attributes = {x: tile.x, y: extent - tile.y - tile.size, width: tile.size,
-      height: tile.size, role: 'button', tabindex: 0, 'aria-label': tile.label};
+    const rectangle = document.createElementNS(map.namespaceURI, 'g');
+    const attributes = {transform: `translate(${tile.x + tile.size / 2} ${extent - tile.y - tile.size / 2})`,
+      role: 'button', tabindex: 0, 'aria-label': tile.label};
     for (const [key, value] of Object.entries(attributes)) rectangle.setAttribute(key, value);
     const select = () => {
       if (tileSelect.disabled || tileSelect.value === tile.id) return;
@@ -96,11 +106,11 @@ async function loadCatalog() {
     });
     map.append(rectangle);
     tileRects.set(tile.id, rectangle);
+    const marker = document.createElementNS(map.namespaceURI, 'circle');
+    marker.setAttribute('r', '30');
     const label = document.createElementNS(map.namespaceURI, 'text');
-    label.setAttribute('x', tile.x + tile.size * (index === 0 ? 0.22 : 0.73));
-    label.setAttribute('y', extent - tile.y - tile.size * 0.42);
-    label.textContent = index === 0 ? 'A' : 'B';
-    map.append(label);
+    label.textContent = tile.id.slice(5).toUpperCase();
+    rectangle.append(marker, label);
   });
   if (!busy) updateArea();
 }
