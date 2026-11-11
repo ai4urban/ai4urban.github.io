@@ -10,3 +10,24 @@ ul { list-style: none; padding: 0; margin: 24px 0 0; }
 li { padding: 15px 0; border-top: 1px solid #d3dfd8; }
 li a { font-size: 1.15rem; font-weight: 650; }
 li p { margin: 3px 0 0; }
+
+.research-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.research-cards li { display: flex; padding: 0; border: 0; }
+.research-cards a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d3dfd8;
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none;
+}
+.research-cards a:hover { border-color: #1b6257; }
+.research-cards a:hover span { text-decoration: underline; }
+.research-cards img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.research-card-text { padding: 14px 16px 16px; }
+.research-card-text span { font-size: 1.4rem; }
+.research-card-text p { color: #203b35; font-size: 1rem; font-weight: 400; }
+@media (max-width: 560px) {
+  .research-cards { grid-template-columns: 1fr; }
+}
