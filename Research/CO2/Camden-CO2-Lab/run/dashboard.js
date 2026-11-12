@@ -128,7 +128,7 @@ function runInBlocks(scenario, provider, tile) {
   return new Promise((resolve, reject) => {
     const key = `${provider}/${tile?.id ?? 'domain'}`;
     if (workerKey !== key) stopDomainWorker();
-    worker ??= new Worker('domain-worker.js');
+    worker ??= new Worker(`domain-worker.js?compute=${provider}`);
     workerKey = key;
     worker.onerror = event => reject(new Error(event.message || 'The calculation worker stopped.'));
     worker.onmessage = ({data}) => {
@@ -166,7 +166,7 @@ async function runWithDevice(whole, tile, scenario) {
       return {summary, fields: {baseline: fields.baseline, field: fields.prediction, mask: fields.mask}};
     }
     stopDomainWorker();
-    return runTile(tile, scenario, weatherCatalog, message => status(message, 'busy'), provider);
+    return runTile(tile, scenario, weatherCatalog, message => status(message, 'busy'));
   };
   status('Starting on ' + computeLabel(provider) + '…', 'busy');
   try {

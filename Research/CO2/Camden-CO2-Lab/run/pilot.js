@@ -10,20 +10,16 @@ export async function fetchAsset(path) {
 }
 
 let sessionPromise;
-let sessionProvider;
 let domainManifest;
 
-async function loadModel(provider) {
+async function loadModel() {
   const response = await fetchAsset('assets/stage2.onnx');
-  return ort.InferenceSession.create(await response.arrayBuffer(), {
-    executionProviders: [provider], enableCpuMemArena: false, enableMemPattern: false,
-  });
+  return ort.InferenceSession.create(await response.arrayBuffer(), {executionProviders: ['wasm']});
 }
 
-async function prepare(tile, provider) {
+async function prepare(tile) {
   const start = performance.now();
-  sessionProvider = provider;
-  sessionPromise ??= loadModel(provider).catch(error => { sessionPromise = undefined; throw error; });
+  sessionPromise ??= loadModel().catch(error => { sessionPromise = undefined; throw error; });
   if (document.documentElement.hasAttribute('data-public-app')) {
     domainManifest ??= fetchAsset('domain-assets/domain.json').then(response => response.json())
       .catch(error => { domainManifest = undefined; throw error; });
@@ -102,18 +98,16 @@ export async function releaseTile(releaseModel = false) {
   if (releaseModel) {
     const previous = sessionPromise;
     sessionPromise = undefined;
-    sessionProvider = undefined;
     const session = await previous?.catch(() => undefined);
     await session?.release();
   }
 }
 
-export async function runTile(tile, scenario, catalog, onStatus, provider) {
+export async function runTile(tile, scenario, catalog, onStatus) {
   const {emissions} = scenario;
   const factor = emissions / 100;
   onStatus('Loading the model and tile…');
-  if (sessionProvider && sessionProvider !== provider) await releaseTile(true);
-  prepared ??= await prepare(tile, provider);
+  prepared ??= await prepare(tile);
   const state = prepared;
   const {arrays, loadSeconds} = state;
   const start = performance.now();
@@ -158,7 +152,7 @@ export async function runTile(tile, scenario, catalog, onStatus, provider) {
   if (!count) throw new Error('The case has no valid atmospheric cells.');
   const summary = {
     tile: tile.id, factor, seconds, loadSeconds, count, meanChangePpm: sumChange / count,
-    compute: {provider, baselineSeconds, weatherSeconds, predictionSeconds},
+    compute: {provider: 'wasm', baselineSeconds, weatherSeconds, predictionSeconds},
     meanAbsoluteErrorPpm: reference ? errorSum / count : null,
     maxAbsoluteErrorPpm: reference ? maxError : null,
     referenceMeanChangePpm: reference ? referenceChangeSum / count : null,

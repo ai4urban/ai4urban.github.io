@@ -37,7 +37,7 @@
               <option value="gpu">GPU (WebGPU)</option>
               <option value="auto">Automatic</option>
             </select>
-            <p id="compute-help">Both modes run on this device. GPU speed depends on your hardware. Automatic tries WebGPU and switches to the CPU if needed. Custom weather always uses the CPU.</p>
+            <p id="compute-help">GPU speed depends on your hardware. Automatic tries WebGPU and switches to the CPU if needed. Custom weather runs on the CPU across the whole grid, even for a tile, and can take several minutes.</p>
           </aside>
           <div class="control">
             <label for="scope">Prediction area</label>
@@ -164,7 +164,7 @@
     </div>
     <footer>Urban atmospheric CO₂ surrogate <span>Concentrations in ppm · exploratory scenarios</span></footer>
   </main>
-  <script src="runtime/ort.webgpu.min.js"></script>
+  <script src="runtime/ort.wasm.min.js"></script>
   <script src="weather.js"></script>
   <script type="module" src="public-start.js"></script>
 </body>

@@ -1,5 +1,7 @@
 /* Tiled operator execution with normalization over the selected prediction area. */
-importScripts('runtime/ort.webgpu.min.js', 'weather.js', 'weather-model.js', 'grid-inputs.js');
+const runtime = new URL(location.href).searchParams.get('compute') === 'wasm' ?
+  'runtime/ort.wasm.min.js' : 'runtime/ort.webgpu.min.js';
+importScripts(runtime, 'weather.js', 'weather-model.js', 'grid-inputs.js');
 ort.env.wasm.wasmPaths = new URL('runtime/', location.href).href;
 ort.env.wasm.numThreads = crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
 
