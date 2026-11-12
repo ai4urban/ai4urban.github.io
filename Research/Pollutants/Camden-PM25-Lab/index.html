@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Camden PM2.5 surrogate predictions and compare the unchanged reference case with PALM.">
+  <title>Camden PM2.5 Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="masthead">
+  <a href="./" class="brand"><span class="brand-icon">PM<span>2.5</span></span><span>Camden <strong>PM2.5 Lab</strong></span></a>
+  <nav aria-label="Research navigation"><a href="https://ai4urban.github.io/Research/Pollutants/">Pollutants</a></nav>
+  <span class="private-label"><i></i> Hourly average concentration</span>
+</header>
+<main>
+  <section class="intro">
+    <div><p class="eyebrow">URBAN AIR QUALITY · CAMDEN, LONDON</p><h1 id="page-title">Explore PM2.5 across Camden.</h1><p id="page-lede" class="lede">Change emissions and weather, run the trained surrogate, and inspect the predicted concentration and its change.</p></div>
+    <div class="domain"><strong>12 model heights</strong><span>15–195 m · 10 m horizontal grid</span><small id="domain-scope">Loading the reference domain</small></div>
+  </section>
+  <div class="workspace">
+    <aside>
+      <section class="panel controls" id="scenario-controls">
+        <div class="panel-title"><h2>Set a scenario</h2><button id="reset" class="text-button">Reset</button></div>
+        <p class="small muted">Change physical inputs before the model’s original normalization.</p>
+        <div class="control"><div><label for="emissions">PM2.5 emissions</label><output id="emissions-value">100%</output></div><p>Scale the emissions supplied to the surrogate.</p><input id="emissions" type="range" min="0" max="2" step="0.05" value="1"><span class="range-labels"><span>0%</span><span>200%</span></span></div>
+        <div class="control"><div><label for="background">Incoming PM2.5</label><output id="background-value">0 µg/m³</output></div><p>Offset the incoming concentration profile at every height. A negative concentration is rejected.</p><input id="background" type="range" min="-5" max="5" step="0.25" value="0"><span class="range-labels"><span>−5 µg/m³</span><span>+5 µg/m³</span></span></div>
+        <div class="control"><div><label for="wind">Wind speed factor</label><output id="wind-value">100%</output></div><p>Scale the horizontal wind forcing profile.</p><input id="wind" type="range" min="0.5" max="2" step="0.05" value="1"><span class="range-labels"><span>50%</span><span>200%</span></span></div>
+        <div class="control"><div><label for="rotation">Wind direction adjustment</label><output id="rotation-value">0°</output></div><p>Positive values rotate the horizontal forcing clockwise.</p><input id="rotation" type="range" min="-180" max="180" step="5" value="0"><span class="range-labels"><span>−180°</span><span>+180°</span></span></div>
+        <label for="compute-mode">Compute device</label> <select id="compute-mode"><option value="auto">Automatic</option><option value="gpu">GPU (WebGPU)</option><option value="cpu">CPU</option></select>
+<p class="small muted">Use GPU (WebGPU) when available for potentially faster predictions. Automatic tries the GPU first and switches to the CPU if needed. Both modes run on this device.</p>
+<button id="run" class="primary" disabled>Run prediction <span aria-hidden="true">↗</span></button>
+        <p id="pending" class="small muted">Loading the reference case…</p>
+        <div class="presets"><button data-preset="emissions">20% fewer emissions</button><button data-preset="wind">Rotate wind +30°</button></div>
+        <div class="note"><strong>Exploratory scenarios</strong><p>Controls describe what is changed in the surrogate inputs. Their ranges are demonstration settings. Changed scenarios require new PALM simulations for independent physical validation.</p></div>
+      </section>
+      <section class="panel comparison-guide" id="comparison-guide" hidden>
+        <p class="eyebrow">THE UNCHANGED REFERENCE</p><h2>Check the surrogate against PALM.</h2>
+        <p>Compare the original physical simulation with the trained model on the same grid, timestamp and valid atmospheric cells.</p>
+        <dl class="definitions"><dt>PALM</dt><dd>The physical simulation used as the reference.</dd><dt>Surrogate</dt><dd>The unchanged model prediction for this case.</dd><dt>Error</dt><dd>Surrogate minus PALM. Blue is underprediction; red is overprediction.</dd></dl>
+        <div class="note"><strong>Interpret this comparison carefully</strong><p id="validation-note">Agreement on this reference case checks execution and case accuracy. Independent skill depends on the documented train/test split. Aggregate metrics do not show every local error.</p></div>
+        <a class="secondary block-link" href="./">Open scenario explorer ↗</a>
+      </section>
+      <section class="panel reference-panel"><p class="eyebrow">REFERENCE CASE</p><h3 id="case-name">Loading…</h3><p id="case-time" class="small"></p><p id="compute-device" class="small muted">Saved reference · ready for local prediction</p><p class="small muted">Concentrations in µg/m³. Heights follow the model’s fixed vertical coordinate.</p></section>
+    </aside>
+    <section class="results">
+      <div class="results-heading"><div><p class="eyebrow" id="result-eyebrow">THE PREDICTED FIELD</p><h2 id="result-title">Preparing the reference case</h2></div><div class="height-picker"><label for="height">Model height</label><select id="height" disabled><option>Loading…</option></select></div></div>
+      <div id="status" class="status" role="status" aria-live="polite"><span id="status-dot" class="spinner"></span><span id="status-text">Loading the reference data…</span></div>
+      <p id="applied" class="applied">Maps will appear when the reference calculation is ready.</p>
+      <div class="metrics"><article><span id="metric-label-1">Baseline mean</span><strong id="metric-1">—</strong><small id="metric-unit-1">µg/m³</small></article><article><span id="metric-label-2">Scenario mean</span><strong id="metric-2">—</strong><small id="metric-unit-2">µg/m³</small></article><article class="accent"><span id="metric-label-3">Mean change</span><strong id="metric-3">—</strong><small id="metric-unit-3">scenario − baseline · µg/m³</small></article><article><span id="metric-label-4">Average absolute change</span><strong id="metric-4">—</strong><small id="metric-unit-4">µg/m³ · no sign cancellation</small></article></div>
+      <article id="correlation-card" class="panel" hidden><div class="correlation-summary"><span>Pearson correlation at selected height</span><strong id="correlation-value">—</strong></div><p class="small muted">Spatial Pearson r across all matched valid Camden atmospheric cells. This measures association; it is distinct from predictive R².</p></article><div class="map-tools"><p id="map-definition">Baseline and scenario share one concentration scale; the difference has its own zero-centred scale.</p><label for="contrast">Difference contrast <select id="contrast"><option value="1">Automatic</option><option value="2">2×</option><option value="5">5×</option></select></label><button id="enlarge" class="secondary" aria-pressed="false">Enlarge difference</button></div>
+      <div class="maps" id="maps">
+        <article class="map-card"><div class="map-heading"><h3 id="first-title">Baseline</h3><span id="first-tag">Original inputs</span></div><div class="map-wrap"><canvas id="first-map" width="800" height="800" tabindex="0" aria-label="First concentration map; click a location for a vertical profile"></canvas><span class="north">N ↑</span></div><div class="axis-label"><span id="x-left-1">—</span><span>Easting · BNG km</span><span id="x-right-1">—</span></div><div class="legend"><div class="gradient concentration"></div><div><span class="concentration-low">—</span><span>µg/m³</span><span class="concentration-high">—</span></div></div></article>
+        <article class="map-card"><div class="map-heading"><h3 id="second-title">Scenario</h3><span id="second-tag">Same as baseline</span></div><div class="map-wrap"><canvas id="second-map" width="800" height="800" tabindex="0" aria-label="Second concentration map; click a location for a vertical profile"></canvas><span class="north">N ↑</span></div><div class="axis-label"><span id="x-left-2">—</span><span>Easting · BNG km</span><span id="x-right-2">—</span></div><div class="legend"><div class="gradient concentration"></div><div><span class="concentration-low">—</span><span>µg/m³</span><span class="concentration-high">—</span></div></div></article>
+        <article class="map-card difference-card"><div class="map-heading"><h3 id="difference-title">Change</h3><span id="difference-tag">Scenario − baseline</span></div><div class="map-wrap"><canvas id="difference-map" width="800" height="800" tabindex="0" aria-label="Difference map; click a location for a vertical profile"></canvas><span class="north">N ↑</span></div><div class="axis-label"><span id="x-left-3">—</span><span>Easting · BNG km</span><span id="x-right-3">—</span></div><div class="legend"><div class="gradient difference"></div><div><span id="difference-low">—</span><span>µg/m³</span><span id="difference-high">—</span></div></div></article>
+      </div>
+      <div class="map-footnote"><span id="mask-note"><i></i> Excluded atmospheric cells are hidden.</span><span id="northing-range">Coordinates: British National Grid</span></div>
+      <p id="colour-note" class="small muted">Concentration colours clip to the combined 2nd–98th percentiles. Numeric inspection, metrics and CSV retain unclipped values.</p>
+      <div class="inspection"><strong id="inspect-value">Move over a map to inspect a cell.</strong><span id="inspect-location">Click any map for vertical profiles at the same location.</span></div>
+      <section class="panel profile-panel"><div class="section-heading"><div><h3>Vertical profiles at a location</h3><p id="point-label" class="small muted">Click a valid atmospheric cell on a map.</p></div><button id="profile-download" class="secondary" disabled>Download profiles PNG ↓</button></div><div class="profile-grid"><div><h4>Concentration · µg/m³</h4><canvas id="profile" width="720" height="540" aria-label="Concentration profiles through all 12 model heights"></canvas><div class="chart-key"><span><i class="first-line"></i><span id="first-key">Baseline</span></span><span><i class="second-line"></i><span id="second-key">Scenario</span></span></div></div><div><h4 id="difference-profile-title">Change · µg/m³</h4><canvas id="difference-profile" width="720" height="540" aria-label="Difference profile through all 12 model heights"></canvas><p class="small muted">Dashed line marks zero. Missing atmospheric levels remain blank.</p></div></div></section>
+      <section class="panel performance-panel"><div class="section-heading"><div><h3 id="performance-title">Compare the two fields</h3><p id="scatter-caption" class="small muted">Up to 4,000 evenly sampled valid cells at the selected height; metrics use all valid cells.</p></div><span id="cell-count" class="pill">— cells</span></div><div class="performance-content"><canvas id="scatter" width="640" height="530" aria-label="Scatter plot comparing reference and predicted concentrations"></canvas><div><h4 id="performance-note-title">Reading the difference</h4><p id="performance-note">Signed mean change can hide increases and decreases that cancel. Average absolute change shows their average size.</p><dl id="timings" class="timings"></dl><p id="range-note" class="small muted"></p></div></div></section>
+      <section class="panel table-panel"><div class="section-heading"><div><h3 id="table-title">Results at all 12 heights</h3><p class="small muted" id="table-description">Select a row to view that height.</p></div><a id="download-metrics" class="secondary" href="#">Metrics CSV ↓</a></div><div class="table-scroll"><table><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div></section>
+      <div class="export-row"><span id="saved-note" class="small muted">Download the selected height or summary metrics below.</span><div><button id="figure-download" class="secondary" disabled>Download maps PNG ↓</button><a id="download-csv" class="secondary disabled" href="#">Selected-height CSV ↓</a></div></div>
+      <details class="panel method"><summary>Model, data and interpretation</summary><p id="method-copy">This app runs the supplied PM2.5 surrogate without training. The unchanged prediction is called the baseline; it is distinct from PALM and from the incoming concentration profile. Scenario maps show the last completed calculation, labelled with the parameters that produced it.</p><p id="input-copy">Scenario controls modify model inputs in physical units. Previous atmospheric states and temporal features follow the supplied model workflow. Changing viewing height or selecting a location uses the already computed field.</p><p id="scope-copy">All 12 supplied model heights are available. A level with no valid atmospheric cells is shown as empty. Concentration colours are clipped for visibility; errors and changes remain signed and all numeric metrics use the unmodified fields.</p><p id="provenance-summary" class="small muted"></p><details><summary>Recorded reference and model metadata</summary><pre id="provenance">Loading…</pre></details></details>
+    </section>
+  </div>
+  <footer><span>Imperial College London · Urban air quality surrogate research</span><span>PM2.5 · µg/m³ · hourly average concentration</span></footer>
+</main>
+<script src="./lab-start.js"></script>
+</body>
+</html>
