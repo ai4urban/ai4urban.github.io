@@ -1,10 +1,9 @@
-/* Whole-domain inference with full-field normalization and bounded WASM kernels. */
-importScripts('runtime/ort.wasm.min.js', 'weather.js', 'weather-model.js', 'grid-inputs.js');
+/* Tiled operator execution with normalization over the selected prediction area. */
+importScripts('runtime/ort.webgpu.min.js', 'weather.js', 'weather-model.js', 'grid-inputs.js');
 ort.env.wasm.wasmPaths = new URL('runtime/', location.href).href;
 ort.env.wasm.numThreads = crossOriginIsolated ? Math.min(4, navigator.hardwareConcurrency || 1) : 1;
 
-const CHUNK = 192;
-const options = {executionProviders: ['wasm'], enableCpuMemArena: false, enableMemPattern: false};
+let provider;
 
 async function fetchAsset(path) {
   const response = await fetch('domain-assets/' + path);
@@ -94,15 +93,38 @@ function normalize({data, c, d, h, w}, epsilon, alpha) {
   }
 }
 
-async function openKernel(file) {
-  return ort.InferenceSession.create(await (await fetchAsset('kernels/' + file)).arrayBuffer(), options);
+async function normalizeTile(session, {data, c, d, h, w}) {
+  // Each channel uses all tile cells. Batch eight channels at a time to bound WASM memory.
+  const channels = 8;
+  const size = channels * d * h * w;
+  for (let channel = 0; channel < c; channel += channels) {
+    const offset = channel * d * h * w;
+    const input = new ort.Tensor('float32', data.subarray(offset, offset + size), [1, channels, d, h, w]);
+    let output;
+    try {
+      ({output} = await session.run({field: input}));
+      data.set(output.data, offset);
+    } finally {
+      input.dispose();
+      output?.dispose();
+    }
+  }
+}
+
+async function openKernel(file, previewAsset = false, executeWith = provider) {
+  const response = previewAsset ? await fetch('webgpu-kernels/' + file) : await fetchAsset('kernels/' + file);
+  if (!response.ok) throw new Error(`Could not load ${file} (HTTP ${response.status}).`);
+  return ort.InferenceSession.create(await response.arrayBuffer(), {
+    executionProviders: [executeWith], enableCpuMemArena: false, enableMemPattern: false,
+  });
 }
 
 function* patches(h, w, halo) {
-  for (let y = 0; y < h; y += CHUNK) {
-    for (let x = 0; x < w; x += CHUNK) {
-      const outH = Math.min(CHUNK, h - y);
-      const outW = Math.min(CHUNK, w - x);
+  const chunk = provider === 'webgpu' ? 96 : 192;
+  for (let y = 0; y < h; y += chunk) {
+    for (let x = 0; x < w; x += chunk) {
+      const outH = Math.min(chunk, h - y);
+      const outW = Math.min(chunk, w - x);
       const top = Math.max(0, y - halo);
       const left = Math.max(0, x - halo);
       yield {y, x, outH, outW, top, left,
@@ -112,23 +134,79 @@ function* patches(h, w, halo) {
   }
 }
 
+function loweredInput(parts, patch, expandDepth) {
+  const {d} = parts[0];
+  const stencil = expandDepth ? 3 : 1;
+  const inputChannels = parts.reduce((count, part) => count + part.c, 0) * stencil;
+  const channels = Math.ceil(inputChannels / 4) * 4;
+  const plane = patch.h * patch.w;
+  const data = new Float32Array(d * channels * plane);
+  let target = 0;
+  for (let level = 0; level < d; level++) {
+    for (const part of parts) {
+      for (let c = 0; c < part.c; c++) {
+        for (let offset = 0; offset < stencil; offset++) {
+          const z = level + offset - (expandDepth ? 1 : 0);
+          if (z >= 0 && z < d) {
+            for (let y = 0; y < patch.h; y++) {
+              const start = ((c * d + z) * part.h + patch.top + y) * part.w + patch.left;
+              data.set(part.data.subarray(start, start + patch.w), target + y * patch.w);
+            }
+          }
+          target += plane;
+        }
+      }
+    }
+    target += (channels - inputChannels) * plane;
+  }
+  return new ort.Tensor('float32', data, [d, channels, patch.h, patch.w]);
+}
+
+function copyLowered(output, result, p, ratio) {
+  const data = output.data;
+  const [, channels, h, w] = output.dims;
+  const localY = (p.y - p.top) * ratio, localX = (p.x - p.left) * ratio;
+  const outH = p.outH * ratio, outW = p.outW * ratio;
+  for (let c = 0; c < result.c; c++) {
+    for (let z = 0; z < result.d; z++) {
+      const inputPlane = (Math.floor(z / ratio) * channels + c * ratio + z % ratio) * h * w;
+      const outputPlane = (c * result.d + z) * result.h * result.w;
+      for (let y = 0; y < outH; y++) {
+        const from = inputPlane + (localY + y) * w + localX;
+        const to = outputPlane + (p.y * ratio + y) * result.w + p.x * ratio;
+        result.data.set(data.subarray(from, from + outW), to);
+      }
+    }
+  }
+}
+
 async function spatialKernel(step, parts) {
   const {d, h, w} = parts[0];
   const ratio = step.op === 'MaxPool' ? 0.5 : step.op === 'ConvTranspose' ? 2 : 1;
   const c = step.channels;
   const result = field(new Float32Array(c * d * h * w * ratio ** 3), c, d * ratio, h * ratio, w * ratio);
-  const session = await openKernel(step.file);
+  const lowered = provider === 'webgpu' && (step.op === 'Conv' || step.op === 'ConvTranspose');
+  const session = await openKernel(step.file, lowered);
   try {
     const halo = step.op === 'Conv' ? 1 : 0;
     for (const p of patches(h, w, halo)) {
-      const input = tensor(crop(parts, p.top, p.left, p.h, p.w));
-      const { [step.output]: output } = await session.run({[step.source]: input});
-      const shape = output.dims.slice(1);
-      copyRegion(field(output.data, ...shape), result,
-        (p.y - p.top) * ratio, (p.x - p.left) * ratio,
-        p.y * ratio, p.x * ratio, p.outH * ratio, p.outW * ratio);
-      output.dispose();
-      input.dispose();
+      const input = lowered ? loweredInput(parts, p, step.op === 'Conv') :
+        tensor(crop(parts, p.top, p.left, p.h, p.w));
+      let output;
+      try {
+        const values = await session.run({[lowered ? 'field' : step.source]: input});
+        output = values[lowered ? 'output' : step.output];
+        if (lowered) {
+          copyLowered(output, result, p, ratio);
+        } else {
+          copyRegion(field(output.data, ...output.dims.slice(1)), result,
+            (p.y - p.top) * ratio, (p.x - p.left) * ratio,
+            p.y * ratio, p.x * ratio, p.outH * ratio, p.outW * ratio);
+        }
+      } finally {
+        output?.dispose();
+        input.dispose();
+      }
     }
     return result;
   } finally {
@@ -136,7 +214,7 @@ async function spatialKernel(step, parts) {
   }
 }
 
-async function runTrunk(plan, local, emissions) {
+async function runTrunk(plan, local, emissions, tileNormalization) {
   const values = new Map([['local', local]]);
   const uses = new Map([['local', 1], [plan.heads.decoder, 1]]);
   const sources = step => [].concat(step.source);
@@ -154,7 +232,8 @@ async function runTrunk(plan, local, emissions) {
       if (activation.op !== 'LeakyRelu' || activation.source !== step.output || uses.get(step.source) !== 1) {
         throw new Error('Unexpected normalization and activation layout.');
       }
-      normalize(inputs[0], step.epsilon, activation.alpha);
+      if (tileNormalization) await normalizeTile(tileNormalization, inputs[0]);
+      else normalize(inputs[0], step.epsilon, activation.alpha);
       value = inputs[0];
     } else if (step.op === 'LeakyRelu') {
       value = inputs[0]; // Applied with normalization above.
@@ -171,16 +250,19 @@ async function runTrunk(plan, local, emissions) {
   return values.get(plan.heads.decoder);
 }
 
-function grid(p, local, fullLevels) {
+function grid(p, local, meta, tile) {
   const {coordinate} = gridInputs;
+  const [, fullHeight, fullWidth] = meta.arrays.previous.shape;
+  const offsetX = tile?.x ?? 0;
+  const offsetY = tile?.y ?? 0;
   const data = new Float32Array(local.d * p.h * p.w * 3);
   let i = 0;
   for (let z = 0; z < local.d; z++) {
-    const vertical = coordinate(z + 1, fullLevels);
+    const vertical = coordinate(z + 1, meta.full_vertical_levels);
     for (let y = p.top; y < p.top + p.h; y++) {
-      const north = coordinate(y, local.h);
+      const north = coordinate(y + offsetY, fullHeight);
       for (let x = p.left; x < p.left + p.w; x++) {
-        data[i++] = coordinate(x, local.w);
+        data[i++] = coordinate(x + offsetX, fullWidth);
         data[i++] = north;
         data[i++] = vertical;
       }
@@ -190,22 +272,22 @@ function grid(p, local, fullLevels) {
 }
 
 async function runHeads(state, decoder, emissions) {
-  const {local, context, plan, meta} = state;
-  const encoder = await openKernel(plan.encoder.file);
+  const {local, context, plan, meta, tile} = state;
+  const encoder = await openKernel(plan.encoder.file, false, 'wasm');
   let encoded;
   try {
     encoded = (await encoder.run({context: tensor(context)}))[plan.encoder.output];
   } finally {
     await encoder.release();
   }
-  self.postMessage({status: `${emissions}% emissions · calculating CO₂ across the full grid`});
-  const session = await openKernel(plan.heads.file);
+  self.postMessage({status: `${emissions}% emissions · calculating CO₂ across the ${tile ? 'selected tile' : 'full grid'}`});
+  const session = await openKernel(plan.heads.file, false, 'wasm');
   const prediction = field(new Float32Array(local.d * local.h * local.w), 1, local.d, local.h, local.w);
   try {
     for (const p of patches(local.h, local.w, plan.heads.halo)) {
       const localInput = tensor(crop([local], p.top, p.left, p.h, p.w));
       const decoderInput = tensor(crop([decoder], p.top, p.left, p.h, p.w));
-      const coordinates = grid(p, local, meta.full_vertical_levels);
+      const coordinates = grid(p, local, meta, tile);
       const {delta} = await session.run({
         local: localInput, [plan.heads.decoder]: decoderInput,
         [plan.encoder.output]: encoded, grid: coordinates,
@@ -222,17 +304,21 @@ async function runHeads(state, decoder, emissions) {
   return prediction.data;
 }
 
-async function loadCase() {
-  self.postMessage({status: 'Loading the whole-domain inputs…'});
+async function loadCase(tile) {
+  self.postMessage({status: tile ? 'Loading the tile inputs…' : 'Loading the whole-domain inputs…'});
   const [meta, plan] = await Promise.all(
     ['domain.json', 'kernels/kernels.json'].map(async file => (await fetchAsset(file)).json()));
   const names = ['local', 'context', 'previous', 'mask'];
-  const {local, context, previous, mask} = meta.chunks ? (await gridInputs.load(meta)).arrays :
-    Object.fromEntries(await Promise.all(names.map(async name =>
-      [name, await readArray(meta.arrays[name], name === 'mask' ? Uint8Array : Float32Array)])));
-  const state = {meta, plan, previous, mask, emissions: {}};
+  if (tile && !meta.chunks) throw new Error('Tile kernels require the shared grid assets.');
+  const loaded = meta.chunks ? await gridInputs.load(meta, tile && {x: tile.x, y: tile.y, w: tile.size, h: tile.size}) : {
+    manifest: meta,
+    arrays: Object.fromEntries(await Promise.all(names.map(async name =>
+      [name, await readArray(meta.arrays[name], name === 'mask' ? Uint8Array : Float32Array)]))),
+  };
+  const {local, context, previous, mask} = loaded.arrays;
+  const state = {meta, plan, tile, previous, mask, shapes: loaded.manifest.arrays, emissions: {}};
   for (const [name, data] of Object.entries({local, context})) {
-    state[name] = field(data, ...meta.arrays[name].shape.slice(1));
+    state[name] = field(data, ...state.shapes[name].shape.slice(1));
     const {channel} = meta.emissions[name];
     const volume = data.length / state[name].c;
     state.emissions[name] = data.slice(channel * volume, (channel + 1) * volume);
@@ -250,7 +336,14 @@ async function predict(state, emissions) {
         (Math.fround(Math.fround(Math.fround(original[i] * std) + mean) * factor) - mean) / std;
     }
   }
-  return runHeads(state, await runTrunk(state.plan, state.local, emissions), emissions);
+  const tileNormalization = state.tile ? await openKernel('tile-normalization.onnx', true, 'wasm') : null;
+  let decoder;
+  try {
+    decoder = await runTrunk(state.plan, state.local, emissions, tileNormalization);
+  } finally {
+    await tileNormalization?.release();
+  }
+  return runHeads(state, decoder, emissions);
 }
 
 async function summarize(state, prediction, scenario, verify) {
@@ -291,23 +384,33 @@ async function summarize(state, prediction, scenario, verify) {
 }
 
 let state;
-self.onmessage = async ({data: {scenario, catalog, verify = false}}) => {
+self.onmessage = async ({data: {scenario, catalog, compute, tile, verify = false}}) => {
   const started = performance.now();
   try {
+    provider ??= compute;
+    if (provider !== compute) throw new Error('Start a new worker to change compute device.');
     const {emissions} = scenario;
     if (!Number.isFinite(emissions) || emissions < 50 || emissions > 150) {
       throw new Error('Choose emissions between 50% and 150%.');
     }
-    state ??= await loadCase();
+    state ??= await loadCase(tile);
+    if (state.tile?.id !== tile?.id) throw new Error('Start a new worker to change prediction area.');
+    const baselineStart = performance.now();
     state.baseline ??= await predict(state, 100);
+    const baselineSeconds = (performance.now() - baselineStart) / 1000;
     if (!weather.isReference(scenario)) self.postMessage({status: 'Loading weather for this scenario…'});
     const arrays = {local: state.local.data, context: state.context.data};
-    const shapes = {local: state.meta.arrays.local.shape, context: state.meta.arrays.context.shape};
-    await weather.apply(state, arrays, shapes, 'domain', scenario, catalog,
-      () => weatherModel.compute(scenario, {x: 0, y: 0}, shapes, status => self.postMessage({status}), verify));
+    const shapes = {local: state.shapes.local.shape, context: state.shapes.context.shape};
+    const weatherStart = performance.now();
+    await weather.apply(state, arrays, shapes, tile?.id ?? 'domain', scenario, catalog,
+      () => weatherModel.compute(scenario, tile ?? {x: 0, y: 0}, shapes, status => self.postMessage({status}), verify));
+    const weatherSeconds = (performance.now() - weatherStart) / 1000;
     const sameAsBaseline = emissions === 100 && weather.isReference(scenario);
+    const predictionStart = performance.now();
     const prediction = sameAsBaseline ? state.baseline : await predict(state, emissions);
     const result = await summarize(state, prediction, scenario, verify);
+    result.compute = {provider, baselineSeconds, weatherSeconds,
+      predictionSeconds: (performance.now() - predictionStart) / 1000};
     result.seconds = (performance.now() - started) / 1000;
     self.postMessage({result}, [...new Set(Object.values(result.fields).map(values => values.buffer))]);
   } catch (error) {

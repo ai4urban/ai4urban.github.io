@@ -10,16 +10,20 @@ export async function fetchAsset(path) {
 }
 
 let sessionPromise;
+let sessionProvider;
 let domainManifest;
 
-async function loadModel() {
+async function loadModel(provider) {
   const response = await fetchAsset('assets/stage2.onnx');
-  return ort.InferenceSession.create(await response.arrayBuffer(), {executionProviders: ['wasm']});
+  return ort.InferenceSession.create(await response.arrayBuffer(), {
+    executionProviders: [provider], enableCpuMemArena: false, enableMemPattern: false,
+  });
 }
 
-async function prepare(tile) {
+async function prepare(tile, provider) {
   const start = performance.now();
-  sessionPromise ??= loadModel().catch(error => { sessionPromise = undefined; throw error; });
+  sessionProvider = provider;
+  sessionPromise ??= loadModel(provider).catch(error => { sessionPromise = undefined; throw error; });
   if (document.documentElement.hasAttribute('data-public-app')) {
     domainManifest ??= fetchAsset('domain-assets/domain.json').then(response => response.json())
       .catch(error => { domainManifest = undefined; throw error; });
@@ -60,16 +64,22 @@ function emissionsTensor(name, state, factor) {
 
 async function predict(state, factor) {
   const {arrays, manifest, session} = state;
-  const result = await session.run({
+  const inputs = {
     local: emissionsTensor('local', state, factor),
     context: emissionsTensor('context', state, factor),
     grid: new ort.Tensor('float32', arrays.grid, manifest.arrays.grid.shape),
-  });
-  const field = new Float32Array(arrays.previous.length);
-  const delta = result.delta.data;
-  for (let i = 0; i < field.length; i++) field[i] = arrays.previous[i] + delta[i];
-  result.delta.dispose();
-  return field;
+  };
+  let result;
+  try {
+    result = await session.run(inputs);
+    const field = new Float32Array(arrays.previous.length);
+    const delta = result.delta.data;
+    for (let i = 0; i < field.length; i++) field[i] = arrays.previous[i] + delta[i];
+    return field;
+  } finally {
+    if (result) Object.values(result).forEach(tensor => tensor.dispose());
+    Object.values(inputs).forEach(tensor => tensor.dispose());
+  }
 }
 
 let prepared;
@@ -89,18 +99,21 @@ function calculateWeather(scenario, tile, shapes, onStatus) {
 
 export async function releaseTile(releaseModel = false) {
   prepared = undefined;
-  if (releaseModel && sessionPromise) {
-    const session = await sessionPromise;
+  if (releaseModel) {
+    const previous = sessionPromise;
     sessionPromise = undefined;
-    await session.release();
+    sessionProvider = undefined;
+    const session = await previous?.catch(() => undefined);
+    await session?.release();
   }
 }
 
-export async function runTile(tile, scenario, catalog, onStatus) {
+export async function runTile(tile, scenario, catalog, onStatus, provider) {
   const {emissions} = scenario;
   const factor = emissions / 100;
   onStatus('Loading the model and tile…');
-  prepared ??= await prepare(tile);
+  if (sessionProvider && sessionProvider !== provider) await releaseTile(true);
+  prepared ??= await prepare(tile, provider);
   const state = prepared;
   const {arrays, loadSeconds} = state;
   const start = performance.now();
@@ -108,13 +121,18 @@ export async function runTile(tile, scenario, catalog, onStatus) {
     onStatus('Calculating the reference baseline…');
     state.baseline = await predict(state, 1);
   }
+  const baselineSeconds = (performance.now() - start) / 1000;
   if (!weather.isReference(scenario)) onStatus('Loading weather for this scenario…');
   const shapes = {local: state.manifest.arrays.local.shape, context: state.manifest.arrays.context.shape};
+  const weatherStart = performance.now();
   await weather.apply(state, arrays, shapes, tile.id, scenario, catalog,
     () => calculateWeather(scenario, tile, shapes, onStatus));
+  const weatherSeconds = (performance.now() - weatherStart) / 1000;
   onStatus('Running the CO₂ model in this browser…');
   const sameAsBaseline = factor === 1 && weather.isReference(scenario);
+  const predictionStart = performance.now();
   const field = sameAsBaseline ? state.baseline : await predict(state, factor);
+  const predictionSeconds = (performance.now() - predictionStart) / 1000;
   const seconds = (performance.now() - start) / 1000;
   const reference = weather.isReference(scenario) ?
     factor === 1 ? arrays.baseline : factor === 0.8 ? arrays.reduced : null : null;
@@ -140,6 +158,7 @@ export async function runTile(tile, scenario, catalog, onStatus) {
   if (!count) throw new Error('The case has no valid atmospheric cells.');
   const summary = {
     tile: tile.id, factor, seconds, loadSeconds, count, meanChangePpm: sumChange / count,
+    compute: {provider, baselineSeconds, weatherSeconds, predictionSeconds},
     meanAbsoluteErrorPpm: reference ? errorSum / count : null,
     maxAbsoluteErrorPpm: reference ? maxError : null,
     referenceMeanChangePpm: reference ? referenceChangeSum / count : null,

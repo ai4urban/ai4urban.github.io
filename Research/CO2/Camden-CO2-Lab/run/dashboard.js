@@ -3,6 +3,7 @@ import {clearResults, showResults} from './results.js';
 
 const $ = id => document.getElementById(id);
 const scope = $('scope');
+const computeMode = $('compute-mode');
 const tileSelect = $('tile');
 const emissions = $('emissions');
 const windSpeed = $('wind-speed');
@@ -16,7 +17,7 @@ const query = new URLSearchParams(location.search);
 const verify = !publicApp && query.get('verify') === '1';
 const tileRects = new Map();
 let footprint;
-let catalog, weatherCatalog, liveWeather, truthCache, worker, busy = false;
+let catalog, weatherCatalog, liveWeather, truthCache, worker, workerKey, busy = false;
 const presets = {
   reference: [100, 100, 0, 0],
   lower: [80, 100, 0, 0],
@@ -35,6 +36,7 @@ function status(message, state = 'ready') {
 
 function setBusy(value) {
   busy = value;
+  computeMode.disabled = value;
   scope.disabled = emissions.disabled = $('reset').disabled = value;
   preset.disabled = value;
   windSpeed.disabled = rotation.disabled = background.disabled = value || !weatherCatalog;
@@ -72,6 +74,7 @@ function updateArea() {
 }
 
 function changeTile() {
+  stopDomainWorker();
   releaseTile();
   updateArea();
 }
@@ -118,23 +121,68 @@ async function loadCatalog() {
 function stopDomainWorker() {
   worker?.terminate();
   worker = undefined;
+  workerKey = undefined;
 }
 
-function runDomain(scenario) {
+function runInBlocks(scenario, provider, tile) {
   return new Promise((resolve, reject) => {
+    const key = `${provider}/${tile?.id ?? 'domain'}`;
+    if (workerKey !== key) stopDomainWorker();
     worker ??= new Worker('domain-worker.js');
+    workerKey = key;
     worker.onerror = event => reject(new Error(event.message || 'The calculation worker stopped.'));
     worker.onmessage = ({data}) => {
       if (data.status) status(data.status, 'busy');
       else if (data.error) reject(new Error(data.error));
       else resolve(data.result);
     };
-    worker.postMessage({scenario, catalog: weatherCatalog, verify});
+    worker.postMessage({scenario, catalog: weatherCatalog, compute: provider, tile, verify: verify && !tile});
   });
 }
 
+const computeLabel = provider => provider === 'webgpu' ? 'GPU (WebGPU)' : 'CPU';
+
+async function selectProvider(mode) {
+  if (mode === 'cpu') return 'wasm';
+  let adapter;
+  try {
+    adapter = await navigator.gpu?.requestAdapter();
+  } catch {
+    // The CPU remains available when the browser cannot access a GPU.
+  }
+  if (adapter && !adapter.info?.isFallbackAdapter) return 'webgpu';
+  if (mode === 'gpu') throw new Error('Hardware WebGPU is unavailable. Select CPU or Automatic.');
+  return 'wasm';
+}
+
+async function runWithDevice(whole, tile, scenario) {
+  const mode = computeMode.value;
+  let provider = await selectProvider(mode);
+  const launch = async () => {
+    if (whole) return runInBlocks(scenario, provider);
+    if (provider === 'webgpu') {
+      await releaseTile(true);
+      const {fields, ...summary} = await runInBlocks(scenario, provider, tile);
+      return {summary, fields: {baseline: fields.baseline, field: fields.prediction, mask: fields.mask}};
+    }
+    stopDomainWorker();
+    return runTile(tile, scenario, weatherCatalog, message => status(message, 'busy'), provider);
+  };
+  status('Starting on ' + computeLabel(provider) + '…', 'busy');
+  try {
+    return await launch();
+  } catch (error) {
+    if (mode !== 'auto' || provider !== 'webgpu') throw error;
+    stopDomainWorker();
+    await releaseTile(true).catch(() => {});
+    provider = 'wasm';
+    status('WebGPU could not finish. Retrying on the CPU…', 'busy');
+    return launch();
+  }
+}
+
 scope.addEventListener('change', () => {
-  if (!isDomain()) stopDomainWorker();
+  stopDomainWorker();
   releaseTile();
   if (publicApp) {
     const url = new URL(location.href);
@@ -261,17 +309,19 @@ document.querySelector('form').addEventListener('submit', async event => {
     const comparison = {scenarioLabel, isReference: isReferenceWeather && value === 100};
     if (whole) {
       await releaseTile(true);
-      const {fields, ...summary} = await runDomain(scenario);
+      const {fields, ...summary} = await runWithDevice(true, tile, scenario);
       showResults({...summary, ...fields, ...comparison, truth: await truth, boundary: catalog?.boundary ?? []});
       window.domainResult = summary;
     } else {
-      const {summary, fields} = await runTile(tile, scenario, weatherCatalog, message => status(message, 'busy'));
+      const {summary, fields} = await runWithDevice(false, tile, scenario);
       showResults({baseline: fields.baseline, prediction: fields.field, mask: fields.mask,
         h: tile.size, w: tile.size, tile, boundary: catalog.boundary, emissions: value, seconds: summary.seconds,
         ...comparison, truth: await truth});
       window.pilotFields = fields;
       window.pilotResult = summary;
     }
+    const summary = whole ? window.domainResult : window.pilotResult;
+    $('compute-location').textContent = 'Calculated on this device · ' + computeLabel(summary.compute.provider);
     status(`Prediction complete · ${value}% emissions`);
     $('pending').textContent = 'Change settings and run again to compare another scenario.';
   } catch (error) {
@@ -280,7 +330,8 @@ document.querySelector('form').addEventListener('submit', async event => {
       stopDomainWorker();
     } else {
       window.pilotError = String(error);
-      releaseTile();
+      stopDomainWorker();
+      await releaseTile(true).catch(() => {});
     }
     status(`Could not complete the prediction. ${error.message}`, 'error');
   } finally {

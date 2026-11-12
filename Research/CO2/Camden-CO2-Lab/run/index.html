@@ -31,8 +31,13 @@
         </div>
         <form>
           <aside id="compute-note" class="compute-note">
-            <strong>GPU acceleration recommended</strong>
-            <p>Use a GPU-accelerated version of the app on a computer with a supported GPU for faster predictions, especially for the whole domain or custom weather. This app runs on the CPU, where those predictions can take several minutes.</p>
+            <label for="compute-mode">Compute device</label>
+            <select id="compute-mode" aria-describedby="compute-help">
+              <option value="cpu" selected>CPU</option>
+              <option value="gpu">GPU (WebGPU)</option>
+              <option value="auto">Automatic</option>
+            </select>
+            <p id="compute-help">Both modes run on this device. GPU speed depends on your hardware. Automatic tries WebGPU and switches to the CPU if needed. Custom weather always uses the CPU.</p>
           </aside>
           <div class="control">
             <label for="scope">Prediction area</label>
@@ -90,7 +95,7 @@
           <div><p class="eyebrow">02 · EXPLORE THE RESULTS</p><h2 id="result-title">Tile prediction</h2></div>
           <div class="height-picker"><label for="height">Model height</label><select id="height" disabled><option value="4">45 m</option></select></div>
         </div>
-        <p class="compute-location">Calculations run in this browser.</p>
+        <p class="compute-location" id="compute-location">Calculations run in this browser.</p>
         <p id="height-caution" class="height-caution" hidden>Heights above 95 m are exploratory.</p>
         <div id="status" class="status ready" role="status"><span class="spinner" aria-hidden="true"></span><span id="status-text">Loading the reference case…</span></div>
         <p id="applied-scenario" class="compute-location" hidden></p>
@@ -159,7 +164,7 @@
     </div>
     <footer>Urban atmospheric CO₂ surrogate <span>Concentrations in ppm · exploratory scenarios</span></footer>
   </main>
-  <script src="runtime/ort.wasm.min.js"></script>
+  <script src="runtime/ort.webgpu.min.js"></script>
   <script src="weather.js"></script>
   <script type="module" src="public-start.js"></script>
 </body>
