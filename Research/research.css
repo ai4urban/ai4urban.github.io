@@ -31,3 +31,9 @@ li p { margin: 3px 0 0; }
 @media (max-width: 560px) {
   .research-cards { grid-template-columns: 1fr; }
 }
+
+.research-video { margin: 24px 0; }
+.research-video h2, #pm25 h2 { margin: 0 0 10px; font-size: 1.4rem; line-height: 1.3; }
+.research-video figure { margin: 0; }
+.research-video video { display: block; width: 100%; border-radius: 12px; background: #18231f; }
+.research-video figcaption { margin-top: 8px; }
