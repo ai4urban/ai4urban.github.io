@@ -1,0 +1,3941 @@
+{
+  "shape": [
+    16,
+    800,
+    800
+  ],
+  "valid": 1972872,
+  "ranges": {
+    "emissions": [
+      50,
+      75,
+      80,
+      100,
+      125,
+      150
+    ],
+    "windSpeed": [
+      -200,
+      -100,
+      0,
+      100,
+      200
+    ],
+    "rotation": [
+      -180,
+      -90,
+      0,
+      90,
+      180
+    ],
+    "background": [
+      -5,
+      0,
+      5
+    ]
+  },
+  "cases": {
+    "80_100_0_0": {
+      "file": "case-80_100_0_0.packed.gz",
+      "scale": 4.727336804363172e-05,
+      "maxStorageError": 3.0517578125e-05,
+      "modelSeconds": 6.714524351991713,
+      "bytes": 2149534,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_-180_-5": {
+      "file": "case-50_-200_-180_-5.packed.gz",
+      "scale": 0.00012905786907862102,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.713692843914032,
+      "bytes": 2461866,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_-180_-5": {
+      "file": "case-75_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.767626271117479,
+      "bytes": 2518918,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_-180_-5": {
+      "file": "case-80_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.801585861016065,
+      "bytes": 2515073,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_-180_-5": {
+      "file": "case-100_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.828462376724929,
+      "bytes": 2503287,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_-180_-5": {
+      "file": "case-125_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 14.972889161203057,
+      "bytes": 2497982,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_-180_-5": {
+      "file": "case-150_-200_-180_-5.packed.gz",
+      "scale": 0.0001048571315294948,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.99798130383715,
+      "bytes": 2489944,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_-90_-5": {
+      "file": "case-50_-200_-90_-5.packed.gz",
+      "scale": 0.00015110113681891026,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.065445221029222,
+      "bytes": 2551148,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_-90_-5": {
+      "file": "case-75_-200_-90_-5.packed.gz",
+      "scale": 0.0001216883769984356,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.099917642772198,
+      "bytes": 2614664,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_-90_-5": {
+      "file": "case-80_-200_-90_-5.packed.gz",
+      "scale": 0.00011734828553065858,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.110949581954628,
+      "bytes": 2625604,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_-90_-5": {
+      "file": "case-100_-200_-90_-5.packed.gz",
+      "scale": 0.00011488619887057387,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.121723430696875,
+      "bytes": 2629472,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_-90_-5": {
+      "file": "case-125_-200_-90_-5.packed.gz",
+      "scale": 0.00011288988721239698,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.148382045794278,
+      "bytes": 2636604,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_-90_-5": {
+      "file": "case-150_-200_-90_-5.packed.gz",
+      "scale": 0.00011151957715678418,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.1686429008841515,
+      "bytes": 2645750,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_0_-5": {
+      "file": "case-50_-200_0_-5.packed.gz",
+      "scale": 0.0001536722148294414,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 15.296468479093164,
+      "bytes": 2634803,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_0_-5": {
+      "file": "case-75_-200_0_-5.packed.gz",
+      "scale": 0.000154149168431395,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.249180904123932,
+      "bytes": 2631536,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_0_-5": {
+      "file": "case-80_-200_0_-5.packed.gz",
+      "scale": 0.00015423021328172696,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.263358424883336,
+      "bytes": 2631445,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_0_-5": {
+      "file": "case-100_-200_0_-5.packed.gz",
+      "scale": 0.0001545012943328373,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.273938219994307,
+      "bytes": 2630949,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_0_-5": {
+      "file": "case-125_-200_0_-5.packed.gz",
+      "scale": 0.00015472300323374541,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.3011237774044275,
+      "bytes": 2633288,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_0_-5": {
+      "file": "case-150_-200_0_-5.packed.gz",
+      "scale": 0.00015484876248426054,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.323290165048093,
+      "bytes": 2637801,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_90_-5": {
+      "file": "case-50_-200_90_-5.packed.gz",
+      "scale": 0.0001259390396658463,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.49929194804281,
+      "bytes": 2469853,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_90_-5": {
+      "file": "case-75_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.349445236846805,
+      "bytes": 2519848,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_90_-5": {
+      "file": "case-80_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.357243313919753,
+      "bytes": 2516124,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_90_-5": {
+      "file": "case-100_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367222568951547,
+      "bytes": 2503469,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_90_-5": {
+      "file": "case-125_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376916753128171,
+      "bytes": 2497024,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_90_-5": {
+      "file": "case-150_-200_90_-5.packed.gz",
+      "scale": 0.00010263817942040598,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.383994318544865,
+      "bytes": 2494420,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_180_-5": {
+      "file": "case-50_-200_-180_-5.packed.gz",
+      "scale": 0.00012905786907862102,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.713692843914032,
+      "bytes": 2461866,
+      "identicalInputs": "50_-200_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_180_-5": {
+      "file": "case-75_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.767626271117479,
+      "bytes": 2518918,
+      "identicalInputs": "75_-200_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_180_-5": {
+      "file": "case-80_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.801585861016065,
+      "bytes": 2515073,
+      "identicalInputs": "80_-200_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_180_-5": {
+      "file": "case-100_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.828462376724929,
+      "bytes": 2503287,
+      "identicalInputs": "100_-200_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_180_-5": {
+      "file": "case-125_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 14.972889161203057,
+      "bytes": 2497982,
+      "identicalInputs": "125_-200_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_180_-5": {
+      "file": "case-150_-200_-180_-5.packed.gz",
+      "scale": 0.0001048571315294948,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.99798130383715,
+      "bytes": 2489944,
+      "identicalInputs": "150_-200_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_-180_-5": {
+      "file": "case-50_-100_-180_-5.packed.gz",
+      "scale": 0.00012717520652090965,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.60125962877646,
+      "bytes": 2459214,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_-180_-5": {
+      "file": "case-75_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.392011194024235,
+      "bytes": 2510655,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_-180_-5": {
+      "file": "case-80_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.605010491795838,
+      "bytes": 2506834,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_-180_-5": {
+      "file": "case-100_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3583355019800365,
+      "bytes": 2494407,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_-180_-5": {
+      "file": "case-125_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3677048441022635,
+      "bytes": 2489911,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_-180_-5": {
+      "file": "case-150_-100_-180_-5.packed.gz",
+      "scale": 0.0001050648671803457,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362959909718484,
+      "bytes": 2482501,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_-90_-5": {
+      "file": "case-50_-100_-90_-5.packed.gz",
+      "scale": 0.00013721917866204976,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.622347047086805,
+      "bytes": 2502016,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_-90_-5": {
+      "file": "case-75_-100_-90_-5.packed.gz",
+      "scale": 0.00010192740676749466,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.388925252947956,
+      "bytes": 2583305,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_-90_-5": {
+      "file": "case-80_-100_-90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373916374053806,
+      "bytes": 2587279,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_-90_-5": {
+      "file": "case-100_-100_-90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.371690473053604,
+      "bytes": 2581137,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_-90_-5": {
+      "file": "case-125_-100_-90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375660452991724,
+      "bytes": 2581719,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_-90_-5": {
+      "file": "case-150_-100_-90_-5.packed.gz",
+      "scale": 0.00011065789340325473,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.388807529117912,
+      "bytes": 2556454,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_0_-5": {
+      "file": "case-50_-100_0_-5.packed.gz",
+      "scale": 0.0001467060839009081,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.60014219628647,
+      "bytes": 2557216,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_0_-5": {
+      "file": "case-75_-100_0_-5.packed.gz",
+      "scale": 0.00011676792987828145,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.396602864842862,
+      "bytes": 2624751,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_0_-5": {
+      "file": "case-80_-100_0_-5.packed.gz",
+      "scale": 0.00011619223197592338,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.402405170258135,
+      "bytes": 2624929,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_0_-5": {
+      "file": "case-100_-100_0_-5.packed.gz",
+      "scale": 0.00011376647576598749,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.39758475869894,
+      "bytes": 2627953,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_0_-5": {
+      "file": "case-125_-100_0_-5.packed.gz",
+      "scale": 0.00011196206340859661,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.400582911446691,
+      "bytes": 2633546,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_0_-5": {
+      "file": "case-150_-100_0_-5.packed.gz",
+      "scale": 0.00011186518220819978,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.389244061894715,
+      "bytes": 2638382,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_90_-5": {
+      "file": "case-50_-100_90_-5.packed.gz",
+      "scale": 0.00012348813160580738,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.604752225335687,
+      "bytes": 2468409,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_90_-5": {
+      "file": "case-75_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.387317083775997,
+      "bytes": 2511190,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_90_-5": {
+      "file": "case-80_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.387088248040527,
+      "bytes": 2507801,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_90_-5": {
+      "file": "case-100_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.380312385968864,
+      "bytes": 2496105,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_90_-5": {
+      "file": "case-125_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.395472172182053,
+      "bytes": 2492164,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_90_-5": {
+      "file": "case-150_-100_90_-5.packed.gz",
+      "scale": 0.00010473509847899496,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378253275062889,
+      "bytes": 2487616,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_180_-5": {
+      "file": "case-50_-100_-180_-5.packed.gz",
+      "scale": 0.00012717520652090965,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.60125962877646,
+      "bytes": 2459214,
+      "identicalInputs": "50_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_180_-5": {
+      "file": "case-75_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.392011194024235,
+      "bytes": 2510655,
+      "identicalInputs": "75_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_180_-5": {
+      "file": "case-80_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.605010491795838,
+      "bytes": 2506834,
+      "identicalInputs": "80_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_180_-5": {
+      "file": "case-100_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3583355019800365,
+      "bytes": 2494407,
+      "identicalInputs": "100_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_180_-5": {
+      "file": "case-125_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3677048441022635,
+      "bytes": 2489911,
+      "identicalInputs": "125_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_180_-5": {
+      "file": "case-150_-100_-180_-5.packed.gz",
+      "scale": 0.0001050648671803457,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362959909718484,
+      "bytes": 2482501,
+      "identicalInputs": "150_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_-180_-5": {
+      "file": "case-50_0_-180_-5.packed.gz",
+      "scale": 0.00011857886308569902,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.581499891355634,
+      "bytes": 2492992,
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_-180_-5": {
+      "file": "case-75_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36964764771983,
+      "bytes": 2529623,
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_-180_-5": {
+      "file": "case-80_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.379592661280185,
+      "bytes": 2526372,
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_-180_-5": {
+      "file": "case-100_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382537574041635,
+      "bytes": 2516755,
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_-180_-5": {
+      "file": "case-125_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38545974669978,
+      "bytes": 2516202,
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_-180_-5": {
+      "file": "case-150_0_-180_-5.packed.gz",
+      "scale": 0.00010799272884233821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.384234889876097,
+      "bytes": 2503048,
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_-90_-5": {
+      "file": "case-50_0_-180_-5.packed.gz",
+      "scale": 0.00011857886308569902,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.581499891355634,
+      "bytes": 2492992,
+      "identicalInputs": "50_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_-90_-5": {
+      "file": "case-75_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36964764771983,
+      "bytes": 2529623,
+      "identicalInputs": "75_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_-90_-5": {
+      "file": "case-80_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.379592661280185,
+      "bytes": 2526372,
+      "identicalInputs": "80_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_-90_-5": {
+      "file": "case-100_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382537574041635,
+      "bytes": 2516755,
+      "identicalInputs": "100_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_-90_-5": {
+      "file": "case-125_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38545974669978,
+      "bytes": 2516202,
+      "identicalInputs": "125_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_-90_-5": {
+      "file": "case-150_0_-180_-5.packed.gz",
+      "scale": 0.00010799272884233821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.384234889876097,
+      "bytes": 2503048,
+      "identicalInputs": "150_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_0_-5": {
+      "file": "case-50_0_-180_-5.packed.gz",
+      "scale": 0.00011857886308569902,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.581499891355634,
+      "bytes": 2492992,
+      "identicalInputs": "50_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_0_-5": {
+      "file": "case-75_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36964764771983,
+      "bytes": 2529623,
+      "identicalInputs": "75_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_0_-5": {
+      "file": "case-80_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.379592661280185,
+      "bytes": 2526372,
+      "identicalInputs": "80_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_0_-5": {
+      "file": "case-100_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382537574041635,
+      "bytes": 2516755,
+      "identicalInputs": "100_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_0_-5": {
+      "file": "case-125_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38545974669978,
+      "bytes": 2516202,
+      "identicalInputs": "125_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_0_-5": {
+      "file": "case-150_0_-180_-5.packed.gz",
+      "scale": 0.00010799272884233821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.384234889876097,
+      "bytes": 2503048,
+      "identicalInputs": "150_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_90_-5": {
+      "file": "case-50_0_-180_-5.packed.gz",
+      "scale": 0.00011857886308569902,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.581499891355634,
+      "bytes": 2492992,
+      "identicalInputs": "50_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_90_-5": {
+      "file": "case-75_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36964764771983,
+      "bytes": 2529623,
+      "identicalInputs": "75_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_90_-5": {
+      "file": "case-80_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.379592661280185,
+      "bytes": 2526372,
+      "identicalInputs": "80_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_90_-5": {
+      "file": "case-100_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382537574041635,
+      "bytes": 2516755,
+      "identicalInputs": "100_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_90_-5": {
+      "file": "case-125_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38545974669978,
+      "bytes": 2516202,
+      "identicalInputs": "125_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_90_-5": {
+      "file": "case-150_0_-180_-5.packed.gz",
+      "scale": 0.00010799272884233821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.384234889876097,
+      "bytes": 2503048,
+      "identicalInputs": "150_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_180_-5": {
+      "file": "case-50_0_-180_-5.packed.gz",
+      "scale": 0.00011857886308569902,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.581499891355634,
+      "bytes": 2492992,
+      "identicalInputs": "50_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_180_-5": {
+      "file": "case-75_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36964764771983,
+      "bytes": 2529623,
+      "identicalInputs": "75_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_180_-5": {
+      "file": "case-80_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.379592661280185,
+      "bytes": 2526372,
+      "identicalInputs": "80_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_180_-5": {
+      "file": "case-100_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382537574041635,
+      "bytes": 2516755,
+      "identicalInputs": "100_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_180_-5": {
+      "file": "case-125_0_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38545974669978,
+      "bytes": 2516202,
+      "identicalInputs": "125_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_180_-5": {
+      "file": "case-150_0_-180_-5.packed.gz",
+      "scale": 0.00010799272884233821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.384234889876097,
+      "bytes": 2503048,
+      "identicalInputs": "150_0_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_-180_-5": {
+      "file": "case-50_-100_0_-5.packed.gz",
+      "scale": 0.0001467060839009081,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.60014219628647,
+      "bytes": 2557216,
+      "identicalInputs": "50_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_-180_-5": {
+      "file": "case-75_-100_0_-5.packed.gz",
+      "scale": 0.00011676792987828145,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.396602864842862,
+      "bytes": 2624751,
+      "identicalInputs": "75_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_-180_-5": {
+      "file": "case-80_-100_0_-5.packed.gz",
+      "scale": 0.00011619223197592338,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.402405170258135,
+      "bytes": 2624929,
+      "identicalInputs": "80_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_-180_-5": {
+      "file": "case-100_-100_0_-5.packed.gz",
+      "scale": 0.00011376647576598749,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.39758475869894,
+      "bytes": 2627953,
+      "identicalInputs": "100_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_-180_-5": {
+      "file": "case-125_-100_0_-5.packed.gz",
+      "scale": 0.00011196206340859661,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.400582911446691,
+      "bytes": 2633546,
+      "identicalInputs": "125_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_-180_-5": {
+      "file": "case-150_-100_0_-5.packed.gz",
+      "scale": 0.00011186518220819978,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.389244061894715,
+      "bytes": 2638382,
+      "identicalInputs": "150_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_-90_-5": {
+      "file": "case-50_-100_90_-5.packed.gz",
+      "scale": 0.00012348813160580738,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.604752225335687,
+      "bytes": 2468409,
+      "identicalInputs": "50_-100_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_-90_-5": {
+      "file": "case-75_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.387317083775997,
+      "bytes": 2511190,
+      "identicalInputs": "75_-100_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_-90_-5": {
+      "file": "case-80_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.387088248040527,
+      "bytes": 2507801,
+      "identicalInputs": "80_-100_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_-90_-5": {
+      "file": "case-100_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.380312385968864,
+      "bytes": 2496105,
+      "identicalInputs": "100_-100_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_-90_-5": {
+      "file": "case-125_-100_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.395472172182053,
+      "bytes": 2492164,
+      "identicalInputs": "125_-100_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_-90_-5": {
+      "file": "case-150_-100_90_-5.packed.gz",
+      "scale": 0.00010473509847899496,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378253275062889,
+      "bytes": 2487616,
+      "identicalInputs": "150_-100_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_0_-5": {
+      "file": "case-50_-100_-180_-5.packed.gz",
+      "scale": 0.00012717520652090965,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.60125962877646,
+      "bytes": 2459214,
+      "identicalInputs": "50_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_0_-5": {
+      "file": "case-75_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.392011194024235,
+      "bytes": 2510655,
+      "identicalInputs": "75_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_0_-5": {
+      "file": "case-80_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.605010491795838,
+      "bytes": 2506834,
+      "identicalInputs": "80_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_0_-5": {
+      "file": "case-100_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3583355019800365,
+      "bytes": 2494407,
+      "identicalInputs": "100_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_0_-5": {
+      "file": "case-125_-100_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3677048441022635,
+      "bytes": 2489911,
+      "identicalInputs": "125_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_0_-5": {
+      "file": "case-150_-100_-180_-5.packed.gz",
+      "scale": 0.0001050648671803457,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362959909718484,
+      "bytes": 2482501,
+      "identicalInputs": "150_-100_-180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_90_-5": {
+      "file": "case-50_-100_-90_-5.packed.gz",
+      "scale": 0.00013721917866204976,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.622347047086805,
+      "bytes": 2502016,
+      "identicalInputs": "50_-100_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_90_-5": {
+      "file": "case-75_-100_-90_-5.packed.gz",
+      "scale": 0.00010192740676749466,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.388925252947956,
+      "bytes": 2583305,
+      "identicalInputs": "75_-100_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_90_-5": {
+      "file": "case-80_-100_-90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373916374053806,
+      "bytes": 2587279,
+      "identicalInputs": "80_-100_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_90_-5": {
+      "file": "case-100_-100_-90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.371690473053604,
+      "bytes": 2581137,
+      "identicalInputs": "100_-100_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_90_-5": {
+      "file": "case-125_-100_-90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375660452991724,
+      "bytes": 2581719,
+      "identicalInputs": "125_-100_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_90_-5": {
+      "file": "case-150_-100_-90_-5.packed.gz",
+      "scale": 0.00011065789340325473,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.388807529117912,
+      "bytes": 2556454,
+      "identicalInputs": "150_-100_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_180_-5": {
+      "file": "case-50_-100_0_-5.packed.gz",
+      "scale": 0.0001467060839009081,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.60014219628647,
+      "bytes": 2557216,
+      "identicalInputs": "50_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_180_-5": {
+      "file": "case-75_-100_0_-5.packed.gz",
+      "scale": 0.00011676792987828145,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.396602864842862,
+      "bytes": 2624751,
+      "identicalInputs": "75_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_180_-5": {
+      "file": "case-80_-100_0_-5.packed.gz",
+      "scale": 0.00011619223197592338,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.402405170258135,
+      "bytes": 2624929,
+      "identicalInputs": "80_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_180_-5": {
+      "file": "case-100_-100_0_-5.packed.gz",
+      "scale": 0.00011376647576598749,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.39758475869894,
+      "bytes": 2627953,
+      "identicalInputs": "100_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_180_-5": {
+      "file": "case-125_-100_0_-5.packed.gz",
+      "scale": 0.00011196206340859661,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.400582911446691,
+      "bytes": 2633546,
+      "identicalInputs": "125_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_180_-5": {
+      "file": "case-150_-100_0_-5.packed.gz",
+      "scale": 0.00011186518220819978,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.389244061894715,
+      "bytes": 2638382,
+      "identicalInputs": "150_-100_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_-180_-5": {
+      "file": "case-50_-200_0_-5.packed.gz",
+      "scale": 0.0001536722148294414,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 15.296468479093164,
+      "bytes": 2634803,
+      "identicalInputs": "50_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_-180_-5": {
+      "file": "case-75_-200_0_-5.packed.gz",
+      "scale": 0.000154149168431395,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.249180904123932,
+      "bytes": 2631536,
+      "identicalInputs": "75_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_-180_-5": {
+      "file": "case-80_-200_0_-5.packed.gz",
+      "scale": 0.00015423021328172696,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.263358424883336,
+      "bytes": 2631445,
+      "identicalInputs": "80_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_-180_-5": {
+      "file": "case-100_-200_0_-5.packed.gz",
+      "scale": 0.0001545012943328373,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.273938219994307,
+      "bytes": 2630949,
+      "identicalInputs": "100_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_-180_-5": {
+      "file": "case-125_-200_0_-5.packed.gz",
+      "scale": 0.00015472300323374541,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.3011237774044275,
+      "bytes": 2633288,
+      "identicalInputs": "125_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_-180_-5": {
+      "file": "case-150_-200_0_-5.packed.gz",
+      "scale": 0.00015484876248426054,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.323290165048093,
+      "bytes": 2637801,
+      "identicalInputs": "150_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_-90_-5": {
+      "file": "case-50_-200_90_-5.packed.gz",
+      "scale": 0.0001259390396658463,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.49929194804281,
+      "bytes": 2469853,
+      "identicalInputs": "50_-200_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_-90_-5": {
+      "file": "case-75_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.349445236846805,
+      "bytes": 2519848,
+      "identicalInputs": "75_-200_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_-90_-5": {
+      "file": "case-80_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.357243313919753,
+      "bytes": 2516124,
+      "identicalInputs": "80_-200_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_-90_-5": {
+      "file": "case-100_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367222568951547,
+      "bytes": 2503469,
+      "identicalInputs": "100_-200_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_-90_-5": {
+      "file": "case-125_-200_90_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376916753128171,
+      "bytes": 2497024,
+      "identicalInputs": "125_-200_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_-90_-5": {
+      "file": "case-150_-200_90_-5.packed.gz",
+      "scale": 0.00010263817942040598,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.383994318544865,
+      "bytes": 2494420,
+      "identicalInputs": "150_-200_90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_0_-5": {
+      "file": "case-50_-200_-180_-5.packed.gz",
+      "scale": 0.00012905786907862102,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.713692843914032,
+      "bytes": 2461866,
+      "identicalInputs": "50_-200_180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_0_-5": {
+      "file": "case-75_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.767626271117479,
+      "bytes": 2518918,
+      "identicalInputs": "75_-200_180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_0_-5": {
+      "file": "case-80_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.801585861016065,
+      "bytes": 2515073,
+      "identicalInputs": "80_-200_180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_0_-5": {
+      "file": "case-100_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.828462376724929,
+      "bytes": 2503287,
+      "identicalInputs": "100_-200_180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_0_-5": {
+      "file": "case-125_-200_-180_-5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 14.972889161203057,
+      "bytes": 2497982,
+      "identicalInputs": "125_-200_180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_0_-5": {
+      "file": "case-150_-200_-180_-5.packed.gz",
+      "scale": 0.0001048571315294948,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 6.99798130383715,
+      "bytes": 2489944,
+      "identicalInputs": "150_-200_180_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_90_-5": {
+      "file": "case-50_-200_-90_-5.packed.gz",
+      "scale": 0.00015110113681891026,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.065445221029222,
+      "bytes": 2551148,
+      "identicalInputs": "50_-200_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_90_-5": {
+      "file": "case-75_-200_-90_-5.packed.gz",
+      "scale": 0.0001216883769984356,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.099917642772198,
+      "bytes": 2614664,
+      "identicalInputs": "75_-200_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_90_-5": {
+      "file": "case-80_-200_-90_-5.packed.gz",
+      "scale": 0.00011734828553065858,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.110949581954628,
+      "bytes": 2625604,
+      "identicalInputs": "80_-200_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_90_-5": {
+      "file": "case-100_-200_-90_-5.packed.gz",
+      "scale": 0.00011488619887057387,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.121723430696875,
+      "bytes": 2629472,
+      "identicalInputs": "100_-200_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_90_-5": {
+      "file": "case-125_-200_-90_-5.packed.gz",
+      "scale": 0.00011288988721239698,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.148382045794278,
+      "bytes": 2636604,
+      "identicalInputs": "125_-200_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_90_-5": {
+      "file": "case-150_-200_-90_-5.packed.gz",
+      "scale": 0.00011151957715678418,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.1686429008841515,
+      "bytes": 2645750,
+      "identicalInputs": "150_-200_-90_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_180_-5": {
+      "file": "case-50_-200_0_-5.packed.gz",
+      "scale": 0.0001536722148294414,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 15.296468479093164,
+      "bytes": 2634803,
+      "identicalInputs": "50_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_180_-5": {
+      "file": "case-75_-200_0_-5.packed.gz",
+      "scale": 0.000154149168431395,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.249180904123932,
+      "bytes": 2631536,
+      "identicalInputs": "75_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_180_-5": {
+      "file": "case-80_-200_0_-5.packed.gz",
+      "scale": 0.00015423021328172696,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.263358424883336,
+      "bytes": 2631445,
+      "identicalInputs": "80_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_180_-5": {
+      "file": "case-100_-200_0_-5.packed.gz",
+      "scale": 0.0001545012943328373,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.273938219994307,
+      "bytes": 2630949,
+      "identicalInputs": "100_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_180_-5": {
+      "file": "case-125_-200_0_-5.packed.gz",
+      "scale": 0.00015472300323374541,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.3011237774044275,
+      "bytes": 2633288,
+      "identicalInputs": "125_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_180_-5": {
+      "file": "case-150_-200_0_-5.packed.gz",
+      "scale": 0.00015484876248426054,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.323290165048093,
+      "bytes": 2637801,
+      "identicalInputs": "150_-200_0_-5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_-180_0": {
+      "file": "case-50_-200_-180_0.packed.gz",
+      "scale": 0.00011229835295997405,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.611311133019626,
+      "bytes": 2206554,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_-180_0": {
+      "file": "case-75_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.372571913059801,
+      "bytes": 2134262,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_-180_0": {
+      "file": "case-80_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356810353230685,
+      "bytes": 2105702,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_-180_0": {
+      "file": "case-100_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3666128176264465,
+      "bytes": 1950033,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_-180_0": {
+      "file": "case-125_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3581665232777596,
+      "bytes": 2105637,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_-180_0": {
+      "file": "case-150_-200_-180_0.packed.gz",
+      "scale": 0.00011297000051272513,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367933325003833,
+      "bytes": 2197487,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_-90_0": {
+      "file": "case-50_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.54441773192957,
+      "bytes": 2590206,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_-90_0": {
+      "file": "case-75_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373430673032999,
+      "bytes": 2582629,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_-90_0": {
+      "file": "case-80_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.372327254153788,
+      "bytes": 2581594,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_-90_0": {
+      "file": "case-100_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376535085961223,
+      "bytes": 2581432,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_-90_0": {
+      "file": "case-125_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.369662326294929,
+      "bytes": 2589841,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_-90_0": {
+      "file": "case-150_-200_-90_0.packed.gz",
+      "scale": 0.00011304545606303419,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376780537888408,
+      "bytes": 2562339,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_0_0": {
+      "file": "case-50_-200_0_0.packed.gz",
+      "scale": 0.00013409475994925215,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.537283936981112,
+      "bytes": 2644074,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_0_0": {
+      "file": "case-75_-200_0_0.packed.gz",
+      "scale": 0.00013327965369591346,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.374805955216289,
+      "bytes": 2640482,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_0_0": {
+      "file": "case-80_-200_0_0.packed.gz",
+      "scale": 0.00013311476934523808,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362103223800659,
+      "bytes": 2640118,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_0_0": {
+      "file": "case-100_-200_0_0.packed.gz",
+      "scale": 0.00013243194319244124,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375604998786002,
+      "bytes": 2640281,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_0_0": {
+      "file": "case-125_-200_0_0.packed.gz",
+      "scale": 0.00013150039318862562,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378418306820095,
+      "bytes": 2643571,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_0_0": {
+      "file": "case-150_-200_0_0.packed.gz",
+      "scale": 0.00013109144273695054,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3794224741868675,
+      "bytes": 2648213,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_90_0": {
+      "file": "case-50_-200_90_0.packed.gz",
+      "scale": 0.00010976546849959936,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.530470616649836,
+      "bytes": 2304906,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_90_0": {
+      "file": "case-75_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36269452329725,
+      "bytes": 2275457,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_90_0": {
+      "file": "case-80_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.360082218889147,
+      "bytes": 2265199,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_90_0": {
+      "file": "case-100_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368203343823552,
+      "bytes": 2228046,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_90_0": {
+      "file": "case-125_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.358010974247009,
+      "bytes": 2227473,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_90_0": {
+      "file": "case-150_-200_90_0.packed.gz",
+      "scale": 0.00011069888160342262,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3649267219007015,
+      "bytes": 2245104,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_180_0": {
+      "file": "case-50_-200_-180_0.packed.gz",
+      "scale": 0.00011229835295997405,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.611311133019626,
+      "bytes": 2206554,
+      "identicalInputs": "50_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_180_0": {
+      "file": "case-75_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.372571913059801,
+      "bytes": 2134262,
+      "identicalInputs": "75_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_180_0": {
+      "file": "case-80_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356810353230685,
+      "bytes": 2105702,
+      "identicalInputs": "80_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_180_0": {
+      "file": "case-100_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3666128176264465,
+      "bytes": 1950033,
+      "identicalInputs": "100_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_180_0": {
+      "file": "case-125_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3581665232777596,
+      "bytes": 2105637,
+      "identicalInputs": "125_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_180_0": {
+      "file": "case-150_-200_-180_0.packed.gz",
+      "scale": 0.00011297000051272513,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367933325003833,
+      "bytes": 2197487,
+      "identicalInputs": "150_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_-180_0": {
+      "file": "case-50_-100_-180_0.packed.gz",
+      "scale": 0.00011069981315342643,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.529871535021812,
+      "bytes": 2155318,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_-180_0": {
+      "file": "case-75_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3660504799336195,
+      "bytes": 2011284,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_-180_0": {
+      "file": "case-80_100_0_0.packed.gz",
+      "scale": 4.727336804363172e-05,
+      "maxStorageError": 3.0517578125e-05,
+      "modelSeconds": 6.714524351991713,
+      "bytes": 2149534,
+      "identicalInputs": "80_100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_-180_0": {
+      "file": "case-100_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3565571596845984,
+      "bytes": 643088,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_-180_0": {
+      "file": "case-125_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370498548261821,
+      "bytes": 2020424,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_-180_0": {
+      "file": "case-150_-100_-180_0.packed.gz",
+      "scale": 0.00011287125621232067,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356863242108375,
+      "bytes": 2167371,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_-90_0": {
+      "file": "case-50_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.57130570197478,
+      "bytes": 2467878,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_-90_0": {
+      "file": "case-75_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.380629227031022,
+      "bytes": 2458462,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_-90_0": {
+      "file": "case-80_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381298339925706,
+      "bytes": 2457505,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_-90_0": {
+      "file": "case-100_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373789824079722,
+      "bytes": 2459680,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_-90_0": {
+      "file": "case-125_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376338019035757,
+      "bytes": 2476646,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_-90_0": {
+      "file": "case-150_-100_-90_0.packed.gz",
+      "scale": 0.00011492252932072268,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.380054369568825,
+      "bytes": 2459712,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_0_0": {
+      "file": "case-50_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.553998387884349,
+      "bytes": 2605067,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_0_0": {
+      "file": "case-75_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.359452618751675,
+      "bytes": 2598472,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_0_0": {
+      "file": "case-80_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.385258930269629,
+      "bytes": 2597649,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_0_0": {
+      "file": "case-100_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3658693032339215,
+      "bytes": 2597483,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_0_0": {
+      "file": "case-125_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.377928242087364,
+      "bytes": 2604630,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_0_0": {
+      "file": "case-150_-100_0_0.packed.gz",
+      "scale": 0.00011190151265834859,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381110641174018,
+      "bytes": 2578197,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_90_0": {
+      "file": "case-50_-100_90_0.packed.gz",
+      "scale": 0.00010834764939379197,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.553795076906681,
+      "bytes": 2243377,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_90_0": {
+      "file": "case-75_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3708716640248895,
+      "bytes": 2183164,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_90_0": {
+      "file": "case-80_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3718512039631605,
+      "bytes": 2164629,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_90_0": {
+      "file": "case-100_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362651747185737,
+      "bytes": 2111521,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_90_0": {
+      "file": "case-125_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365658295340836,
+      "bytes": 2205981,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_90_0": {
+      "file": "case-150_-100_90_0.packed.gz",
+      "scale": 0.00011205056065895909,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366111088078469,
+      "bytes": 2257910,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_180_0": {
+      "file": "case-50_-100_-180_0.packed.gz",
+      "scale": 0.00011069981315342643,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.529871535021812,
+      "bytes": 2155318,
+      "identicalInputs": "50_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_180_0": {
+      "file": "case-75_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3660504799336195,
+      "bytes": 2011284,
+      "identicalInputs": "75_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_180_0": {
+      "file": "case-80_100_0_0.packed.gz",
+      "scale": 4.727336804363172e-05,
+      "maxStorageError": 3.0517578125e-05,
+      "modelSeconds": 6.714524351991713,
+      "bytes": 2149534,
+      "identicalInputs": "80_100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_180_0": {
+      "file": "case-100_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3565571596845984,
+      "bytes": 643088,
+      "identicalInputs": "100_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_180_0": {
+      "file": "case-125_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370498548261821,
+      "bytes": 2020424,
+      "identicalInputs": "125_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_180_0": {
+      "file": "case-150_-100_-180_0.packed.gz",
+      "scale": 0.00011287125621232067,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356863242108375,
+      "bytes": 2167371,
+      "identicalInputs": "150_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_-180_0": {
+      "file": "case-50_0_-180_0.packed.gz",
+      "scale": 0.000105154295980712,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.54935802007094,
+      "bytes": 2313597,
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_-180_0": {
+      "file": "case-75_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.358036261983216,
+      "bytes": 2308987,
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_-180_0": {
+      "file": "case-80_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365839506965131,
+      "bytes": 2306920,
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_-180_0": {
+      "file": "case-100_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.357713771983981,
+      "bytes": 2310488,
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_-180_0": {
+      "file": "case-125_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366962207015604,
+      "bytes": 2346961,
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_-180_0": {
+      "file": "case-150_0_-180_0.packed.gz",
+      "scale": 0.00011369660951570132,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356539382133633,
+      "bytes": 2355336,
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_-90_0": {
+      "file": "case-50_0_-180_0.packed.gz",
+      "scale": 0.000105154295980712,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.54935802007094,
+      "bytes": 2313597,
+      "identicalInputs": "50_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_-90_0": {
+      "file": "case-75_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.358036261983216,
+      "bytes": 2308987,
+      "identicalInputs": "75_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_-90_0": {
+      "file": "case-80_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365839506965131,
+      "bytes": 2306920,
+      "identicalInputs": "80_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_-90_0": {
+      "file": "case-100_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.357713771983981,
+      "bytes": 2310488,
+      "identicalInputs": "100_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_-90_0": {
+      "file": "case-125_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366962207015604,
+      "bytes": 2346961,
+      "identicalInputs": "125_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_-90_0": {
+      "file": "case-150_0_-180_0.packed.gz",
+      "scale": 0.00011369660951570132,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356539382133633,
+      "bytes": 2355336,
+      "identicalInputs": "150_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_0_0": {
+      "file": "case-50_0_-180_0.packed.gz",
+      "scale": 0.000105154295980712,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.54935802007094,
+      "bytes": 2313597,
+      "identicalInputs": "50_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_0_0": {
+      "file": "case-75_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.358036261983216,
+      "bytes": 2308987,
+      "identicalInputs": "75_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_0_0": {
+      "file": "case-80_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365839506965131,
+      "bytes": 2306920,
+      "identicalInputs": "80_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_0_0": {
+      "file": "case-100_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.357713771983981,
+      "bytes": 2310488,
+      "identicalInputs": "100_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_0_0": {
+      "file": "case-125_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366962207015604,
+      "bytes": 2346961,
+      "identicalInputs": "125_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_0_0": {
+      "file": "case-150_0_-180_0.packed.gz",
+      "scale": 0.00011369660951570132,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356539382133633,
+      "bytes": 2355336,
+      "identicalInputs": "150_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_90_0": {
+      "file": "case-50_0_-180_0.packed.gz",
+      "scale": 0.000105154295980712,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.54935802007094,
+      "bytes": 2313597,
+      "identicalInputs": "50_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_90_0": {
+      "file": "case-75_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.358036261983216,
+      "bytes": 2308987,
+      "identicalInputs": "75_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_90_0": {
+      "file": "case-80_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365839506965131,
+      "bytes": 2306920,
+      "identicalInputs": "80_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_90_0": {
+      "file": "case-100_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.357713771983981,
+      "bytes": 2310488,
+      "identicalInputs": "100_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_90_0": {
+      "file": "case-125_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366962207015604,
+      "bytes": 2346961,
+      "identicalInputs": "125_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_90_0": {
+      "file": "case-150_0_-180_0.packed.gz",
+      "scale": 0.00011369660951570132,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356539382133633,
+      "bytes": 2355336,
+      "identicalInputs": "150_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_180_0": {
+      "file": "case-50_0_-180_0.packed.gz",
+      "scale": 0.000105154295980712,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.54935802007094,
+      "bytes": 2313597,
+      "identicalInputs": "50_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_180_0": {
+      "file": "case-75_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.358036261983216,
+      "bytes": 2308987,
+      "identicalInputs": "75_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_180_0": {
+      "file": "case-80_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365839506965131,
+      "bytes": 2306920,
+      "identicalInputs": "80_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_180_0": {
+      "file": "case-100_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.357713771983981,
+      "bytes": 2310488,
+      "identicalInputs": "100_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_180_0": {
+      "file": "case-125_0_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366962207015604,
+      "bytes": 2346961,
+      "identicalInputs": "125_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_180_0": {
+      "file": "case-150_0_-180_0.packed.gz",
+      "scale": 0.00011369660951570132,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356539382133633,
+      "bytes": 2355336,
+      "identicalInputs": "150_0_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_-180_0": {
+      "file": "case-50_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.553998387884349,
+      "bytes": 2605067,
+      "identicalInputs": "50_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_-180_0": {
+      "file": "case-75_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.359452618751675,
+      "bytes": 2598472,
+      "identicalInputs": "75_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_-180_0": {
+      "file": "case-80_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.385258930269629,
+      "bytes": 2597649,
+      "identicalInputs": "80_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_-180_0": {
+      "file": "case-100_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3658693032339215,
+      "bytes": 2597483,
+      "identicalInputs": "100_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_-180_0": {
+      "file": "case-125_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.377928242087364,
+      "bytes": 2604630,
+      "identicalInputs": "125_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_-180_0": {
+      "file": "case-150_-100_0_0.packed.gz",
+      "scale": 0.00011190151265834859,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381110641174018,
+      "bytes": 2578197,
+      "identicalInputs": "150_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_-90_0": {
+      "file": "case-50_-100_90_0.packed.gz",
+      "scale": 0.00010834764939379197,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.553795076906681,
+      "bytes": 2243377,
+      "identicalInputs": "50_-100_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_-90_0": {
+      "file": "case-75_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3708716640248895,
+      "bytes": 2183164,
+      "identicalInputs": "75_-100_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_-90_0": {
+      "file": "case-80_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3718512039631605,
+      "bytes": 2164629,
+      "identicalInputs": "80_-100_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_-90_0": {
+      "file": "case-100_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362651747185737,
+      "bytes": 2111521,
+      "identicalInputs": "100_-100_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_-90_0": {
+      "file": "case-125_-100_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365658295340836,
+      "bytes": 2205981,
+      "identicalInputs": "125_-100_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_-90_0": {
+      "file": "case-150_-100_90_0.packed.gz",
+      "scale": 0.00011205056065895909,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366111088078469,
+      "bytes": 2257910,
+      "identicalInputs": "150_-100_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_0_0": {
+      "file": "case-50_-100_-180_0.packed.gz",
+      "scale": 0.00011069981315342643,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.529871535021812,
+      "bytes": 2155318,
+      "identicalInputs": "50_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_0_0": {
+      "file": "case-75_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3660504799336195,
+      "bytes": 2011284,
+      "identicalInputs": "75_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_0_0": {
+      "file": "case-100_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3565571596845984,
+      "bytes": 643088,
+      "identicalInputs": "100_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_0_0": {
+      "file": "case-125_-100_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370498548261821,
+      "bytes": 2020424,
+      "identicalInputs": "125_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_0_0": {
+      "file": "case-150_-100_-180_0.packed.gz",
+      "scale": 0.00011287125621232067,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356863242108375,
+      "bytes": 2167371,
+      "identicalInputs": "150_-100_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_90_0": {
+      "file": "case-50_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.57130570197478,
+      "bytes": 2467878,
+      "identicalInputs": "50_-100_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_90_0": {
+      "file": "case-75_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.380629227031022,
+      "bytes": 2458462,
+      "identicalInputs": "75_-100_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_90_0": {
+      "file": "case-80_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381298339925706,
+      "bytes": 2457505,
+      "identicalInputs": "80_-100_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_90_0": {
+      "file": "case-100_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373789824079722,
+      "bytes": 2459680,
+      "identicalInputs": "100_-100_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_90_0": {
+      "file": "case-125_-100_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376338019035757,
+      "bytes": 2476646,
+      "identicalInputs": "125_-100_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_90_0": {
+      "file": "case-150_-100_-90_0.packed.gz",
+      "scale": 0.00011492252932072268,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.380054369568825,
+      "bytes": 2459712,
+      "identicalInputs": "150_-100_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_180_0": {
+      "file": "case-50_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.553998387884349,
+      "bytes": 2605067,
+      "identicalInputs": "50_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_180_0": {
+      "file": "case-75_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.359452618751675,
+      "bytes": 2598472,
+      "identicalInputs": "75_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_180_0": {
+      "file": "case-80_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.385258930269629,
+      "bytes": 2597649,
+      "identicalInputs": "80_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_180_0": {
+      "file": "case-100_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3658693032339215,
+      "bytes": 2597483,
+      "identicalInputs": "100_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_180_0": {
+      "file": "case-125_-100_0_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.377928242087364,
+      "bytes": 2604630,
+      "identicalInputs": "125_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_180_0": {
+      "file": "case-150_-100_0_0.packed.gz",
+      "scale": 0.00011190151265834859,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381110641174018,
+      "bytes": 2578197,
+      "identicalInputs": "150_-100_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_-180_0": {
+      "file": "case-50_-200_0_0.packed.gz",
+      "scale": 0.00013409475994925215,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.537283936981112,
+      "bytes": 2644074,
+      "identicalInputs": "50_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_-180_0": {
+      "file": "case-75_-200_0_0.packed.gz",
+      "scale": 0.00013327965369591346,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.374805955216289,
+      "bytes": 2640482,
+      "identicalInputs": "75_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_-180_0": {
+      "file": "case-80_-200_0_0.packed.gz",
+      "scale": 0.00013311476934523808,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362103223800659,
+      "bytes": 2640118,
+      "identicalInputs": "80_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_-180_0": {
+      "file": "case-100_-200_0_0.packed.gz",
+      "scale": 0.00013243194319244124,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375604998786002,
+      "bytes": 2640281,
+      "identicalInputs": "100_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_-180_0": {
+      "file": "case-125_-200_0_0.packed.gz",
+      "scale": 0.00013150039318862562,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378418306820095,
+      "bytes": 2643571,
+      "identicalInputs": "125_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_-180_0": {
+      "file": "case-150_-200_0_0.packed.gz",
+      "scale": 0.00013109144273695054,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3794224741868675,
+      "bytes": 2648213,
+      "identicalInputs": "150_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_-90_0": {
+      "file": "case-50_-200_90_0.packed.gz",
+      "scale": 0.00010976546849959936,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.530470616649836,
+      "bytes": 2304906,
+      "identicalInputs": "50_-200_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_-90_0": {
+      "file": "case-75_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36269452329725,
+      "bytes": 2275457,
+      "identicalInputs": "75_-200_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_-90_0": {
+      "file": "case-80_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.360082218889147,
+      "bytes": 2265199,
+      "identicalInputs": "80_-200_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_-90_0": {
+      "file": "case-100_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368203343823552,
+      "bytes": 2228046,
+      "identicalInputs": "100_-200_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_-90_0": {
+      "file": "case-125_-200_90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.358010974247009,
+      "bytes": 2227473,
+      "identicalInputs": "125_-200_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_-90_0": {
+      "file": "case-150_-200_90_0.packed.gz",
+      "scale": 0.00011069888160342262,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3649267219007015,
+      "bytes": 2245104,
+      "identicalInputs": "150_-200_90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_0_0": {
+      "file": "case-50_-200_-180_0.packed.gz",
+      "scale": 0.00011229835295997405,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.611311133019626,
+      "bytes": 2206554,
+      "identicalInputs": "50_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_0_0": {
+      "file": "case-75_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.372571913059801,
+      "bytes": 2134262,
+      "identicalInputs": "75_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_0_0": {
+      "file": "case-80_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.356810353230685,
+      "bytes": 2105702,
+      "identicalInputs": "80_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_0_0": {
+      "file": "case-100_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3666128176264465,
+      "bytes": 1950033,
+      "identicalInputs": "100_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_0_0": {
+      "file": "case-125_-200_-180_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3581665232777596,
+      "bytes": 2105637,
+      "identicalInputs": "125_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_0_0": {
+      "file": "case-150_-200_-180_0.packed.gz",
+      "scale": 0.00011297000051272513,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367933325003833,
+      "bytes": 2197487,
+      "identicalInputs": "150_-200_-180_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_90_0": {
+      "file": "case-50_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.54441773192957,
+      "bytes": 2590206,
+      "identicalInputs": "50_-200_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_90_0": {
+      "file": "case-75_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373430673032999,
+      "bytes": 2582629,
+      "identicalInputs": "75_-200_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_90_0": {
+      "file": "case-80_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.372327254153788,
+      "bytes": 2581594,
+      "identicalInputs": "80_-200_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_90_0": {
+      "file": "case-100_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376535085961223,
+      "bytes": 2581432,
+      "identicalInputs": "100_-200_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_90_0": {
+      "file": "case-125_-200_-90_0.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.369662326294929,
+      "bytes": 2589841,
+      "identicalInputs": "125_-200_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_90_0": {
+      "file": "case-150_-200_-90_0.packed.gz",
+      "scale": 0.00011304545606303419,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.376780537888408,
+      "bytes": 2562339,
+      "identicalInputs": "150_-200_-90_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_180_0": {
+      "file": "case-50_-200_0_0.packed.gz",
+      "scale": 0.00013409475994925215,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.537283936981112,
+      "bytes": 2644074,
+      "identicalInputs": "50_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_180_0": {
+      "file": "case-75_-200_0_0.packed.gz",
+      "scale": 0.00013327965369591346,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.374805955216289,
+      "bytes": 2640482,
+      "identicalInputs": "75_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_180_0": {
+      "file": "case-80_-200_0_0.packed.gz",
+      "scale": 0.00013311476934523808,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.362103223800659,
+      "bytes": 2640118,
+      "identicalInputs": "80_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_180_0": {
+      "file": "case-100_-200_0_0.packed.gz",
+      "scale": 0.00013243194319244124,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375604998786002,
+      "bytes": 2640281,
+      "identicalInputs": "100_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_180_0": {
+      "file": "case-125_-200_0_0.packed.gz",
+      "scale": 0.00013150039318862562,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378418306820095,
+      "bytes": 2643571,
+      "identicalInputs": "125_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_180_0": {
+      "file": "case-150_-200_0_0.packed.gz",
+      "scale": 0.00013109144273695054,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3794224741868675,
+      "bytes": 2648213,
+      "identicalInputs": "150_-200_0_0",
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_-180_5": {
+      "file": "case-50_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.561805651988834,
+      "bytes": 2576730,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_-180_5": {
+      "file": "case-75_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.359954258892685,
+      "bytes": 2566517,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_-180_5": {
+      "file": "case-80_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378782818093896,
+      "bytes": 2565410,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_-180_5": {
+      "file": "case-100_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.360476843081415,
+      "bytes": 2565668,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_-180_5": {
+      "file": "case-125_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368399936240166,
+      "bytes": 2577311,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_-180_5": {
+      "file": "case-150_-200_-180_5.packed.gz",
+      "scale": 0.0001235552032060821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370837045833468,
+      "bytes": 2524678,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_-90_5": {
+      "file": "case-50_-200_-90_5.packed.gz",
+      "scale": 0.00011548611707303113,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.579030903056264,
+      "bytes": 2587592,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_-90_5": {
+      "file": "case-75_-200_-90_5.packed.gz",
+      "scale": 0.00011526813437213828,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.37956707784906,
+      "bytes": 2581339,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_-90_5": {
+      "file": "case-80_-200_-90_5.packed.gz",
+      "scale": 0.00011521503602192078,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373748048208654,
+      "bytes": 2580906,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_-90_5": {
+      "file": "case-100_-200_-90_5.packed.gz",
+      "scale": 0.00011499891642103556,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.383200871758163,
+      "bytes": 2582717,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_-90_5": {
+      "file": "case-125_-200_-90_5.packed.gz",
+      "scale": 0.00011480515402024191,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373455876018852,
+      "bytes": 2593294,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_-90_5": {
+      "file": "case-150_-200_-90_5.packed.gz",
+      "scale": 0.00012136140294709631,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3657954297959805,
+      "bytes": 2588193,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_0_5": {
+      "file": "case-50_-200_0_5.packed.gz",
+      "scale": 0.00015102847591861264,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.579618569929153,
+      "bytes": 2589222,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_0_5": {
+      "file": "case-75_-200_0_5.packed.gz",
+      "scale": 0.00015092600541819292,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3991240272298455,
+      "bytes": 2585797,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_0_5": {
+      "file": "case-80_-200_0_5.packed.gz",
+      "scale": 0.00015090457976810515,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.385756344068795,
+      "bytes": 2585482,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_0_5": {
+      "file": "case-100_-200_0_5.packed.gz",
+      "scale": 0.0001508058354677007,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38600649824366,
+      "bytes": 2586197,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_0_5": {
+      "file": "case-125_-200_0_5.packed.gz",
+      "scale": 0.0001506558559170864,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381729514338076,
+      "bytes": 2590590,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_0_5": {
+      "file": "case-150_-200_0_5.packed.gz",
+      "scale": 0.00015494936988467262,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.388151894789189,
+      "bytes": 2586977,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_90_5": {
+      "file": "case-50_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.596683300100267,
+      "bytes": 2581989,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_90_5": {
+      "file": "case-75_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381415223237127,
+      "bytes": 2572020,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_90_5": {
+      "file": "case-80_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382211447227746,
+      "bytes": 2570564,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_90_5": {
+      "file": "case-100_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.390077056363225,
+      "bytes": 2570555,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_90_5": {
+      "file": "case-125_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373641717247665,
+      "bytes": 2580846,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_90_5": {
+      "file": "case-150_-200_90_5.packed.gz",
+      "scale": 0.00012042333209325397,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.379254563245922,
+      "bytes": 2535748,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-200_180_5": {
+      "file": "case-50_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.561805651988834,
+      "bytes": 2576730,
+      "identicalInputs": "50_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_-200_180_5": {
+      "file": "case-75_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.359954258892685,
+      "bytes": 2566517,
+      "identicalInputs": "75_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_-200_180_5": {
+      "file": "case-80_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378782818093896,
+      "bytes": 2565410,
+      "identicalInputs": "80_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_-200_180_5": {
+      "file": "case-100_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.360476843081415,
+      "bytes": 2565668,
+      "identicalInputs": "100_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_-200_180_5": {
+      "file": "case-125_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368399936240166,
+      "bytes": 2577311,
+      "identicalInputs": "125_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_-200_180_5": {
+      "file": "case-150_-200_-180_5.packed.gz",
+      "scale": 0.0001235552032060821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370837045833468,
+      "bytes": 2524678,
+      "identicalInputs": "150_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_-180_5": {
+      "file": "case-50_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.603261400945485,
+      "bytes": 2578406,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_-180_5": {
+      "file": "case-75_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3825188600458205,
+      "bytes": 2568537,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_-180_5": {
+      "file": "case-80_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370004141237587,
+      "bytes": 2566925,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_-180_5": {
+      "file": "case-100_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.392420744057745,
+      "bytes": 2567693,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_-180_5": {
+      "file": "case-125_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.383267551194876,
+      "bytes": 2579538,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_-180_5": {
+      "file": "case-150_-100_-180_5.packed.gz",
+      "scale": 0.0001231676784044948,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.394373759161681,
+      "bytes": 2527481,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_-90_5": {
+      "file": "case-50_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.604850685223937,
+      "bytes": 2612136,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_-90_5": {
+      "file": "case-75_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378909222315997,
+      "bytes": 2605091,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_-90_5": {
+      "file": "case-80_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.389410021714866,
+      "bytes": 2604485,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_-90_5": {
+      "file": "case-100_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38884350983426,
+      "bytes": 2606305,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_-90_5": {
+      "file": "case-125_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.386299280915409,
+      "bytes": 2616049,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_-90_5": {
+      "file": "case-150_-100_-90_5.packed.gz",
+      "scale": 0.00012076707404466194,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382798811420798,
+      "bytes": 2565319,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_0_5": {
+      "file": "case-50_-100_0_5.packed.gz",
+      "scale": 0.00012470100971077533,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.557196758221835,
+      "bytes": 2580125,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_0_5": {
+      "file": "case-75_-100_0_5.packed.gz",
+      "scale": 0.00012453426226009234,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36806660797447,
+      "bytes": 2574229,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_0_5": {
+      "file": "case-80_-100_0_5.packed.gz",
+      "scale": 0.00012449327405992446,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366352747194469,
+      "bytes": 2573639,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_0_5": {
+      "file": "case-100_-100_0_5.packed.gz",
+      "scale": 0.0001243293212592529,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3725447240285575,
+      "bytes": 2574691,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_0_5": {
+      "file": "case-125_-100_0_5.packed.gz",
+      "scale": 0.00012426690740899724,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367477333173156,
+      "bytes": 2583783,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_0_5": {
+      "file": "case-150_-100_0_5.packed.gz",
+      "scale": 0.00012417282085861188,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366388840135187,
+      "bytes": 2595694,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_90_5": {
+      "file": "case-50_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.569404528010637,
+      "bytes": 2582888,
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_90_5": {
+      "file": "case-75_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.369146915152669,
+      "bytes": 2573666,
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_90_5": {
+      "file": "case-80_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368304372299463,
+      "bytes": 2572493,
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_90_5": {
+      "file": "case-100_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365208109840751,
+      "bytes": 2572915,
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_90_5": {
+      "file": "case-125_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.360651939176023,
+      "bytes": 2584187,
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_90_5": {
+      "file": "case-150_-100_90_5.packed.gz",
+      "scale": 0.00012179923144888965,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3644424779340625,
+      "bytes": 2535068,
+      "encoding": "delta-byteplanes"
+    },
+    "50_-100_180_5": {
+      "file": "case-50_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.603261400945485,
+      "bytes": 2578406,
+      "identicalInputs": "50_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_-100_180_5": {
+      "file": "case-75_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3825188600458205,
+      "bytes": 2568537,
+      "identicalInputs": "75_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_-100_180_5": {
+      "file": "case-80_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370004141237587,
+      "bytes": 2566925,
+      "identicalInputs": "80_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_-100_180_5": {
+      "file": "case-100_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.392420744057745,
+      "bytes": 2567693,
+      "identicalInputs": "100_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_-100_180_5": {
+      "file": "case-125_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.383267551194876,
+      "bytes": 2579538,
+      "identicalInputs": "125_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_-100_180_5": {
+      "file": "case-150_-100_-180_5.packed.gz",
+      "scale": 0.0001231676784044948,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.394373759161681,
+      "bytes": 2527481,
+      "identicalInputs": "150_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_-180_5": {
+      "file": "case-50_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.549551397096366,
+      "bytes": 2590277,
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_-180_5": {
+      "file": "case-75_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375050507020205,
+      "bytes": 2581231,
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_-180_5": {
+      "file": "case-80_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378505559172481,
+      "bytes": 2580630,
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_-180_5": {
+      "file": "case-100_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368906288873404,
+      "bytes": 2582116,
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_-180_5": {
+      "file": "case-125_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368430787697434,
+      "bytes": 2593616,
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_-180_5": {
+      "file": "case-150_0_-180_5.packed.gz",
+      "scale": 0.00012251279875181244,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.371573126874864,
+      "bytes": 2541494,
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_-90_5": {
+      "file": "case-50_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.549551397096366,
+      "bytes": 2590277,
+      "identicalInputs": "50_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_-90_5": {
+      "file": "case-75_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375050507020205,
+      "bytes": 2581231,
+      "identicalInputs": "75_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_-90_5": {
+      "file": "case-80_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378505559172481,
+      "bytes": 2580630,
+      "identicalInputs": "80_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_-90_5": {
+      "file": "case-100_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368906288873404,
+      "bytes": 2582116,
+      "identicalInputs": "100_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_-90_5": {
+      "file": "case-125_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368430787697434,
+      "bytes": 2593616,
+      "identicalInputs": "125_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_-90_5": {
+      "file": "case-150_0_-180_5.packed.gz",
+      "scale": 0.00012251279875181244,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.371573126874864,
+      "bytes": 2541494,
+      "identicalInputs": "150_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_0_5": {
+      "file": "case-50_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.549551397096366,
+      "bytes": 2590277,
+      "identicalInputs": "50_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_0_5": {
+      "file": "case-75_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375050507020205,
+      "bytes": 2581231,
+      "identicalInputs": "75_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_0_5": {
+      "file": "case-80_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378505559172481,
+      "bytes": 2580630,
+      "identicalInputs": "80_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_0_5": {
+      "file": "case-100_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368906288873404,
+      "bytes": 2582116,
+      "identicalInputs": "100_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_0_5": {
+      "file": "case-125_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368430787697434,
+      "bytes": 2593616,
+      "identicalInputs": "125_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_0_5": {
+      "file": "case-150_0_-180_5.packed.gz",
+      "scale": 0.00012251279875181244,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.371573126874864,
+      "bytes": 2541494,
+      "identicalInputs": "150_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_90_5": {
+      "file": "case-50_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.549551397096366,
+      "bytes": 2590277,
+      "identicalInputs": "50_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_90_5": {
+      "file": "case-75_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375050507020205,
+      "bytes": 2581231,
+      "identicalInputs": "75_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_90_5": {
+      "file": "case-80_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378505559172481,
+      "bytes": 2580630,
+      "identicalInputs": "80_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_90_5": {
+      "file": "case-100_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368906288873404,
+      "bytes": 2582116,
+      "identicalInputs": "100_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_90_5": {
+      "file": "case-125_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368430787697434,
+      "bytes": 2593616,
+      "identicalInputs": "125_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_90_5": {
+      "file": "case-150_0_-180_5.packed.gz",
+      "scale": 0.00012251279875181244,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.371573126874864,
+      "bytes": 2541494,
+      "identicalInputs": "150_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_0_180_5": {
+      "file": "case-50_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.549551397096366,
+      "bytes": 2590277,
+      "identicalInputs": "50_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_0_180_5": {
+      "file": "case-75_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.375050507020205,
+      "bytes": 2581231,
+      "identicalInputs": "75_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_0_180_5": {
+      "file": "case-80_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378505559172481,
+      "bytes": 2580630,
+      "identicalInputs": "80_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_0_180_5": {
+      "file": "case-100_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368906288873404,
+      "bytes": 2582116,
+      "identicalInputs": "100_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_0_180_5": {
+      "file": "case-125_0_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368430787697434,
+      "bytes": 2593616,
+      "identicalInputs": "125_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_0_180_5": {
+      "file": "case-150_0_-180_5.packed.gz",
+      "scale": 0.00012251279875181244,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.371573126874864,
+      "bytes": 2541494,
+      "identicalInputs": "150_0_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_-180_5": {
+      "file": "case-50_-100_0_5.packed.gz",
+      "scale": 0.00012470100971077533,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.557196758221835,
+      "bytes": 2580125,
+      "identicalInputs": "50_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_-180_5": {
+      "file": "case-75_-100_0_5.packed.gz",
+      "scale": 0.00012453426226009234,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36806660797447,
+      "bytes": 2574229,
+      "identicalInputs": "75_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_-180_5": {
+      "file": "case-80_-100_0_5.packed.gz",
+      "scale": 0.00012449327405992446,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366352747194469,
+      "bytes": 2573639,
+      "identicalInputs": "80_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_-180_5": {
+      "file": "case-100_-100_0_5.packed.gz",
+      "scale": 0.0001243293212592529,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3725447240285575,
+      "bytes": 2574691,
+      "identicalInputs": "100_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_-180_5": {
+      "file": "case-125_-100_0_5.packed.gz",
+      "scale": 0.00012426690740899724,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367477333173156,
+      "bytes": 2583783,
+      "identicalInputs": "125_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_-180_5": {
+      "file": "case-150_-100_0_5.packed.gz",
+      "scale": 0.00012417282085861188,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366388840135187,
+      "bytes": 2595694,
+      "identicalInputs": "150_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_-90_5": {
+      "file": "case-50_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.569404528010637,
+      "bytes": 2582888,
+      "identicalInputs": "50_-100_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_-90_5": {
+      "file": "case-75_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.369146915152669,
+      "bytes": 2573666,
+      "identicalInputs": "75_-100_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_-90_5": {
+      "file": "case-80_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368304372299463,
+      "bytes": 2572493,
+      "identicalInputs": "80_-100_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_-90_5": {
+      "file": "case-100_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.365208109840751,
+      "bytes": 2572915,
+      "identicalInputs": "100_-100_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_-90_5": {
+      "file": "case-125_-100_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.360651939176023,
+      "bytes": 2584187,
+      "identicalInputs": "125_-100_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_-90_5": {
+      "file": "case-150_-100_90_5.packed.gz",
+      "scale": 0.00012179923144888965,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3644424779340625,
+      "bytes": 2535068,
+      "identicalInputs": "150_-100_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_0_5": {
+      "file": "case-50_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.603261400945485,
+      "bytes": 2578406,
+      "identicalInputs": "50_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_0_5": {
+      "file": "case-75_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3825188600458205,
+      "bytes": 2568537,
+      "identicalInputs": "75_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_0_5": {
+      "file": "case-80_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370004141237587,
+      "bytes": 2566925,
+      "identicalInputs": "80_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_0_5": {
+      "file": "case-100_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.392420744057745,
+      "bytes": 2567693,
+      "identicalInputs": "100_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_0_5": {
+      "file": "case-125_-100_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.383267551194876,
+      "bytes": 2579538,
+      "identicalInputs": "125_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_0_5": {
+      "file": "case-150_-100_-180_5.packed.gz",
+      "scale": 0.0001231676784044948,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.394373759161681,
+      "bytes": 2527481,
+      "identicalInputs": "150_-100_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_90_5": {
+      "file": "case-50_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.604850685223937,
+      "bytes": 2612136,
+      "identicalInputs": "50_-100_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_90_5": {
+      "file": "case-75_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378909222315997,
+      "bytes": 2605091,
+      "identicalInputs": "75_-100_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_90_5": {
+      "file": "case-80_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.389410021714866,
+      "bytes": 2604485,
+      "identicalInputs": "80_-100_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_90_5": {
+      "file": "case-100_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38884350983426,
+      "bytes": 2606305,
+      "identicalInputs": "100_-100_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_90_5": {
+      "file": "case-125_-100_-90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.386299280915409,
+      "bytes": 2616049,
+      "identicalInputs": "125_-100_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_90_5": {
+      "file": "case-150_-100_-90_5.packed.gz",
+      "scale": 0.00012076707404466194,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382798811420798,
+      "bytes": 2565319,
+      "identicalInputs": "150_-100_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_100_180_5": {
+      "file": "case-50_-100_0_5.packed.gz",
+      "scale": 0.00012470100971077533,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.557196758221835,
+      "bytes": 2580125,
+      "identicalInputs": "50_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_100_180_5": {
+      "file": "case-75_-100_0_5.packed.gz",
+      "scale": 0.00012453426226009234,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.36806660797447,
+      "bytes": 2574229,
+      "identicalInputs": "75_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_100_180_5": {
+      "file": "case-80_-100_0_5.packed.gz",
+      "scale": 0.00012449327405992446,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366352747194469,
+      "bytes": 2573639,
+      "identicalInputs": "80_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_100_180_5": {
+      "file": "case-100_-100_0_5.packed.gz",
+      "scale": 0.0001243293212592529,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3725447240285575,
+      "bytes": 2574691,
+      "identicalInputs": "100_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_100_180_5": {
+      "file": "case-125_-100_0_5.packed.gz",
+      "scale": 0.00012426690740899724,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.367477333173156,
+      "bytes": 2583783,
+      "identicalInputs": "125_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_100_180_5": {
+      "file": "case-150_-100_0_5.packed.gz",
+      "scale": 0.00012417282085861188,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.366388840135187,
+      "bytes": 2595694,
+      "identicalInputs": "150_-100_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_-180_5": {
+      "file": "case-50_-200_0_5.packed.gz",
+      "scale": 0.00015102847591861264,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.579618569929153,
+      "bytes": 2589222,
+      "identicalInputs": "50_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_-180_5": {
+      "file": "case-75_-200_0_5.packed.gz",
+      "scale": 0.00015092600541819292,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3991240272298455,
+      "bytes": 2585797,
+      "identicalInputs": "75_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_-180_5": {
+      "file": "case-80_-200_0_5.packed.gz",
+      "scale": 0.00015090457976810515,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.385756344068795,
+      "bytes": 2585482,
+      "identicalInputs": "80_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_-180_5": {
+      "file": "case-100_-200_0_5.packed.gz",
+      "scale": 0.0001508058354677007,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38600649824366,
+      "bytes": 2586197,
+      "identicalInputs": "100_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_-180_5": {
+      "file": "case-125_-200_0_5.packed.gz",
+      "scale": 0.0001506558559170864,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381729514338076,
+      "bytes": 2590590,
+      "identicalInputs": "125_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_-180_5": {
+      "file": "case-150_-200_0_5.packed.gz",
+      "scale": 0.00015494936988467262,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.388151894789189,
+      "bytes": 2586977,
+      "identicalInputs": "150_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_-90_5": {
+      "file": "case-50_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.596683300100267,
+      "bytes": 2581989,
+      "identicalInputs": "50_-200_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_-90_5": {
+      "file": "case-75_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381415223237127,
+      "bytes": 2572020,
+      "identicalInputs": "75_-200_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_-90_5": {
+      "file": "case-80_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.382211447227746,
+      "bytes": 2570564,
+      "identicalInputs": "80_-200_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_-90_5": {
+      "file": "case-100_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.390077056363225,
+      "bytes": 2570555,
+      "identicalInputs": "100_-200_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_-90_5": {
+      "file": "case-125_-200_90_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373641717247665,
+      "bytes": 2580846,
+      "identicalInputs": "125_-200_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_-90_5": {
+      "file": "case-150_-200_90_5.packed.gz",
+      "scale": 0.00012042333209325397,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.379254563245922,
+      "bytes": 2535748,
+      "identicalInputs": "150_-200_90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_0_5": {
+      "file": "case-50_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.561805651988834,
+      "bytes": 2576730,
+      "identicalInputs": "50_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_0_5": {
+      "file": "case-75_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.359954258892685,
+      "bytes": 2566517,
+      "identicalInputs": "75_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_0_5": {
+      "file": "case-80_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.378782818093896,
+      "bytes": 2565410,
+      "identicalInputs": "80_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_0_5": {
+      "file": "case-100_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.360476843081415,
+      "bytes": 2565668,
+      "identicalInputs": "100_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_0_5": {
+      "file": "case-125_-200_-180_5.packed.gz",
+      "scale": 0.0001,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.368399936240166,
+      "bytes": 2577311,
+      "identicalInputs": "125_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_0_5": {
+      "file": "case-150_-200_-180_5.packed.gz",
+      "scale": 0.0001235552032060821,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.370837045833468,
+      "bytes": 2524678,
+      "identicalInputs": "150_-200_-180_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_90_5": {
+      "file": "case-50_-200_-90_5.packed.gz",
+      "scale": 0.00011548611707303113,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.579030903056264,
+      "bytes": 2587592,
+      "identicalInputs": "50_-200_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_90_5": {
+      "file": "case-75_-200_-90_5.packed.gz",
+      "scale": 0.00011526813437213828,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.37956707784906,
+      "bytes": 2581339,
+      "identicalInputs": "75_-200_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_90_5": {
+      "file": "case-80_-200_-90_5.packed.gz",
+      "scale": 0.00011521503602192078,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373748048208654,
+      "bytes": 2580906,
+      "identicalInputs": "80_-200_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_90_5": {
+      "file": "case-100_-200_-90_5.packed.gz",
+      "scale": 0.00011499891642103556,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.383200871758163,
+      "bytes": 2582717,
+      "identicalInputs": "100_-200_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_90_5": {
+      "file": "case-125_-200_-90_5.packed.gz",
+      "scale": 0.00011480515402024191,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.373455876018852,
+      "bytes": 2593294,
+      "identicalInputs": "125_-200_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_90_5": {
+      "file": "case-150_-200_-90_5.packed.gz",
+      "scale": 0.00012136140294709631,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3657954297959805,
+      "bytes": 2588193,
+      "identicalInputs": "150_-200_-90_5",
+      "encoding": "delta-byteplanes"
+    },
+    "50_200_180_5": {
+      "file": "case-50_-200_0_5.packed.gz",
+      "scale": 0.00015102847591861264,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 15.579618569929153,
+      "bytes": 2589222,
+      "identicalInputs": "50_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "75_200_180_5": {
+      "file": "case-75_-200_0_5.packed.gz",
+      "scale": 0.00015092600541819292,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.3991240272298455,
+      "bytes": 2585797,
+      "identicalInputs": "75_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "80_200_180_5": {
+      "file": "case-80_-200_0_5.packed.gz",
+      "scale": 0.00015090457976810515,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.385756344068795,
+      "bytes": 2585482,
+      "identicalInputs": "80_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "100_200_180_5": {
+      "file": "case-100_-200_0_5.packed.gz",
+      "scale": 0.0001508058354677007,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.38600649824366,
+      "bytes": 2586197,
+      "identicalInputs": "100_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "125_200_180_5": {
+      "file": "case-125_-200_0_5.packed.gz",
+      "scale": 0.0001506558559170864,
+      "maxStorageError": 6.103515625e-05,
+      "modelSeconds": 7.381729514338076,
+      "bytes": 2590590,
+      "identicalInputs": "125_-200_0_5",
+      "encoding": "delta-byteplanes"
+    },
+    "150_200_180_5": {
+      "file": "case-150_-200_0_5.packed.gz",
+      "scale": 0.00015494936988467262,
+      "maxStorageError": 9.1552734375e-05,
+      "modelSeconds": 7.388151894789189,
+      "bytes": 2586977,
+      "identicalInputs": "150_-200_0_5",
+      "encoding": "delta-byteplanes"
+    }
+  },
+  "date": "2019-06-16",
+  "time": "19:30 UTC",
+  "reference": [
+    100,
+    100,
+    0,
+    0
+  ],
+  "encoding": "float32 baseline plus scaled int16 scenario differences",
+  "inference": "single whole-domain V17 CO2 prediction with V12 meteorology",
+  "checkpoints": {
+    "weather": "026aba0c0b6959ba82029427be936121c15bf6e8ea4f7ed7d947e68086e0421e",
+    "co2": "98bd7448ff921519474f0309274f04dc908ad5298432038c3d560ae4918a4282"
+  }
+}
