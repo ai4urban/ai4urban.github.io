@@ -166,9 +166,9 @@ footer { display: flex; justify-content: space-between; gap: 12px; font-size: 15
 
 /* Actual reference fields and forcing profiles. */
 #input-plots {display:block;}
-.emission-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.emission-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:640px;}
 .emission-pair canvas {display:block;width:100%;height:auto;aspect-ratio:1;cursor:crosshair;}
-.emission-gradient {height:10px;margin-top:14px;background:linear-gradient(90deg,#440154,#3b528b,#21918c,#5ec962,#fde725);}
+.emission-gradient {max-width:640px;height:10px;margin-top:14px;background:linear-gradient(90deg,#440154,#3b528b,#21918c,#5ec962,#fde725);}
 .forcing-inputs {margin-top:28px;}
 .forcing-profiles {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
-@media(max-width:760px){.emission-pair,.forcing-profiles {grid-template-columns:1fr;}}
+@media(max-width:760px){.forcing-profiles {grid-template-columns:1fr;}.emission-pair {max-width:310px;grid-template-columns:1fr;}}
