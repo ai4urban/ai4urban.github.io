@@ -108,8 +108,6 @@ h1 { font: 54px/1.1 var(--serif); letter-spacing: -1.5px; margin: 0 0 12px; }
 .concentration { background: linear-gradient(90deg, #440154, #3b528b, #21918c, #5ec962, #fde725); }
 .difference { background: linear-gradient(90deg, #2166ac, #67a9cf, #f7f7f7, #ef8a62, #b2182b); }
 .legend-ends { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px; margin-top: 6px; }
-.maps.focus-change { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.focus-change .change-card { grid-column: 1 / -1; grid-row: 1; width: min(100%, 640px); justify-self: center; }
 .map-caption { display: flex; justify-content: space-between; gap: 6px 12px; flex-wrap: wrap; color: var(--muted); font-size: 15px; margin: 11px 0 18px; }
 .mask-key { display: inline-block; width: 8px; height: 8px; background: #f1f3ee; border: 1px solid #ccd5c9; margin-right: 4px; }
 .readout { border: 1px solid var(--line); border-radius: 8px; background: white; padding: 14px; }
@@ -150,7 +148,27 @@ footer { display: flex; justify-content: space-between; gap: 12px; font-size: 15
   .paper-link { font-size: 14px; }
   main { padding-top: 24px; }
   h1 { font-size: 40px; }
-  .maps, .maps.focus-change { grid-template-columns: 1fr; }
-  .exploration, .profile-charts { grid-template-columns: 1fr; }
+  .maps,   .exploration, .profile-charts { grid-template-columns: 1fr; }
   footer { flex-direction: column; }
 }
+
+.back-nav {margin-bottom: 24px; color: var(--green); font-weight: 650;}
+.reference-guide {background:white; border:1px solid var(--line); border-radius:8px; padding:20px; margin-bottom:24px;}
+.reference-guide h2 {margin-top:0;}
+.input-plots {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px;}
+.input-plots figure {margin:0; min-width:0;}
+.input-plots svg {display:block; width:100%; height:auto; background:#f6f7f2; border-radius:6px;}
+.input-plots figcaption {font-weight:650; margin-bottom:8px;}
+.input-plots p {font-size:16px;}
+.map-card {display:grid; grid-template-rows:auto auto 1fr; min-width:0;}
+.map-heading {min-height:88px; align-content:center;}
+@media(max-width:760px) {.input-plots {grid-template-columns:1fr;}}
+
+/* Actual reference fields and forcing profiles. */
+#input-plots {display:block;}
+.emission-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.emission-pair canvas {display:block;width:100%;height:auto;aspect-ratio:1;cursor:crosshair;}
+.emission-gradient {height:10px;margin-top:14px;background:linear-gradient(90deg,#440154,#3b528b,#21918c,#5ec962,#fde725);}
+.forcing-inputs {margin-top:28px;}
+.forcing-profiles {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+@media(max-width:760px){.emission-pair,.forcing-profiles {grid-template-columns:1fr;}}

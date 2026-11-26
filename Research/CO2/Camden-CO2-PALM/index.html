@@ -122,11 +122,12 @@
   <section aria-labelledby="methods">
     <h2 id="methods">Comparison method</h2>
     <p>The PALM and surrogate fields share a grid and time, so the comparison matches cells directly. Model heights are fixed vertical coordinates. The distance above local ground varies with terrain.</p>
-    <p>MAE is mean absolute error, RMSE is root mean square error, and Pearson r measures spatial correlation. The Camden boundary is from the Office for National Statistics, May 2024.</p>
+    <p>MAE is mean absolute error, RMSE is root mean square error, and Pearson r measures spatial correlation. The borough outline defines the analysis mask; it is separate from atmospheric boundary forcing.</p>
   </section>
 
+  <section aria-labelledby="input-sources"><h2 id="input-sources">Simulation input sources</h2><p><strong>Atmospheric inputs.</strong> Meteorological forcing comes from ERA5; background CO₂ comes from CAMS EGG4. Anthropogenic emissions are derived from the London Atmospheric Emissions Inventory (LAEI), disaggregated to 10 m; PALM-CO₂ calculates biogenic fluxes using VPRM. See <a href="https://doi.org/10.5194/gmd-19-6417-2026">Li, Zheng &amp; Fang (2026), <cite>A high-resolution urban CO₂ transport model with anthropogenic and biogenic fluxes</cite>, Geoscientific Model Development, 19 (14), 6417–6449</a>.</p><p><strong>Geographic outline.</strong> The Camden outline is a display and analysis mask, separate from the atmospheric boundary conditions. ERA5 supplies meteorology, not the borough outline.</p></section>
   <section aria-labelledby="reference">
-    <h2 id="reference">PALM reference</h2>
+    <h2 id="reference">PALM-CO₂ references</h2><p><a href="https://doi.org/10.5194/gmd-19-6417-2026">Li, Zheng &amp; Fang (2026), <cite>A high-resolution urban CO₂ transport model with anthropogenic and biogenic fluxes</cite>, Geoscientific Model Development, 19 (14), 6417–6449</a>.</p>
     <p id="palm-reference">Maronga, B., et al. (2020). Overview of the PALM model system 6.0. <cite>Geoscientific Model Development</cite>, 13, 1335–1372. <a href="https://doi.org/10.5194/gmd-13-1335-2020">doi:10.5194/gmd-13-1335-2020</a></p>
   </section>
 </main>

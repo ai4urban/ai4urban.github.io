@@ -5,7 +5,6 @@ const difference = [[33, 102, 172], [103, 169, 207], [247, 247, 247], [239, 138,
 const mapKinds = ['baseline', 'scenario', 'difference'];
 const height = $('height');
 const contrast = $('change-contrast');
-const enlarge = $('enlarge-change');
 const placeholders = document.querySelectorAll('.map-placeholder');
 const legends = [document.querySelectorAll('.co2-low'), document.querySelectorAll('.co2-high')];
 let result, layer, selectedCell;
@@ -208,7 +207,7 @@ export function clearResults() {
   $('profile-location').textContent = 'Click or tap a coloured cell on any map.';
   $('height-caution').hidden = true;
   height.replaceChildren(new Option('45 m', '4'));
-  height.disabled = contrast.disabled = enlarge.disabled = true;
+  height.disabled = contrast.disabled = true;
   placeholders.forEach(item => { item.hidden = false; });
   ['baseline-mean', 'scenario-mean', 'change-mean', 'runtime', 'diff-low', 'diff-high'].forEach(id => {
     $(id).textContent = '—';
@@ -231,7 +230,7 @@ export function showResults(data) {
   }
   height.value = [...height.options].find(option => option.value === previousHeight && !option.disabled)?.value ??
     [...height.options].find(option => !option.disabled).value;
-  height.disabled = contrast.disabled = enlarge.disabled = false;
+  height.disabled = contrast.disabled = false;
   placeholders.forEach(item => { item.hidden = true; });
   $('applied-scenario').textContent = data.scenarioLabel;
   $('applied-scenario').hidden = false;
@@ -243,11 +242,6 @@ export function showResults(data) {
 
 height.addEventListener('change', showHeight);
 contrast.addEventListener('change', drawChange);
-enlarge.addEventListener('click', () => {
-  const enlarged = $('maps').classList.toggle('focus-change');
-  enlarge.setAttribute('aria-pressed', String(enlarged));
-  enlarge.textContent = enlarged ? 'Equal-size maps' : 'Enlarge change map';
-});
 for (const kind of mapKinds) {
   const canvas = $(kind + '-map');
   const inspect = event => {

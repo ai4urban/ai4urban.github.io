@@ -13,6 +13,7 @@
     <a class="paper-link" href="https://github.com/PetterDong-ch/3D-high-resolution-surrogate-Modelling-for-urban-CO2-prediction" target="_blank" rel="noreferrer">Research &amp; source ↗</a>
   </header>
   <main>
+    <nav class="back-nav" aria-label="Research navigation"><a href="../../">← Back to CO₂</a></nav>
     <section class="intro">
       <div>
         <p class="eyebrow">URBAN CARBON · CAMDEN, LONDON</p>
@@ -21,6 +22,8 @@
       </div>
       <div class="domain-note"><strong>8 × 8 km</strong><span>surrounding model domain</span><small>10 m grid · 16 height levels</small></div>
     </section>
+    <section class="reference-guide" aria-labelledby="reference-title"><h2 id="reference-title">Reference, baseline and PALM-CO₂</h2><p>The reference case is 16 June 2019 at 19:30 UTC, for one 30-minute prediction step. The baseline is the surrogate prediction with unchanged reference inputs: 100% emissions, 100% wind speed, 0° rotation and 0 ppm boundary shift. Your scenario changes those inputs; change means scenario minus baseline.</p><p>PALM-CO₂ is the physics-based simulation used for comparison. It is separate from the surrogate baseline. <a href="../../Camden-CO2-PALM/">Compare the baseline with PALM-CO₂</a> for the original reference case. Changed scenarios have no matching PALM validation in this app.</p><p><a href="https://doi.org/10.5194/gmd-19-6417-2026">Li, Zheng &amp; Fang (2026), <cite>A high-resolution urban CO₂ transport model with anthropogenic and biogenic fluxes</cite>, Geoscientific Model Development, 19 (14), 6417–6449</a>.</p></section>
+    <section class="reference-guide" aria-labelledby="input-title"><h2 id="input-title">Compare your inputs with the reference</h2><p>Compare the actual reference inputs with your selected settings: spatially varying emissions and height-dependent atmospheric forcing. These inputs are separate from the predicted concentration maps.</p><div class="input-plots" id="input-plots" aria-live="polite"></div></section>
     <div class="workspace">
       <aside class="controls">
         <div class="panel-heading"><span class="step-number">01</span><h2>Set a scenario</h2><button id="reset" type="button" class="text-button">Reset</button></div>
@@ -95,7 +98,7 @@
           <div><p class="eyebrow">02 · EXPLORE THE RESULTS</p><h2 id="result-title">Tile prediction</h2></div>
           <div class="height-picker"><label for="height">Model height</label><select id="height" disabled><option value="4">45 m</option></select></div>
         </div>
-        <p class="compute-location" id="compute-location">Calculations run in this browser.</p>
+        <p class="compute-location">Calculations run in this browser.</p>
         <p id="height-caution" class="height-caution" hidden>Heights above 95 m are exploratory.</p>
         <div id="status" class="status ready" role="status"><span class="spinner" aria-hidden="true"></span><span id="status-text">Loading the reference case…</span></div>
         <p id="applied-scenario" class="compute-location" hidden></p>
@@ -114,7 +117,6 @@
           <div class="change-tools">
             <label for="change-contrast">Change map contrast</label>
             <select id="change-contrast" disabled><option value="1">Automatic</option><option value="2">Stronger · 2×</option><option value="5">Stronger · 5×</option></select>
-            <button id="enlarge-change" class="secondary" type="button" aria-pressed="false" disabled>Enlarge change map</button>
           </div>
         </section>
         <div class="maps" id="maps">
@@ -158,7 +160,7 @@
         <details class="method">
           <summary>About this demonstration</summary>
           <p>The browser applies the Camden CO₂ surrogate using prepared meteorology for saved settings or computes new meteorology for custom settings. The PALM simulation supplies a reference for the original inputs. Tiles overlap and can predict different values at the same location. Choose Whole domain for a single calculation over the full grid. The maps show atmospheric cells inside Camden.</p>
-          <p>Boundary data comes from the ONS Local Authority Districts, May 2024 (20 m generalised). Contains OS and ONS data.</p>
+          <p><strong>Atmospheric inputs.</strong> Meteorological forcing comes from ERA5; background CO₂ comes from CAMS EGG4. Anthropogenic emissions are derived from the London Atmospheric Emissions Inventory (LAEI), disaggregated to 10 m; PALM-CO₂ calculates biogenic fluxes using VPRM. See <a href="https://doi.org/10.5194/gmd-19-6417-2026">Li, Zheng &amp; Fang (2026), <cite>A high-resolution urban CO₂ transport model with anthropogenic and biogenic fluxes</cite>, Geoscientific Model Development, 19 (14), 6417–6449</a>.</p><p><strong>Geographic outline.</strong> The Camden outline is a display and analysis mask, separate from the atmospheric boundary conditions. ERA5 supplies meteorology, not the borough outline.</p>
         </details>
       </section>
     </div>
@@ -167,5 +169,6 @@
   <script src="runtime/ort.wasm.min.js"></script>
   <script src="weather.js"></script>
   <script type="module" src="public-start.js"></script>
+  <script src="input-comparison.js?v=2"></script>
 </body>
 </html>
