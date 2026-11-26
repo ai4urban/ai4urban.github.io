@@ -1,5 +1,5 @@
 import {fetchAsset, releaseTile, runTile} from './pilot.js';
-import {clearResults, showResults} from './results.js';
+import {clearResults, showResults} from './results.js?v=co2-20261126-3';
 
 const $ = id => document.getElementById(id);
 const scope = $('scope');

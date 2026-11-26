@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camden CO₂ Lab · Saved scenarios</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=co2-20261126-3">
   <style>.value-entry select {max-width: 100px; padding: 4px 7px; font: inherit; font-weight: 600; color: inherit; border: 1px solid #cbd5cc; border-radius: 5px; background: white;}</style>
 </head>
 <body>
@@ -159,7 +159,7 @@
     </div>
     <footer>Urban atmospheric CO₂ surrogate <span>Concentrations in ppm · exploratory scenarios</span></footer>
   </main>
-  <script type="module" src="offline.js"></script>
-  <script src="input-comparison.js?v=2"></script>
+  <script type="module">import('./offline.js?v=co2-20261126-3').catch(error => { document.getElementById('status-text').textContent = 'Could not start the saved-scenario app. Reload to try again. ' + error.message; document.getElementById('status').className = 'status error'; console.error(error); });</script>
+  <script src="input-comparison.js?v=co2-20261126-3"></script>
 </body>
 </html>

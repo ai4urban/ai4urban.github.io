@@ -65,7 +65,7 @@
   document.getElementById('reset').addEventListener('click',schedule);
   host.textContent='Loading reference vertical profiles and horizontal emissions…';
   (async()=>{
-    const r=await fetch('reference-inputs.json');if(!r.ok)throw Error('Profile unavailable');reference=await r.json();
+    const r=await fetch('reference-inputs.json?v=co2-20261126-3');if(!r.ok)throw Error('Profile unavailable');reference=await r.json();
     const e=await fetch(reference.emissions.file);if(!e.ok)throw Error('Emissions unavailable');
     emissions=new Float32Array(await new Response(e.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());
     if(emissions.length!==800*800||reference.heights.length!==60)throw Error('Unexpected input dimensions');

@@ -12,7 +12,7 @@ async function start() {
       return;
     }
   }
-  await import('./dashboard.js');
+  await import('./dashboard.js?v=co2-20261126-3');
 }
 
 start().catch(error => {
