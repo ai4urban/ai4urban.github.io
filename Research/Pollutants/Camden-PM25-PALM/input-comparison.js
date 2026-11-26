@@ -31,7 +31,7 @@
     ctx.putImageData(im,0,0);
   }
   function render(){
-    if(!panel.open||!data)return;
+    if(!panel.open||!data||!emission)return;
     const [scale,shift,wind,rotation]=settings();if(![scale,shift,wind,rotation].every(Number.isFinite))return;
     const hour=Number(document.getElementById('input-hour').value),p=data.dynamic[hour],a=rotation*Math.PI/180;
     const selected=[p[0].map((u,i)=>wind*(u*Math.cos(a)+p[1][i]*Math.sin(a))),p[1].map((v,i)=>wind*(-p[0][i]*Math.sin(a)+v*Math.cos(a))),p[2],p[3],p[4].map(v=>v+shift)];
@@ -39,7 +39,7 @@
     map('reference-emissions',hour,1);map('selected-emissions',hour,scale);
   }
   async function load(){
-    if(data)return render();if(loading)return;
+    if(data&&emission)return render();if(loading)return;
     host.textContent='Loading reference input fields…';loading=true;
     try{
       const r=await fetch('./reference-inputs.json');if(!r.ok)throw Error();data=await r.json();
