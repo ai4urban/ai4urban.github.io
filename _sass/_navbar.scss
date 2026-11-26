@@ -27,6 +27,12 @@
 }
 
 /* Keep the long project title separate from the complete navigation. */
+#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
 #main-nav > .container {
   display: block;
 }
