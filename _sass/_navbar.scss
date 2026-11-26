@@ -25,3 +25,75 @@
     text-transform: uppercase;
   }
 }
+
+/* Keep the long project title separate from the complete navigation. */
+#main-nav > .container {
+  display: block;
+}
+
+#main-nav .navbar-brand {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: .5rem .75rem;
+  min-width: 0;
+  margin-right: 0;
+  white-space: normal;
+  line-height: 1.35;
+  padding-bottom: .5rem;
+}
+
+#main-nav .navbar-brand img {
+  flex: 0 0 auto;
+  max-width: min(30vw, 140px);
+  object-fit: contain;
+}
+
+#main-nav .navbar-brand .project-logo {
+  width: 56px;
+  height: 56px;
+}
+
+#main-nav .navbar-project-title {
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+#main-nav .navbar-brand .navbar-funders {
+  width: 140px;
+  height: 30px;
+  margin-left: auto;
+}
+
+#main-nav #navbar-menu {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+}
+
+#main-nav .navbar-toggler {
+  display: none;
+}
+
+#main-nav .navbar-nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: .125rem .25rem;
+  margin-left: 0 !important;
+}
+
+#main-nav .nav-link {
+  padding: .5rem .7rem;
+  white-space: nowrap;
+}
+
+#main-nav .dropdown-menu {
+  position: absolute;
+  right: auto;
+  left: 0;
+  max-width: calc(100vw - 2rem);
+}
+
+#main-nav .dropdown-item {
+  white-space: normal;
+}
