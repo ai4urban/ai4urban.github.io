@@ -43,3 +43,22 @@ h4 { font-size: 17px; }
 
 .control select {width:100%; min-height:42px; border:1px solid var(--line); border-radius:6px; padding:5px 9px; color:var(--ink); background:white;}
 .ready-dot {display:inline-block; flex-shrink:0; width:8px; height:8px; border-radius:50%; background:var(--teal);}
+
+/* Compact supporting information; keep all result maps the same size. */
+.compact-notes {padding:12px 18px;margin:0 0 12px;}
+.compact-notes summary {cursor:pointer;color:var(--teal);font-weight:650;font-size:17px;}
+.compact-notes summary span {font-size:14px;color:var(--muted);font-weight:400;margin-left:12px;}
+.compact-notes p,.baseline-summary {font-size:16px;}
+.compact-notes[open] summary {margin-bottom:16px;}
+.maps,.maps.focus-difference {grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;}
+.maps.focus-difference .difference-card {grid-column:auto;width:100%;}
+.map-heading {height:90px;align-content:center;overflow-wrap:anywhere;}
+#input-plots {margin-top:16px;}
+.emission-pair {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:376px;}
+.emission-pair figure,.forcing-profiles figure {margin:0;min-width:0;}
+.emission-pair canvas {width:100%;height:auto;display:block;aspect-ratio:1;}
+.input-gradient {height:8px;max-width:376px;margin-top:10px;background:linear-gradient(90deg,#440154,#3b528b,#21918c,#5ec962,#fde725);}
+.forcing-profiles {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.forcing-profiles svg {width:100%;height:auto;display:block;background:#f5f7f3;}
+.forcing-profiles figcaption,.emission-pair figcaption {font-size:16px;font-weight:650;margin-bottom:8px;}
+@media(max-width:740px){.maps,.maps.focus-difference,.forcing-profiles {grid-template-columns:1fr;}.compact-notes summary span {display:block;margin-left:20px;}}
