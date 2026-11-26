@@ -35,6 +35,19 @@
       section { margin-top: 26px; }
       .controls a { flex-basis: 100%; }
     }
+    .reference-panel { margin-top: 16px; padding: 14px 18px; border: 1px solid #d3dfd8; border-radius: 8px; background: white; }
+    .reference-panel summary { cursor: pointer; font-weight: 700; }
+    .reference-panel summary span { display: block; font-size: .88rem; font-weight: 400; color: #415a53; }
+    .reference-panel[open] summary { margin-bottom: 14px; }
+    .input-layout { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 20px; }
+    .input-layout h3 { font-size: 1rem; margin: 0 0 8px; }
+    .input-layout p { font-size: .85rem; }
+    #baseline-emissions { display: block; width: 180px; max-width: 100%; height: auto; image-rendering: pixelated; }
+    .profile-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+    .profile-grid svg { width: 100%; height: auto; }
+    .emission-scale { width: 180px; max-width: 100%; height: 8px; background: linear-gradient(90deg,#440154,#3b528b,#21918c,#5ec962,#fde725); margin: 8px 0; }
+    @media(max-width:750px) { .input-layout { grid-template-columns: 1fr; } .profile-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+    @media(max-width:420px) { .profile-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -42,12 +55,23 @@
   <header>
     <nav aria-label="Research navigation" style="margin-bottom: 18px"><a href="../../index.html">Research outcomes</a> <span aria-hidden="true">/</span> <a href="../index.html">CO₂</a></nav>
     <h1>Camden CO₂ PALM comparison</h1>
-    <p class="emissions-correction" id="emissions-provenance-note" style="border-left:3px solid #a97435;padding:10px 14px;background:#fff5e5;"><strong>CO₂ emissions mapping under review.</strong> The transport model uses a 10 m grid, but the archived emissions input was resized from a 600 × 600 source grid at 100 m spacing over 60 × 60 km. Its geographic mapping to Camden has not been verified. Treat emissions-sensitivity results as provisional until that mapping is checked.</p>
     <p class="case">16 June 2019, 19:30 UTC · PALM 30-minute averages · 10 m nested grid</p>
     <p>PALM is an atmospheric model that uses large-eddy simulation to represent the larger turbulent motions in the air. In cities, it can simulate how buildings shape wind and how turbulent air transports gases such as CO₂. <a href="#palm-reference">Maronga et al. (2020)</a></p>
     <p>Compare the baseline surrogate’s CO₂ concentrations with the PALM simulation at matching model heights. The maps and statistics cover valid atmospheric cells within Camden.</p>
     <p class="note"><strong>How to read this comparison.</strong> Error is surrogate minus PALM. Positive values indicate overprediction. Heights above 95 m are exploratory. This reference case includes training patches, so the results describe agreement for this case. Independent validation requires a held-out case.</p>
   </header>
+
+  <details class="reference-panel">
+    <summary>About the baseline and PALM-CO₂ <span>Baseline = unchanged reference inputs</span></summary>
+    <p>The baseline is the reference case for 16 June 2019 at 19:30 UTC, using one 30-minute prediction step. Emissions and wind speed are both at 100%, with 0° wind rotation and no shift in background CO₂. These settings are fixed on this comparison page.</p>
+    <p>PALM-CO₂ is the corresponding large-eddy simulation reference. The figures compare the surrogate baseline with PALM at matching heights; error means surrogate minus PALM. The atmospheric transport grid is 10 m. The forcing profiles contain 60 input levels from 25 to 2,975 m, separate from the 16 displayed output heights.</p>
+    <p>Read about the <a href="#palm-reference">PALM model system</a> and <a href="https://doi.org/10.5194/gmd-19-6417-2026">London PALM-CO₂ study</a>. To change inputs, use the <a href="../Camden-CO2-Lab/run/">prediction Lab</a>.</p>
+  </details>
+  <details class="reference-panel" id="input-figures">
+    <summary>View input figures <span>Reference emissions map and vertical forcing profiles</span></summary>
+    <p>These are the unchanged reference inputs used by the baseline. Atmospheric inputs vary with height; emissions vary horizontally. Hover over the emissions map to inspect a value.</p>
+    <div id="reference-input-plots" aria-live="polite">Open this panel to load the reference inputs.</div>
+  </details>
 
   <section aria-labelledby="compare">
     <h2 id="compare">Compare one height</h2>
@@ -146,5 +170,6 @@
   height.addEventListener('change', showHeight);
   showHeight();
 </script>
+<script src="reference-inputs.js?v=20261126-1"></script>
 </body>
 </html>
