@@ -172,3 +172,10 @@ footer { display: flex; justify-content: space-between; gap: 12px; font-size: 15
 .forcing-inputs {margin-top:28px;}
 .forcing-profiles {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
 @media(max-width:760px){.forcing-profiles {grid-template-columns:1fr;}.emission-pair {max-width:376px;grid-template-columns:repeat(2,minmax(0,1fr));}}
+
+/* Keep supporting figures available without delaying access to results. */
+.input-disclosure,.reference-disclosure {padding:12px 18px;margin-bottom:12px;}
+.input-disclosure summary,.reference-disclosure summary {cursor:pointer;font-weight:650;color:var(--green);}
+.input-disclosure summary span,.reference-disclosure summary span {font-size:15px;font-weight:400;color:var(--muted);margin-left:12px;}
+.input-disclosure[open] summary,.reference-disclosure[open] summary {margin-bottom:16px;}
+@media(max-width:760px){.input-disclosure summary span,.reference-disclosure summary span {display:block;margin-left:20px;}}

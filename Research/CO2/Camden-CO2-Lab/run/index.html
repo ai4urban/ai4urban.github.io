@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Camden CO₂ Lab · Run a prediction</title>
-  <link rel="stylesheet" href="style.css?v=co2-20261126-5">
+  <link rel="stylesheet" href="style.css?v=co2-20261126-6">
 </head>
 <body>
   <header class="masthead">
@@ -22,8 +22,8 @@
       </div>
       <div class="domain-note"><strong>8 × 8 km</strong><span>surrounding model domain</span><small>10 m grid · 16 height levels</small></div>
     </section>
-    <section class="reference-guide" aria-labelledby="reference-title"><h2 id="reference-title">Reference, baseline and PALM-CO₂</h2><p>The reference case is 16 June 2019 at 19:30 UTC, for one 30-minute prediction step. The baseline is the surrogate prediction with unchanged reference inputs: 100% emissions, 100% wind speed, 0° rotation and 0 ppm boundary shift. Your scenario changes those inputs; change means scenario minus baseline.</p><p>PALM-CO₂ is the physics-based simulation used for comparison. It is separate from the surrogate baseline. <a href="../../Camden-CO2-PALM/">Compare the baseline with PALM-CO₂</a> for the original reference case. Changed scenarios have no matching PALM validation in this app.</p><p><a href="https://doi.org/10.5194/gmd-19-6417-2026">Li, Zheng &amp; Fang (2026), <cite>A high-resolution urban CO₂ transport model with anthropogenic and biogenic fluxes</cite>, Geoscientific Model Development, 19 (14), 6417–6449</a>.</p></section>
-    <section class="reference-guide" aria-labelledby="input-title"><h2 id="input-title">Compare your inputs with the reference</h2><p>Compare the actual reference inputs with your selected settings: spatially varying emissions and height-dependent atmospheric forcing. These inputs are separate from the predicted concentration maps.</p><div class="input-plots" id="input-plots" aria-live="polite"></div></section>
+    <details class="reference-guide reference-disclosure"><summary id="reference-title">About the baseline and PALM-CO₂ <span>Baseline = unchanged reference inputs</span></summary><p>The reference case is 16 June 2019 at 19:30 UTC, for one 30-minute prediction step. The baseline is the surrogate prediction with unchanged reference inputs: 100% emissions, 100% wind speed, 0° rotation and 0 ppm boundary shift. Your scenario changes those inputs; change means scenario minus baseline.</p><p>PALM-CO₂ is the physics-based simulation used for comparison. It is separate from the surrogate baseline. <a href="../../Camden-CO2-PALM/">Compare the baseline with PALM-CO₂</a> for the original reference case. Changed scenarios have no matching PALM validation in this app.</p><p><a href="https://doi.org/10.5194/gmd-19-6417-2026">Li, Zheng &amp; Fang (2026), <cite>A high-resolution urban CO₂ transport model with anthropogenic and biogenic fluxes</cite>, Geoscientific Model Development, 19 (14), 6417–6449</a>.</p></details>
+    <details class="reference-guide input-disclosure" id="input-figures"><summary id="input-title">View input figures <span>Emissions maps and vertical forcing profiles</span></summary><p>Compare the actual reference inputs with your selected settings: spatially varying emissions and height-dependent atmospheric forcing. These inputs are separate from the predicted concentration maps.</p><div class="input-plots" id="input-plots" aria-live="polite"></div></details>
     <div class="workspace">
       <aside class="controls">
         <div class="panel-heading"><span class="step-number">01</span><h2>Set a scenario</h2><button id="reset" type="button" class="text-button">Reset</button></div>
