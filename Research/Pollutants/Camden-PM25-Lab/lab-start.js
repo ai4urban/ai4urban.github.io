@@ -20,7 +20,7 @@ async function startLab() {
     }
   }
 
-  for (const file of ['./lab-data.js', './app.js?v=pm25-20261126-1']) {
+  for (const file of ['./lab-data.js', './app.js?v=pm25-20261126-2']) {
     await new Promise((resolve, reject) => {
       const script = document.createElement('script');
       script.src = file;
