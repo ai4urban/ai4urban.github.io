@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Software for urban environmental modelling</title>
+  <desc id="description">An illustrative urban grid connected to a neural network and a predicted concentration field.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#edf4ee"/><stop offset="1" stop-color="#dbe9e6"/></linearGradient>
+    <linearGradient id="field" x2="1" y2="1"><stop stop-color="#254978"/><stop offset=".45" stop-color="#298e94"/><stop offset=".75" stop-color="#9dce8a"/><stop offset="1" stop-color="#f1df80"/></linearGradient>
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1.5"/></pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#5e8d85" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="800" height="600" fill="url(#background)"/>
+  <g transform="translate(70 125)">
+    <path d="M0 95L145 15L285 95L145 175Z" fill="#c4d8d2" stroke="#8bb4a9" stroke-width="2"/>
+    <g fill="none" stroke="#f6fbf8" stroke-width="2">
+      <path d="M36 75L178 155M72 55L214 135M108 35L250 115M36 115L178 35M72 135L214 55M108 155L250 75"/>
+    </g>
+    <g stroke="#e6f1ee" stroke-width="1">
+      <path d="M59 87V24L89 8V71Z" fill="#468783"/><path d="M89 8L116 24V87L89 71Z" fill="#326d70"/><path d="M59 24L87 40L116 24L89 8Z" fill="#8dbbb0"/>
+      <path d="M139 102V53L169 37V86Z" fill="#468783"/><path d="M169 37L196 53V102L169 86Z" fill="#326d70"/><path d="M139 53L167 69L196 53L169 37Z" fill="#8dbbb0"/>
+      <path d="M103 133V101L130 86V117Z" fill="#598f8c"/><path d="M130 86L156 101V133L130 117Z" fill="#397476"/><path d="M103 101L129 116L156 101L130 86Z" fill="#a3c7bb"/>
+    </g>
+  </g>
+  <path d="M330 269C385 269 384 327 416 327" fill="none" stroke="#5e8d85" stroke-width="4" marker-end="url(#arrow)"/>
+  <g stroke="#8baca6" stroke-width="2" stroke-opacity=".7">
+    <path d="M302 371L365 330M302 371L365 395M302 371L365 460M302 439L365 330M302 439L365 395M302 439L365 460M365 330L427 360M365 330L427 429M365 395L427 360M365 395L427 429M365 460L427 360M365 460L427 429"/>
+  </g>
+  <g fill="#f8fcfa" stroke="#32776d" stroke-width="4">
+    <circle cx="302" cy="371" r="12"/><circle cx="302" cy="439" r="12"/>
+    <circle cx="365" cy="330" r="12"/><circle cx="365" cy="395" r="12"/><circle cx="365" cy="460" r="12"/>
+    <circle cx="427" cy="360" r="12"/><circle cx="427" cy="429" r="12"/>
+  </g>
+  <path d="M453 389C487 389 470 286 508 286" fill="none" stroke="#5e8d85" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(531 156)">
+    <rect width="200" height="240" rx="10" fill="#fff" stroke="#91b4ab" stroke-width="2"/>
+    <rect x="15" y="15" width="170" height="210" rx="5" fill="url(#field)"/>
+    <path d="M43 225C24 184 113 178 91 132S155 64 169 15H185V225Z" fill="#f6e690" opacity=".55"/>
+    <rect x="15" y="15" width="170" height="210" fill="url(#grid)"/>
+    <g fill="#e5eeeb" stroke="#fff" stroke-width="2"><path d="M42 48H66V86H42Z"/><path d="M104 79H133V109H104Z"/><path d="M58 145H85V182H58Z"/><path d="M126 165H157V191H126Z"/></g>
+  </g>
+</svg>

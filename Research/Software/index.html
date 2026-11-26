@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software | AI4URBAN research outcomes</title>
+  <link rel="stylesheet" href="../research.css">
+  <style>
+    .software-list { margin-top: 28px; }
+    .software-list article { padding: 24px 0; border-top: 1px solid #d3dfd8; }
+    .software-list h2 { margin: 0 0 10px; font-size: 1.45rem; line-height: 1.3; }
+    .software-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 0; }
+    .software-links a { font-weight: 650; }
+    .software-figure { margin: 24px 0; }
+    .software-figure img { display: block; width: 100%; max-width: 32rem; height: auto; border-radius: 12px; }
+  </style>
+</head>
+<body>
+<main>
+  <nav aria-label="Research navigation"><a href="../">Research outcomes</a> · <a href="/">Home</a></nav>
+  <h1>Software</h1>
+  <p>Research software for atmospheric transport, air quality forecasting and urban CO₂ modelling.</p>
+  <figure class="software-figure">
+    <img src="../images/software.svg" width="800" height="600" alt="Illustration of an urban model grid, a neural network and a predicted concentration field.">
+  </figure>
+  <div class="software-list">
+    <article aria-labelledby="palm-co2">
+      <h2 id="palm-co2">PALM-CO₂ (v01)</h2>
+      <p>A high-resolution urban CO₂ transport model with anthropogenic and biogenic fluxes.</p>
+      <p class="software-links"><a href="https://zenodo.org/records/18852193">Download software on Zenodo</a><a href="https://egusphere.copernicus.org/preprints/2026/egusphere-2026-970/">Read the paper</a></p>
+    </article>
+    <article aria-labelledby="duo-attnopnets">
+      <h2 id="duo-attnopnets">Duo-AttnOPNets</h2>
+      <p>Global operational atmospheric carbon monoxide forecasting with AI-empowered four-dimensional variational data assimilation (4D-Var).</p>
+      <p class="software-links"><a href="https://zenodo.org/records/18320269">Download software on Zenodo</a><a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025MS005319">Read the paper</a></p>
+    </article>
+    <article aria-labelledby="d-dnet">
+      <h2 id="d-dnet">D-DNet</h2>
+      <p>A dual deep neural network framework for high-efficiency operational PM₂.₅ and aerosol optical depth (AOD₅₅₀) forecasting with data assimilation.</p>
+      <p class="software-links"><a href="https://github.com/SJ-CAI/D-DNet">Source code on GitHub</a><a href="https://arxiv.org/abs/2406.19154v1">Read the paper</a></p>
+    </article>
+    <article aria-labelledby="unet-film">
+      <h2 id="unet-film">3D U-Net-FiLM</h2>
+      <p>3D U-Net-FiLM for PM₂.₅ prediction.</p>
+      <p class="software-links"><a href="https://github.com/ada-rl925/palm-pm25-surrogate">Source code on GitHub</a><a href="https://doi.org/10.1016/j.envsoft.2026.107247">Read the paper</a></p>
+    </article>
+  </div>
+</main>
+</body>
+</html>
