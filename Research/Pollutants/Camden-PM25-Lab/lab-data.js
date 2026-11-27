@@ -41,7 +41,7 @@ function useBrowserWorker(provider, settings) {
     browserWorker.onerror = event => reject(new Error(event.message || 'Browser worker stopped.'));
     browserWorker.onmessage = ({ data }) => {
       if (data.progress) {
-        status((provider === 'webgpu' ? 'WebGPU · ' : 'CPU · ') + data.progress);
+        status((provider === 'webgpu' ? 'WebGPU · ' : 'CPU · ') + data.progress, false, true);
       } else if (data.error) {
         reject(data.invalid ? new RangeError(data.error) : new Error(data.error));
       } else {
@@ -82,7 +82,7 @@ async function runInBrowser(settings) {
     if (error instanceof RangeError) throw error;
     stopBrowserWorker();
     if (device !== 'auto' || provider !== 'webgpu') throw error;
-    status('WebGPU could not finish. Retrying on the CPU…');
+    status('WebGPU could not finish. Retrying on the CPU…', false, true);
     provider = 'wasm';
     output = await useBrowserWorker(provider, settings);
   }

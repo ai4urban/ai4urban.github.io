@@ -48,7 +48,7 @@
     </aside>
     <section class="results">
       <div class="results-heading"><div><p class="eyebrow" id="result-eyebrow">THE PREDICTED FIELD</p><h2 id="result-title">Preparing the reference case</h2></div><div class="height-picker"><label for="height">Model height</label><select id="height" disabled><option>Loading…</option></select></div></div>
-      <div id="status" class="status" role="status" aria-live="polite"><span id="status-dot" class="spinner"></span><span id="status-text">Loading the reference data…</span></div>
+      <div id="status" class="status" role="status" aria-live="polite" aria-busy="true"><span id="status-dot" class="spinner" aria-hidden="true"></span><span id="status-text">Loading the reference data…</span></div>
       <p id="applied" class="applied">Maps will appear when the reference calculation is ready.</p>
       <div class="metrics"><article><span id="metric-label-1">Baseline mean</span><strong id="metric-1">—</strong><small id="metric-unit-1">µg/m³</small></article><article><span id="metric-label-2">Scenario mean</span><strong id="metric-2">—</strong><small id="metric-unit-2">µg/m³</small></article><article class="accent"><span id="metric-label-3">Mean change</span><strong id="metric-3">—</strong><small id="metric-unit-3">scenario − baseline · µg/m³</small></article><article><span id="metric-label-4">Average absolute change</span><strong id="metric-4">—</strong><small id="metric-unit-4">µg/m³ · no sign cancellation</small></article></div>
       <article id="correlation-card" class="panel" hidden><div class="correlation-summary"><span>Pearson correlation at selected height</span><strong id="correlation-value">—</strong></div><p class="small muted">Spatial Pearson r across all matched valid Camden atmospheric cells. This measures association; it is distinct from predictive R².</p></article><div class="map-tools"><p id="map-definition">Baseline and scenario share one concentration scale; the difference has its own zero-centred scale.</p><label for="contrast">Difference contrast <select id="contrast"><option value="1">Automatic</option><option value="2">2×</option><option value="5">5×</option></select></label></div>
@@ -70,7 +70,7 @@
   </div>
   <footer><span>Imperial College London · Urban air quality surrogate research</span><span>PM2.5 · µg/m³ · hourly average concentration</span></footer>
 </main>
-<script src="./lab-start.js?v=pm25-20261126-2"></script>
+<script src="./lab-start.js?v=pm25-20261127-1"></script>
 <script src="./input-comparison.js?v=pm25-20261126-2"></script>
 </body>
 </html>

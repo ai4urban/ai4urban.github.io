@@ -20,7 +20,7 @@ async function startLab() {
     }
   }
 
-  for (const file of ['./lab-data.js', './app.js?v=pm25-20261126-2']) {
+  for (const file of ['./lab-data.js?v=pm25-20261127-1', './app.js?v=pm25-20261127-1']) {
     await new Promise((resolve, reject) => {
       const script = document.createElement('script');
       script.src = file;
@@ -32,5 +32,10 @@ async function startLab() {
 }
 
 startLab().catch(error => {
+  const indicator = document.getElementById('status');
+  indicator.classList.remove('ready');
+  indicator.classList.add('error');
+  indicator.setAttribute('aria-busy', 'false');
+  document.getElementById('status-dot').hidden = true;
   document.getElementById('status-text').textContent = error.message;
 });
